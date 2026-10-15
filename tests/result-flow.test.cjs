@@ -36,7 +36,7 @@ test('last result marker survives a new page load with the same browser storage'
  const storage=new Map([['pharmaco-last-type','INFJ']]);const b=boot({storage});
  // The start page does not overwrite the cache; result viewing updates it.
  assert.equal(storage.get('pharmaco-last-type'),'INFJ');
- const c=boot({search:'?type=ISTP',storage});c.elements['nav-types'].onclick();await settle();assert(c.app.innerHTML.includes('type-icon last-result" data-code="ISTP'));
+ const c=boot({search:'?type=ISTP',storage});c.elements['nav-types'].onclick();await settle();assert(c.app.innerHTML.includes('type-tile last-result" aria-label="ISTP'));assert(!c.app.innerHTML.includes('type-icon last-result'));
 });
 
 test('all four screens have the same four navigation buttons in order',async()=>{

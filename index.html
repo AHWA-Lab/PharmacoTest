@@ -153,7 +153,7 @@ main:has(.types-page) { max-width: 960px; }
 .type-dialog p { margin-bottom: 0; }
 .type-description { border-top: 1px dashed var(--line); margin-top: 22px; padding-top: 4px; font-size: 15px; line-height: 1.85; word-break: keep-all; overflow-wrap: break-word; }
 .type-description p { margin: 16px 0 0; }
-.type-icon.last-result, .stats-icon.last-result { outline: 5px solid #36a66c; outline-offset: 3px; box-shadow: 0 0 0 8px #36a66c20; }
+.type-tile.last-result, .stats-icon.last-result { outline: 5px solid #36a66c; outline-offset: 3px; box-shadow: 0 0 0 8px #36a66c20; }
 .stats-avatar { min-width: 0; }
 .stats-avatar .satisfaction-bar { margin-top: 10px; width: 72px; }
 .feedback button:disabled { cursor: default; opacity: .45; }
@@ -642,8 +642,8 @@ main:has(.types-page) { max-width: 960px; }
       var r = RESULTS[code];
       var pos = CHARACTER_POSITIONS[code];
       var sat = satisfaction(code), label = sat.label;
-      return '<article class="type-tile" aria-label="' + code + ' ' + r[2] + '">' +
-        '<button type="button" class="character-frame type-icon' + (code === lastResultType ? ' last-result' : '') + '" data-code="' + code + '" aria-label="' + r[2] + ' 상세 보기"><div class="character" style="background-position:' + (pos[0] * 100 / 3) + '% ' + (pos[1] * 100 / 3) + '%"></div></button>' +
+      return '<article class="type-tile' + (code === lastResultType ? ' last-result' : '') + '" aria-label="' + code + ' ' + r[2] + '">' +
+        '<button type="button" class="character-frame type-icon" data-code="' + code + '" aria-label="' + r[2] + ' 상세 보기"><div class="character" style="background-position:' + (pos[0] * 100 / 3) + '% ' + (pos[1] * 100 / 3) + '%"></div></button>' +
         '<span class="tile-code">' + code + '</span><h2 class="tile-name">' + r[2] + '</h2><p class="tile-nick">' + r[0] + '</p>' +
         sat.bar + '</article>';
     }).join("");
