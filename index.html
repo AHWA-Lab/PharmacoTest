@@ -120,6 +120,20 @@ button:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
 .feedback button:hover { border-color: var(--lav); }
 .feedback button[aria-pressed="true"] { background: #e9f8f1; border-color: #5fae8e; box-shadow: 0 0 0 2px rgba(95,174,142,.18); }
 .result-menu { display: grid; gap: 10px; margin-top: 22px; }
+main:has(.types-page) { max-width: 960px; }
+.types-page h1 { font-size: clamp(24px, 6vw, 36px); margin-bottom: 24px; }
+.types-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(6px, 2vw, 18px); }
+.type-tile { display: flex; flex-direction: column; min-width: 0; padding: clamp(6px, 2vw, 16px); background: var(--surface); border: 1px solid var(--line); border-radius: 14px; }
+.type-tile .character-frame { width: 100%; margin-bottom: 10px; border-radius: 10px; }
+.tile-code { font-weight: 700; color: #43866d; font-size: clamp(12px, 2.5vw, 19px); }
+.tile-name { font-size: clamp(11px, 2vw, 16px); margin: 4px 0; overflow-wrap: anywhere; }
+.tile-nick { font-size: clamp(10px, 1.8vw, 13px); color: var(--muted); margin: 0 0 12px; }
+.satisfaction-bar { display: flex; height: 10px; border-radius: 999px; overflow: hidden; margin-top: auto; }
+.satisfaction-bar .positive { background: #66bb8a; }
+.satisfaction-bar .negative { background: #eb8585; }
+.satisfaction-bar.no-data { opacity: .35; }
+.type-tile:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; }
+.satisfaction-tooltip { position: fixed; z-index: 10; pointer-events: none; background: var(--ink); color: white; border-radius: 8px; padding: 7px 11px; font-size: 13px; box-shadow: 0 3px 12px #0002; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 
@@ -368,11 +382,14 @@ button:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
       '</div>' +
       '<div class="result-menu">' +
         '<button type="button" class="ghost">처음으로 돌아가기</button>' +
-        '<button type="button" class="ghost">약침타입 전체보기</button>' +
+        '<button type="button" class="ghost" id="all-types">약침타입 전체보기</button>' +
         '<button type="button" class="ghost">통계 보기</button>' +
       '</div>' +
       '</section>'
     );
+    document.getElementById("all-types").onclick = function () {
+      renderAllTypes(function () { renderResult(code, tally); });
+    };
     var feedbackButtons = app.querySelectorAll(".feedback button");
     Array.prototype.forEach.call(feedbackButtons, function (button) {
       button.onclick = function () {
@@ -393,6 +410,45 @@ button:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
         "나는 " + code + " " + r[0] + " · [" + r[1] + "] " + r[2] + "! 너는 어떤 약침이야?",
         BASE + "?type=" + code);
     };
+  }
+
+  // 공용 집계 연결 전에는 빈 데이터로 유지합니다. 형식: { ESTJ: { up: 8, down: 2 } }
+  var satisfactionStats = {};
+
+  function renderAllTypes(back) {
+    var tiles = Object.keys(RESULTS).map(function (code) {
+      var r = RESULTS[code];
+      var pos = CHARACTER_POSITIONS[code];
+      var stats = satisfactionStats[code];
+      var total = stats ? stats.up + stats.down : 0;
+      var percent = total ? Math.round(stats.up / total * 100) : null;
+      var label = percent === null ? "만족도: 집계 전" : "만족도 " + percent + "%";
+      // 집계 전의 두 색은 비율을 나타내지 않습니다.
+      var width = percent === null ? 50 : percent;
+      return '<article class="type-tile" tabindex="0" data-satisfaction="' + label + '" aria-label="' + code + ' ' + r[2] + ', ' + label + '">' +
+        '<div class="character-frame" role="img" aria-label="' + r[0] + ' 캐릭터"><div class="character" style="background-position:' + (pos[0] * 100 / 3) + '% ' + (pos[1] * 100 / 3) + '%"></div></div>' +
+        '<span class="tile-code">' + code + '</span><h2 class="tile-name">' + r[2] + '</h2><p class="tile-nick">' + r[0] + '</p>' +
+        '<div class="satisfaction-bar' + (percent === null ? ' no-data' : '') + '" aria-hidden="true"><span class="positive" style="width:' + width + '%"></span><span class="negative" style="width:' + (100 - width) + '%"></span></div></article>';
+    }).join("");
+    el('<section class="types-page"><h1>약침타입 전체보기</h1><div class="types-grid">' + tiles + '</div>' +
+      '<p class="foot">초록: 만족 · 빨강: 불만족. 흐린 막대는 아직 집계된 평가가 없는 타입입니다.</p>' +
+      '<button type="button" class="ghost" id="types-back">결과로 돌아가기</button>' +
+      '<div class="satisfaction-tooltip" id="satisfaction-tooltip" role="tooltip" hidden></div></section>');
+    var tooltip = document.getElementById("satisfaction-tooltip");
+    function show(tile, x, y) {
+      tooltip.textContent = tile.getAttribute("data-satisfaction");
+      tooltip.hidden = false;
+      tooltip.style.left = Math.max(8, Math.min(x, window.innerWidth - tooltip.offsetWidth - 8)) + "px";
+      tooltip.style.top = Math.max(8, Math.min(y + 18, window.innerHeight - tooltip.offsetHeight - 8)) + "px";
+    }
+    Array.prototype.forEach.call(app.querySelectorAll(".type-tile"), function (tile) {
+      tile.onpointermove = function (event) { show(tile, event.clientX, event.clientY); };
+      tile.onpointerleave = tile.onblur = function () { tooltip.hidden = true; };
+      tile.onfocus = function () { var rect = tile.getBoundingClientRect(); show(tile, rect.left, rect.bottom); };
+      tile.onclick = function () { var rect = tile.getBoundingClientRect(); show(tile, rect.left, rect.bottom); };
+    });
+    document.getElementById("types-back").onclick = back;
+    window.scrollTo(0, 0);
   }
 
   var shared = new URLSearchParams(location.search).get("type");
