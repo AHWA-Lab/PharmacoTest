@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>약침MBTI · 약침 테스트 모음</title>
+<meta name="description" content="16문항으로 알아보는 나와 닮은 약침. 일반한약팀 심리 처방.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="약침 성격 처방">
+<meta property="og:description" content="16문항에 답하면 나와 닮은 약침이 조제됩니다. 나는 어떤 약침일까?">
+<meta property="og:url" content="https://ahwa-lab.github.io/PharmacoTest/mbti/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#fdeef4">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='11' y='2' width='10' height='5' rx='1' fill='%23a8e0c8'/%3E%3Crect x='8' y='8' width='16' height='22' rx='3' fill='%23a8e0c8'/%3E%3Crect x='10' y='15' width='12' height='8' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;900&display=swap">
+<link rel="stylesheet" href="../app.css">
+
+</head>
+<body>
+<header class="collection-bar"><a href="../">← 테스트 모음</a><span>약침MBTI</span></header>
+<main id="app"></main>
+
+<script src="../stats-config.js"></script>
+<script src="../stats.js"></script>
+<script src="../catalog.js"></script><script src="../compatibility.js"></script>
+<script>
+(function () {
+  var AXES = [
+    { id: "EI", a: "E", b: "I", aName: "외향", bName: "내향", pool: [
+      ["약속이 취소되면 아쉽다", "약속이 취소되면 은근히 좋다"],
+      ["처음 보는 사람과 금방 말을 튼다", "처음 보는 사람은 한참 지켜본다"],
+      ["밥은 같이 먹는 게 좋다", "밥은 혼자 먹는 게 편하다"],
+      ["생각은 말하면서 정리된다", "생각은 혼자 정리한 뒤 말한다"],
+      ["쉬는 날엔 밖으로 나간다", "쉬는 날엔 집이 최고다"],
+      ["전화가 오면 반갑다", "전화가 오면 일단 긴장한다"],
+      ["모임에서 말이 많은 편이다", "모임에서 듣는 편이다"],
+      ["회식 뒤에 오히려 기운이 난다", "회식 뒤에 방전된다"],
+      ["낯선 자리에 먼저 손을 든다", "낯선 자리에선 뒷줄에 앉는다"],
+      ["친구는 많을수록 좋다", "깊은 친구 몇 명이면 충분하다"],
+      ["카톡은 바로바로 답한다", "카톡은 몰아서 답한다"],
+      ["여행은 여럿이 간다", "여행은 혼자나 둘이 간다"]
+    ]},
+    { id: "SN", a: "S", b: "N", aName: "감각", bName: "직관", pool: [
+      ["이야기는 사실 위주로 듣는다", "이야기는 의미와 맥락 위주로 듣는다"],
+      ["레시피는 그대로 따른다", "레시피는 참고만 한다"],
+      ["지금 눈앞의 일이 중요하다", "앞으로의 가능성이 중요하다"],
+      ["검증된 방법이 좋다", "새로운 방법이 좋다"],
+      ["설명은 예시가 먼저다", "설명은 큰 그림이 먼저다"],
+      ["멍때릴 때 오늘 한 일이 떠오른다", "멍때릴 때 엉뚱한 상상을 한다"],
+      ["숫자와 데이터를 믿는다", "직감을 믿는다"],
+      ["디테일을 잘 알아챈다", "분위기와 흐름을 잘 알아챈다"],
+      ["길은 지도를 보고 찾는다", "길은 감으로 찾는다"],
+      ["현실적이라는 말을 자주 듣는다", "독특하다는 말을 자주 듣는다"],
+      ["해본 것이 믿음직하다", "처음 보는 것이 끌린다"],
+      ["영화는 줄거리가 중요하다", "영화는 숨은 상징이 중요하다"]
+    ]},
+    { id: "TF", a: "T", b: "F", aName: "사고", bName: "감정", pool: [
+      ["고민 상담엔 해결책부터 준다", "고민 상담엔 공감부터 한다"],
+      ["옳고 그름이 먼저다", "상대의 기분이 먼저다"],
+      ["\"똑똑하다\"는 말이 더 좋다", "\"따뜻하다\"는 말이 더 좋다"],
+      ["싸울 땐 논리로 이기고 싶다", "싸울 땐 관계를 지키고 싶다"],
+      ["냉정하다는 말을 들어봤다", "감성적이라는 말을 들어봤다"],
+      ["결정은 장단점을 따져서 한다", "결정은 마음이 가는 쪽으로 한다"],
+      ["영화를 보며 \"저게 말이 돼?\" 한다", "영화를 보며 쉽게 눈물이 난다"],
+      ["피드백은 직설적이 낫다", "피드백은 돌려 말하는 게 낫다"],
+      ["효율이 곧 배려다", "마음 써주는 게 곧 배려다"],
+      ["감정 호소에 잘 흔들리지 않는다", "남의 감정이 쉽게 전염된다"],
+      ["팀에선 원칙을 지키는 쪽이다", "팀에선 분위기를 살리는 쪽이다"],
+      ["실수한 사람에겐 원인을 짚어준다", "실수한 사람은 먼저 다독인다"]
+    ]},
+    { id: "JP", a: "J", b: "P", aName: "계획", bName: "즉흥", pool: [
+      ["할 일은 미리 끝낸다", "할 일은 마감이 닥쳐야 한다"],
+      ["일정이 바뀌면 스트레스다", "일정이 바뀌면 재밌다"],
+      ["여행 전에 시간표를 짠다", "여행은 가서 정한다"],
+      ["책상이 대체로 정돈돼 있다", "책상에 나만 아는 질서가 있다"],
+      ["체크리스트가 있으면 안심된다", "체크리스트는 답답하다"],
+      ["약속엔 10분 일찍 도착한다", "약속엔 아슬아슬하게 도착한다"],
+      ["결정은 빨리 내리고 싶다", "결정은 끝까지 열어두고 싶다"],
+      ["쇼핑 전에 살 목록을 적는다", "쇼핑은 구경하다 정한다"],
+      ["계획이 틀어지면 불안하다", "계획이 없는 게 편하다"],
+      ["방학 숙제는 미리 했다", "방학 숙제는 마지막 날 했다"],
+      ["캘린더를 꼼꼼히 쓴다", "캘린더는 거의 안 쓴다"],
+      ["시작하면 끝을 본다", "여러 개를 동시에 벌려 둔다"]
+    ]}
+  ];
+
+  var RESULTS = {}, TYPE_DESCRIPTIONS = {};
+  Object.keys(window.PharmacoCatalog.byTest.mbti).forEach(function (code) {
+    var p = window.PharmacoCatalog.byTest.mbti[code];
+    RESULTS[code] = [p.nick, p.category, p.displayName, p.core];
+    TYPE_DESCRIPTIONS[code] = p.paragraphs;
+  });
+
+  function typeDescriptionMarkup(code) {
+    return '<div class="type-description">' + TYPE_DESCRIPTIONS[code].map(function (paragraph) {
+      return '<p>' + paragraph + '</p>';
+    }).join('') + '</div>';
+  }
+
+  // 4×4 스프라이트 시트: RESULTS와 같은 16개 유형을 행 우선으로 배치합니다.
+  var CHARACTER_POSITIONS = {
+    ESTJ: [0, 0], ESTP: [1, 0], ESFJ: [2, 0], ESFP: [3, 0],
+    ENTJ: [0, 1], ENTP: [1, 1], ENFJ: [2, 1], ENFP: [3, 1],
+    ISTJ: [0, 2], ISTP: [1, 2], ISFJ: [2, 2], ISFP: [3, 2],
+    INTJ: [0, 3], INTP: [1, 3], INFJ: [2, 3], INFP: [3, 3]
+  };
+
+  var PER_AXIS = 4;
+  var app = document.getElementById("app");
+  var state = { qs: [], i: 0, ans: [], resultId: null, vote: null };
+  var lastResultType = null;
+  try { lastResultType = localStorage.getItem('pharmaco-last-type'); } catch (error) {}
+
+  var savedResult = null;
+  try {
+    var cached = JSON.parse(localStorage.getItem('pharmaco-last-result') || 'null');
+    if (cached && Object.prototype.hasOwnProperty.call(RESULTS, cached.code)) {
+      var validTally = Array.isArray(cached.tally) && cached.tally.length === 4 && cached.tally.every(function (t) {
+        return t && Number.isInteger(t.a) && Number.isInteger(t.b) && t.a >= 0 && t.b >= 0 && t.a + t.b <= PER_AXIS;
+      });
+      savedResult = { code: cached.code, tally: validTally ? cached.tally : null, resultId: validTally ? cached.resultId : null, vote: cached.vote === 1 || cached.vote === -1 ? cached.vote : null };
+    }
+  } catch (error) {}
+  if (!savedResult && Object.prototype.hasOwnProperty.call(RESULTS, lastResultType)) savedResult = { code: lastResultType, tally: null };
+
+  function rememberResult(code, tally) {
+    lastResultType = code;
+    savedResult = { code: code, tally: tally || null, resultId: tally ? state.resultId : null, vote: tally ? state.vote : null };
+    try {
+      localStorage.setItem('pharmaco-last-type', code);
+      localStorage.setItem('pharmaco-last-result', JSON.stringify(savedResult));
+    } catch (error) {}
+  }
+
+  function shuffle(arr) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+
+  function buildQuiz() {
+    var qs = [];
+    AXES.forEach(function (ax, ai) {
+      shuffle(ax.pool).slice(0, PER_AXIS).forEach(function (p) {
+        qs.push({ axis: ai, flip: Math.random() < 0.5, text: p });
+      });
+    });
+    state.qs = shuffle(qs);
+    state.i = 0;
+    state.ans = [];
+    state.resultId = window.PharmacoStats.id();
+    state.vote = null;
+  }
+
+  var viewVersion = 0;
+  var quizTimer = null;
+  var quizDeadline = 0;
+  var questionOpen = false;
+  function stopQuizTimer() {
+    if (quizTimer !== null) clearInterval(quizTimer);
+    quizTimer = null;
+    questionOpen = false;
+  }
+  function el(html) {
+    stopQuizTimer();
+    viewVersion++;
+    var page = html.indexOf('class="start"') >= 0 ? 'start' : html.indexOf('class="label"') >= 0 ? 'result' : html.indexOf('class="types-page"') >= 0 ? 'types' : html.indexOf('class="stats-page"') >= 0 ? 'stats' : null;
+    var links = [ ['restart', '다시하기', 'start'], ['result', '결과보기', 'result'], ['types', '전체보기', 'types'], ['stats', '통계보기', 'stats'] ];
+    var nav = page ? '<nav class="bottom-nav" aria-label="화면 이동">' + links.map(function (link) {
+      return '<button type="button" class="ghost" id="nav-' + link[0] + '"' + (page === link[2] ? ' aria-current="page"' : '') + (link[0] === 'result' && !savedResult ? ' disabled title="테스트를 완료하면 결과를 볼 수 있어요"' : '') + '>' + link[1] + '</button>';
+    }).join('') + '</nav>' : '';
+    app.innerHTML = html + nav;
+    if (page) {
+      document.getElementById('nav-restart').onclick = function () {
+        history.replaceState(null, '', BASE);
+        buildQuiz(); renderQ(); window.scrollTo(0, 0);
+      };
+      document.getElementById('nav-result').onclick = function () {
+        if (!savedResult) return;
+        state.resultId = savedResult.resultId;
+        state.vote = savedResult.vote;
+        renderResult(savedResult.code, savedResult.tally); window.scrollTo(0, 0);
+      };
+      document.getElementById('nav-types').onclick = function () { renderAllTypes(null); };
+      document.getElementById('nav-stats').onclick = function () { renderTypeStats(null); };
+    }
+  }
+
+  function renderStart() {
+    el(
+      '<section class="start">' +
+      '<p class="eyebrow">일반한약팀 · 심리 처방</p>' +
+      '<h1>약침 성격 처방</h1>' +
+      '<p class="lead">16개 문항에 둘 중 가까운 쪽을 고르면 나와 닮은 약침이 조제됩니다. 문항은 풀에서 무작위로 뽑혀서 할 때마다 달라요.</p>' +
+      '<p class="time-notice">질문당 시간제한 10초</p>' +
+      '<p class="foot">시간 안에 선택하지 않으면 ‘모르겠다’로 넘어갑니다.</p>' +
+      '<ul class="spec"><li>1회 16문항</li><li>약 1분</li><li>결과 16종</li></ul>' +
+      '<div class="actions"><button class="go" id="go">조제 시작</button><button class="ghost" id="share">친구에게 공유</button></div>' +
+      '</section>'
+    );
+    document.getElementById("go").onclick = function () { buildQuiz(); renderQ(); };
+    var shareBtn = document.getElementById("share");
+    shareBtn.onclick = function () { share(shareBtn, "약침 성격 처방", "16문항으로 알아보는 나와 닮은 약침", BASE); };
+  }
+
+  function renderQ() {
+    var q = state.qs[state.i];
+    var opts = q.flip ? [1, 0] : [0, 1];
+    var rack = "";
+    for (var k = 0; k < state.qs.length; k++) {
+      rack += '<i class="' + (k < state.i ? (state.ans[k] === null ? "skipped" : "done") : k === state.i ? "now" : "") + '"></i>';
+    }
+    var btns = opts.map(function (o) {
+      return '<button class="choice" data-pick="' + o + '">' + q.text[o] + '</button>';
+    }).join('<div class="choice-divider"><span class="vs" aria-hidden="true">VS</span><button type="button" class="unknown" id="unknown">모르겠다</button></div>');
+    el(
+      '<section>' +
+      '<div class="rack" role="img" aria-label="' + state.i + '문항 완료, 모르겠다 ' + state.ans.filter(function (a) { return a === null; }).length + '문항">' + rack + '</div>' +
+      '<p class="count">' + (state.i + 1) + ' / ' + state.qs.length + '</p>' +
+      '<p class="q-title">둘 중 나와 가까운 쪽</p>' +
+      '<div class="choices">' + btns + '</div>' +
+      '<div class="countdown" id="countdown" role="timer" aria-label="남은 시간 10초">10</div>' +
+      '<button class="back" id="back"' + (state.i === 0 ? " disabled" : "") + '>이전 문항</button>' +
+      '</section>'
+    );
+    questionOpen = true;
+    quizDeadline = Date.now() + 10000;
+    var questionVersion = viewVersion;
+    var countdown = document.getElementById('countdown');
+    quizTimer = setInterval(function () {
+      if (questionVersion !== viewVersion || !questionOpen) return;
+      var remaining = Math.max(0, Math.ceil((quizDeadline - Date.now()) / 1000));
+      countdown.textContent = String(remaining);
+      countdown.setAttribute('aria-label', '남은 시간 ' + remaining + '초');
+      countdown.className = 'countdown' + (remaining <= 3 ? ' urgent' : '');
+      if (remaining === 0) answer(null);
+    }, 100);
+    Array.prototype.forEach.call(app.querySelectorAll(".choice"), function (b) {
+      b.onclick = function () { if (questionVersion === viewVersion) answer(parseInt(b.getAttribute("data-pick"), 10)); };
+    });
+    document.getElementById('unknown').onclick = function () { if (questionVersion === viewVersion) answer(null); };
+    document.getElementById("back").onclick = function () {
+      if (state.i > 0) { state.i--; state.ans.pop(); renderQ(); }
+    };
+  }
+
+  function answer(pick) {
+    if (!questionOpen) return;
+    if (Date.now() >= quizDeadline) pick = null;
+    stopQuizTimer();
+    state.ans.push(pick);
+    state.i++;
+    if (state.i >= state.qs.length) {
+      var res = scoreResult();
+      window.PharmacoStats.record(state.resultId, res.code, null);
+      renderResult(res.code, res.tally);
+    } else renderQ();
+  }
+
+  var BASE = location.origin + location.pathname;
+
+  function share(btn, title, text, url) {
+    var label = btn.textContent;
+    var flash = function (msg) { btn.textContent = msg; setTimeout(function () { btn.textContent = label; }, 1800); };
+    if (navigator.share) {
+      navigator.share({ title: title, text: text, url: url }).catch(function () {});
+      return;
+    }
+    try {
+      navigator.clipboard.writeText(text + "\n" + url).then(function () { flash("링크 복사됨"); }, function () { flash("복사 불가"); });
+    } catch (e) { flash("복사 불가"); }
+  }
+
+  function scoreResult() {
+    var tally = AXES.map(function () { return { a: 0, b: 0, skipped: 0, last: Math.random() < 0.5 ? "a" : "b" }; });
+    state.qs.forEach(function (q, idx) {
+      if (state.ans[idx] === null) { tally[q.axis].skipped++; return; }
+      var side = state.ans[idx] === 0 ? "a" : "b";
+      tally[q.axis][side]++;
+      tally[q.axis].last = side;
+    });
+    var code = "";
+    AXES.forEach(function (ax, i) {
+      var t = tally[i];
+      var side = t.a > t.b ? "a" : t.b > t.a ? "b" : t.last;
+      code += ax[side];
+    });
+    return { code: code, tally: tally };
+  }
+
+  function renderResult(code, tally) {
+    rememberResult(code, tally);
+    var shared = !tally;
+    var r = RESULTS[code];
+    var pos = CHARACTER_POSITIONS[code];
+    var characterStyle = "background-position:" + (pos[0] * 100 / 3) + "% " + (pos[1] * 100 / 3) + "%";
+    var detail = "";
+    if (!shared) {
+      var bars = AXES.map(function (ax, i) {
+        var t = tally[i];
+        var answered = t.a + t.b;
+        var pa = answered ? (t.a / answered) * 100 : 50;
+        return '<div class="bar"><span class="l">' + ax.a + '</span>' +
+          '<div class="track" role="img" aria-label="' + (answered ? ax.aName + ' ' + t.a + ', ' + ax.bName + ' ' + t.b : '응답 없음') + '"><span style="width:' + pa + '%;opacity:' + (answered ? 1 : 0) + '"></span></div>' +
+          '<span class="r">' + ax.b + '</span></div>';
+      }).join("");
+      var scoreLine = AXES.map(function (ax, i) {
+        return ax.aName + ' ' + tally[i].a + ':' + tally[i].b + ' ' + ax.bName + (tally[i].skipped ? ' (모름 ' + tally[i].skipped + ')' : '');
+      }).join(" · ");
+      detail = '<div class="bars">' + bars + '</div><p class="foot">' + scoreLine + '</p>';
+      if (tally.some(function (t) { return t.a + t.b === 0; })) detail += '<p class="foot">응답이 없는 성향 축은 무작위로 배정되었습니다.</p>';
+    }
+
+    el(
+      '<section>' +
+      '<p class="eyebrow">' + (shared ? "친구가 받은 처방" : "조제 완료") + '</p>' +
+      '<article class="label">' +
+        '<div class="label-cap"><span>' + r[1] + '</span><span>1BOX = 2ml × 5 vial</span></div>' +
+        '<div class="label-body">' +
+          '<p class="cat">' + (shared ? "이 사람의 약침" : "당신의 약침") + '</p>' +
+          '<div class="character-frame result-icon" tabindex="0" data-code="' + code + '" role="img" aria-label="' + r[2] + ' ' + r[0] + ' 캐릭터">' +
+            '<div class="character" style="' + characterStyle + '"></div>' +
+          '</div>' +
+          '<h2 class="vial-name">' + r[2] + '</h2>' +
+          '<div class="type-row"><span class="nick">' + r[0] + '</span><span class="code">' + code + '</span></div>' +
+          '<p class="you">' + (shared ? "" : "당신은 ") + '<b>' + r[3] + '</b> 타입입니다.</p>' +
+          detail +
+          window.PharmacoCompatibility.summary("mbti",code) + typeDescriptionMarkup(code) +
+        '</div>' +
+      '</article>' +
+      '<p class="foot">이름과 재료를 연결한 재미용 매칭입니다. 실제 효능과는 관계가 없습니다.</p>' +
+      '<div class="feedback" role="group" aria-label="이 결과가 내 성격에 부합하나요?">' +
+        '<button type="button" aria-label="내 성격에 부합해요" aria-pressed="false">👍</button>' +
+        '<button type="button" aria-label="내 성격에 부합하지 않아요" aria-pressed="false">👎</button>' +
+      '</div>' +
+      (!shared ? '<p class="foot" id="feedback-status" role="status"></p>' : '') +
+      window.PharmacoCompatibility.markup(window.PharmacoCatalog.byTest.mbti[code]) + '<div class="satisfaction-tooltip" id="result-tooltip" role="tooltip" hidden></div></section>'
+    );
+    setupTypeTooltips(document.getElementById('result-tooltip'), '.result-icon');
+    window.PharmacoCompatibility.bind(app);
+    var feedbackButtons = app.querySelectorAll(".feedback button");
+    Array.prototype.forEach.call(feedbackButtons, function (button, index) {
+      var vote = index === 0 ? 1 : -1;
+      button.disabled = shared;
+      button.setAttribute('aria-pressed', String(!shared && state.vote === vote));
+      button.onclick = function () {
+        if (shared) return;
+        var wasPressed = button.getAttribute("aria-pressed") === "true";
+        Array.prototype.forEach.call(feedbackButtons, function (item) {
+          item.setAttribute("aria-pressed", "false");
+        });
+        button.setAttribute("aria-pressed", String(!wasPressed));
+        state.vote = wasPressed ? null : vote;
+        rememberResult(code, tally);
+        var statusNode = document.getElementById('feedback-status');
+        statusNode.textContent = '평가 저장 중…';
+        window.PharmacoStats.record(state.resultId, code, state.vote).then(function (saved) {
+          statusNode.textContent = saved ? '평가가 반영되었습니다.' : '평가를 보관했습니다. 통계 연결 시 다시 전송합니다.';
+        });
+      };
+    });
+  }
+
+  // 공용 집계 연결 전에는 빈 데이터로 유지합니다. 형식: { ESTJ: { up: 8, down: 2 } }
+  var satisfactionStats = {};
+
+
+
+  function satisfaction(code) {
+    var stats = satisfactionStats[code];
+    var total = stats ? stats.up + stats.down : 0;
+    var percent = total ? Math.round(stats.up / total * 100) : null;
+    var label = percent === null ? '만족도: 집계 전' : '만족도 ' + percent + '% · 불만족 ' + (100 - percent) + '%';
+    var width = percent === null ? 50 : percent;
+    return { label: label, bar: '<div class="satisfaction-bar' + (percent === null ? ' no-data' : '') + '" tabindex="0" role="img" data-satisfaction="' + label + '" aria-label="' + label + '"><span class="positive" style="width:' + width + '%"></span><span class="negative" style="width:' + (100 - width) + '%"></span></div>' };
+  }
+
+  function statsNotice() {
+    var status = window.PharmacoStats.status();
+    if (status === 'unconfigured') return '공용 통계 연결 전입니다.';
+    if (status === 'error') return '통계를 불러오지 못했습니다. 다시 들어오면 재시도합니다.';
+    if (status === 'pending') return '일부 결과의 전송을 기다리고 있습니다.';
+    if (status === 'loading') return '통계를 불러오는 중…';
+    return '';
+  }
+
+  function refreshStatsView(render) {
+    var version = viewVersion;
+    window.PharmacoStats.refresh().then(function (rows) {
+      if (rows) {
+        typeResultCounts = {};
+        satisfactionStats = {};
+        rows.forEach(function (row) {
+          if (!Object.prototype.hasOwnProperty.call(RESULTS, row.code)) return;
+          typeResultCounts[row.code] = Number(row.result_count);
+          satisfactionStats[row.code] = { up: Number(row.up_count), down: Number(row.down_count) };
+        });
+      }
+      if (version === viewVersion && !document.getElementById('type-dialog').open) render();
+    });
+  }
+
+  function setupTypeTooltips(tooltip, iconSelector) {
+    function bind(element, content) {
+      function show(x, y) {
+        tooltip.textContent = content();
+        tooltip.hidden = false;
+        tooltip.style.maxHeight = Math.max(60, window.innerHeight - y - 26) + 'px';
+        tooltip.style.left = Math.max(8, Math.min(x, window.innerWidth - tooltip.offsetWidth - 8)) + 'px';
+        tooltip.style.top = Math.max(8, Math.min(y + 18, window.innerHeight - tooltip.offsetHeight - 8)) + 'px';
+      }
+      element.onpointermove = function (event) { show(event.clientX, event.clientY); };
+      element.onpointerleave = element.onblur = function () { tooltip.hidden = true; };
+      element.onfocus = function () { var rect = element.getBoundingClientRect(); show(rect.left, rect.bottom); };
+    }
+    Array.prototype.forEach.call(app.querySelectorAll(iconSelector), function (icon) {
+      bind(icon, function () {
+        var code = icon.getAttribute('data-code'), r = RESULTS[code];
+        return r[2] + ' · ' + r[0] + '\n\n' + TYPE_DESCRIPTIONS[code].join('\n\n');
+      });
+    });
+    Array.prototype.forEach.call(app.querySelectorAll('.satisfaction-bar'), function (bar) {
+      bind(bar, function () { return bar.getAttribute('data-satisfaction'); });
+      bar.onclick = bar.onfocus;
+    });
+  }
+
+  function typeDialogMarkup() {
+    return '<dialog class="type-dialog" id="type-dialog" aria-labelledby="dialog-type-name"><button type="button" class="dialog-close" id="dialog-close" aria-label="닫기">×</button><div id="dialog-content"></div></dialog>';
+  }
+
+  function setupTypeDialog(tooltip) {
+    var dialog = document.getElementById('type-dialog');
+    document.getElementById('dialog-close').onclick = function () { dialog.close(); };
+    dialog.onclose = function () { tooltip.hidden = true; };
+    return function (code) {
+        tooltip.hidden = true;
+        var r = RESULTS[code], pos = CHARACTER_POSITIONS[code];
+        document.getElementById('dialog-content').innerHTML = '<div class="character-frame" role="img" aria-label="' + r[2] + ' 캐릭터"><div class="character" style="background-position:' + (pos[0] * 100 / 3) + '% ' + (pos[1] * 100 / 3) + '%"></div></div>' +
+          '<h2 id="dialog-type-name">' + r[2] + '</h2><div class="type-row"><span class="nick">' + r[0] + '</span><span class="code">' + code + '</span></div><p class="cat">' + r[1] + '</p><p>' + r[3] + ' 타입입니다.</p>' + typeDescriptionMarkup(code);
+        dialog.showModal();
+    };
+  }
+
+  function renderAllTypes(back, refreshed) {
+    var tiles = Object.keys(RESULTS).map(function (code) {
+      var r = RESULTS[code];
+      var pos = CHARACTER_POSITIONS[code];
+      var sat = satisfaction(code), label = sat.label;
+      return '<article class="type-tile' + (code === lastResultType ? ' last-result' : '') + '" aria-label="' + code + ' ' + r[2] + '">' +
+        '<button type="button" class="character-frame type-icon" data-code="' + code + '" aria-label="' + r[2] + ' 상세 보기"><div class="character" style="background-position:' + (pos[0] * 100 / 3) + '% ' + (pos[1] * 100 / 3) + '%"></div></button>' +
+        '<span class="tile-code">' + code + '</span><h2 class="tile-name">' + r[2] + '</h2><p class="tile-nick">' + r[0] + '</p>' +
+        sat.bar + '</article>';
+    }).join("");
+    el('<section class="types-page"><h1>약침타입 전체보기</h1><div class="types-grid">' + tiles + '</div>' +
+      '<p class="foot">' + statsNotice() + '</p>' +
+      '<p class="foot">초록: 만족 · 빨강: 불만족. 흐린 막대는 아직 집계된 평가가 없는 타입입니다.</p>' +
+      '<div class="satisfaction-tooltip" id="satisfaction-tooltip" role="tooltip" hidden></div>' + typeDialogMarkup() + '</section>');
+    var tooltip = document.getElementById("satisfaction-tooltip");
+    var openTypeDialog = setupTypeDialog(tooltip);
+    Array.prototype.forEach.call(app.querySelectorAll('.type-icon'), function (button) {
+      button.onclick = function (event) { event.stopPropagation(); openTypeDialog(button.getAttribute('data-code')); };
+    });
+    setupTypeTooltips(tooltip, '.type-icon');
+    if (!refreshed) {
+      window.scrollTo(0, 0);
+      refreshStatsView(function () { renderAllTypes(back, true); });
+    }
+  }
+
+  // 유형별 테스트 결과 건수. 만족/불만족 평가 건수와 별도로 집계합니다.
+  var typeResultCounts = null;
+
+  function renderTypeStats(back, refreshed) {
+    var codes = Object.keys(RESULTS);
+    var total = typeResultCounts ? codes.reduce(function (sum, code) { return sum + (typeResultCounts[code] || 0); }, 0) : 0;
+    var rows = codes.map(function (code) {
+      var r = RESULTS[code], pos = CHARACTER_POSITIONS[code];
+      var count = typeResultCounts ? typeResultCounts[code] || 0 : null;
+      var ratio = total ? count / total * 100 : 0;
+      var value = count === null ? '비율 — · 결과건수 — (집계 전)' : ratio.toFixed(1) + '% · ' + count.toLocaleString('ko-KR') + '건';
+      return '<div class="stats-row"><div class="stats-avatar"><button type="button" class="stats-icon' + (code === lastResultType ? ' last-result' : '') + '" data-code="' + code + '" aria-label="' + r[2] + ' 상세 보기">' +
+        '<div class="character" style="background-position:' + (pos[0] * 100 / 3) + '% ' + (pos[1] * 100 / 3) + '%"></div></button>' + satisfaction(code).bar + '</div>' +
+        '<div><div class="stats-track" role="img" aria-label="' + r[2] + ': ' + value + '"><span class="stats-fill" style="width:' + ratio + '%"></span></div><p class="stats-value">' + value + '</p></div></div>';
+    }).join('');
+    el('<section class="stats-page"><h1>약침타입 통계보기</h1><p class="foot">' + statsNotice() + '</p><div class="stats-list">' + rows + '</div>' +
+      '<div class="satisfaction-tooltip" id="type-name-tooltip" role="tooltip" hidden></div>' +
+      typeDialogMarkup() + '</section>');
+    var tooltip = document.getElementById('type-name-tooltip');
+    var openTypeDialog = setupTypeDialog(tooltip);
+    Array.prototype.forEach.call(app.querySelectorAll('.stats-icon'), function (button) {
+      button.onclick = function () { openTypeDialog(button.getAttribute('data-code')); };
+    });
+    setupTypeTooltips(tooltip, '.stats-icon');
+    if (!refreshed) {
+      window.scrollTo(0, 0);
+      refreshStatsView(function () { renderTypeStats(back, true); });
+    }
+  }
+
+  var shared = new URLSearchParams(location.search).get("type");
+  shared = shared && shared.toUpperCase();
+  if (shared && RESULTS[shared]) renderResult(shared); else renderStart();
+})();
+</script>
+
+</body>
+</html>

@@ -1,11 +1,36 @@
-# 약침 성격 처방 (pharmacoMBTI)
+# 약침 테스트 모음 (PharmacoTest)
 
-16문항에 답하면 나와 닮은 약침이 조제되는 MBTI 스타일 성격 테스트입니다.
+네 가지 창작 성격 테스트·오늘의 운세와 50개 고유 약침 캐릭터입니다.
 
-- 바로 하기: https://ahwa-lab.github.io/pharmacoMBTI/
-- 결과 공유 링크: `?type=ESTJ` 형태로 친구의 결과를 볼 수 있습니다.
+| 테스트 | 문항 | 결과 | 링크 |
+| --- | ---: | ---: | --- |
+| 약침MBTI | 16 | 16 | [플레이](https://ahwa-lab.github.io/PharmacoTest/mbti/) |
+| 약침D&D | 12 | 9 | [플레이](https://ahwa-lab.github.io/PharmacoTest/dnd/) |
+| 약침ABO± | 12 | 8 | [플레이](https://ahwa-lab.github.io/PharmacoTest/abo/) |
+| 약침에니어그램 | 18 | 9 | [플레이](https://ahwa-lab.github.io/PharmacoTest/enneagram/) |
+| 오늘의 약침운세 | 질문 없음 | 50 | [플레이](https://ahwa-lab.github.io/PharmacoTest/fortune/) |
 
-이름과 재료를 억지로 연결한 재미용 매칭이며, 실제 효능과는 관계가 없습니다.
+네 성격 테스트는 다시하기 / 결과보기 / 전체보기 / 통계보기, 10초 타이머, 모르겠다, 마지막 결과 저장, 만족도 평가와 상세 팝업을 제공합니다. 오늘의 약침운세는 질문 없이 한 번 클릭하면 카드가 뒤집히며 표시됩니다.
+
+`catalog.json`이 50종의 구성·출처·캐릭터 배정 원본입니다. [설계 근거](research/약침-캐릭터-설계.md)와 [이미지 프롬프트](research/character-prompts.json)를 함께 보관합니다. 캐릭터 시트 5개는 `assets/characters-*.png`이며 OpenAI 내장 이미지 생성 도구를 사용했습니다.
+
+- D&D는 2개 축의 조합, ABO±는 3개 리듬 축, 에니어그램은 18개 비교 선택, 운세는 한국 날짜에 따라 50종 중 하나로 고정되는 카드입니다. 모두 자체 창작 게임입니다. 오늘의 행운·불운 캐릭터는 네 성격 체계에서 하나씩 날짜에 따라 고르며, 같은 체계에서 행운·불운이 겹치지 않습니다.
+- 실제 혈액형을 예측하거나 심리·의학적 진단을 제공하지 않습니다.
+- 과거 자료에만 존재하는 약침도 포함되며 현재 공급 여부를 뜻하지 않습니다.
+- 기존 루트의 `?type=ESTJ` 링크는 MBTI 하위 페이지로 연결합니다.
+
+## 개발 검증
+
+`npm ci && npm test`
+
+별도 외부 서비스 없이 정적 파일 서버로 로컬 실행할 수 있습니다. 배포는 GitHub Pages의 main 루트 기준입니다.
+
+- [전체 약침 도감](https://ahwa-lab.github.io/PharmacoTest/encyclopedia/): 50종의 캐릭터·성격·설명과 원료 모티프를 검색할 수 있습니다.
+
+- 바로 하기: https://ahwa-lab.github.io/PharmacoTest/
+- 결과 공유 링크: `mbti/?type=ESTJ` 형태로 친구의 결과를 볼 수 있습니다.
+
+이름과 재료를 연결한 재미용 매칭이며, 실제 효능과는 관계가 없습니다.
 
 ## 결과·만족도 통계 연결
 
@@ -13,7 +38,7 @@ GitHub Pages는 정적 호스팅이므로 전체 이용자 집계에는 Supabase
 
 1. Supabase 프로젝트의 SQL Editor에서 `supabase/schema.sql`을 실행합니다.
 2. `stats-config.js`에 프로젝트 URL과 공개 **publishable** 키(또는 legacy anon 키)를 입력합니다. **secret / service_role 키는 사용하지 않습니다.**
-3. GitHub에 반영하면 새 테스트 결과부터 공용 집계가 동작합니다. 연결 전에 같은 브라우저에 임시 보관한 결과도 다음 통계 조회/전송 때 재시도합니다.
+3. GitHub에 반영하면 새 테스트 결과부터 공용 집계가 동작합니다. 연결 전에 같은 브라우저에 임시 보관한 결과도 다음 통계 조회/전송 때 재시도합니다. 기존 설치에서는 schema.sql을 다시 실행하면 새 네 테스트용 테이블·RPC가 추가됩니다. 기존 MBTI 집계는 유지합니다.
 
 - 결과 비율 = 해당 타입의 완료 건수 ÷ 전체 완료 건수.
 - 만족도 = 👍 ÷ (👍 + 👎). 평가하지 않은 결과는 만족도 분모에 넣지 않습니다.
@@ -25,3 +50,9 @@ GitHub Pages는 정적 호스팅이므로 전체 이용자 집계에는 Supabase
 - 마지막으로 본 결과 타입과 미전송 결과는 브라우저 localStorage에 보관합니다. 브라우저 데이터를 지우면 사라지며 다른 기기와 동기화되지 않습니다.
 
 Supabase 공식 참고: [데이터베이스 함수](https://supabase.com/docs/guides/database/functions), [공개 API 키](https://supabase.com/docs/guides/getting-started/api-keys).
+
+참고: [D&D의 성향 체계](https://www.dndbeyond.com/sources/dnd/br-2024/creating-a-character), [에니어그램 유형 설명](https://www.enneagraminstitute.com/type-descriptions/). 명칭과 체계만 참고했고 문항과 캐릭터 설명은 새로 작성했습니다.
+
+## 오늘의 약침운세
+
+한국 날짜(Asia/Seoul)를 UTC 일련번호로 변환하고 50일 블록마다 고정 시드로 섞은 50종 배열에 매칭합니다. 같은 날에는 모든 이용자가 같은 약침·운세·행운/불운 조합을 봅니다. 각 50일 블록 안에서는 50종을 모두 한 번씩 사용합니다. 운세는 성격 원문 대신 모티프에 맞는 전용 문장과 색·채도·장소·음악·아이템·행동·음식 힌트를 조합합니다. 같은 브라우저의 같은 날 재뽑기는 결과 건수를 늘리거나 평가를 지우지 않습니다. 운세는 사용자의 후속 요청으로 50종 전체를 공유하며, 다른 네 테스트의 결과 약침은 서로 중복되지 않습니다.

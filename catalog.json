@@ -1,0 +1,2378 @@
+{
+  "version": "2026-10-15",
+  "notice": "처방 구성과 공개 소개에서 착안한 창작 성격 캐릭터입니다. 효능·진단·치료 적합성을 뜻하지 않습니다. PDF2024_ONLY는 과거 자료에만 확인된 항목이며 현재 조제 가능 여부를 확인한 것이 아닙니다.",
+  "profiles": [
+    {
+      "id": "M01",
+      "sourceName": "삼기활력",
+      "displayName": "삼기활력 약침",
+      "test": "mbti",
+      "resultCode": "ESTJ",
+      "nick": "활력기관장",
+      "category": "혈기보양약침",
+      "ingredients": [
+        "홍삼",
+        "산양삼",
+        "인삼",
+        "수삼",
+        "당귀",
+        "녹용",
+        "맥문동",
+        "오미자",
+        "감초",
+        "사향"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 48,
+          "originalName": "삼기활력"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "삼기활력"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": "https://ajad.co.kr/sg_vitality/",
+      "materialReading": "삼류 원료·당귀·녹용의 복합 구성을 여러 동력원이 모이는 기관으로 해석",
+      "core": "흩어진 에너지를 한 방향으로 모아 팀을 출발시키는 활력기관장",
+      "paragraphs": [
+        "여러 동력을 맞물리는 기관장처럼, 일이 멈춰 있으면 내가 먼저 시동을 거는 편이에요. 목표가 보이면 역할과 순서를 빠르게 정하고, 함께 해냈다는 감각에서 다음 힘을 얻어요.",
+        "늘 앞장서지만 사실 매번 대장이 되고 싶은 것은 아니에요. 내가 없어도 잘 굴러가는 팀을 보면 뿌듯하면서도 살짝 허전할 수 있죠. 지휘를 맡기는 여유까지 생길 때 당신의 추진력은 더 오래가요."
+      ],
+      "art": {
+        "animal": "brown bear",
+        "expression": "determined broad smile, one eyebrow raised",
+        "action": "leans forward turning a huge golden winding key with both paws",
+        "prop": "sun-wheel engine core"
+      },
+      "sheet": "mbti",
+      "pos": [
+        0,
+        0
+      ],
+      "columns": 4,
+      "rows": 4
+    },
+    {
+      "id": "M02",
+      "sourceName": "어혈",
+      "displayName": "어혈 약침",
+      "test": "mbti",
+      "resultCode": "ESTP",
+      "nick": "매듭돌파자",
+      "category": "증류약침",
+      "ingredients": [
+        "치자",
+        "현호색",
+        "유향",
+        "몰약",
+        "도인",
+        "적작약",
+        "단삼",
+        "소목"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 23,
+          "originalName": "어혈"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "어혈"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": "https://ajad.co.kr/bloodstasis/",
+      "materialReading": "치자·현호색·유향·몰약 등을 정체된 매듭을 다루는 이미지로 해석",
+      "core": "막힌 순간의 핵심 매듭을 찾아 손부터 움직이는 매듭돌파자",
+      "paragraphs": [
+        "여우가 엉킨 끈의 틈을 찾듯, 복잡한 상황에서도 지금 바꿀 수 있는 부분을 먼저 포착해요. 긴 설명보다 직접 해보는 쪽이 편하고, 돌발 상황에서 오히려 판단이 선명해지는 편이에요.",
+        "대담하게 움직이다가도 내 선택권이 줄어들면 예민해질 수 있어요. 모든 문제를 당장 풀어야 한다고 느낄 필요는 없어요. 한번 멈춰 다음 매듭까지 살피는 여유도 당신의 순발력과 잘 어울려요."
+      ],
+      "art": {
+        "animal": "red fox",
+        "expression": "playful sideways grin and narrowed alert eyes",
+        "action": "skids sideways while pulling a complicated red knot loose",
+        "prop": "long tangled red cord"
+      },
+      "sheet": "mbti",
+      "pos": [
+        1,
+        0
+      ],
+      "columns": 4,
+      "rows": 4
+    },
+    {
+      "id": "M03",
+      "sourceName": "경근이완",
+      "displayName": "경근이완 약침",
+      "test": "mbti",
+      "resultCode": "ESFJ",
+      "nick": "완충연결자",
+      "category": "증류약침",
+      "ingredients": [
+        "총백",
+        "골쇄보",
+        "호도육",
+        "선모",
+        "당귀",
+        "황기",
+        "강황",
+        "길초근",
+        "소회향"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 26,
+          "originalName": "경근이완"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "경근이완"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": "https://ajad.co.kr/muscle-relaxation/",
+      "materialReading": "골쇄보·호도육·당귀·황기와 긴장 완화라는 소개에서 탄성·완충을 창작",
+      "core": "관계의 팽팽함을 읽고 각자의 여유를 되찾게 하는 완충연결자",
+      "paragraphs": [
+        "늘 친절하게 접대하는 사람이라기보다, 누가 힘을 너무 주고 있는지 알아채는 연결자에 가까워요. 말투 하나나 자리의 간격을 바꿔서 서로 편히 움직일 공간을 만드는 편이에요.",
+        "좋은 분위기를 좋아하지만 모두에게 맞춰주기만 하는 것은 아니에요. 내 쪽 끈까지 지나치게 당겨지면 조용히 거리를 두고 싶어져요. 상대를 편하게 하는 만큼 내가 편해질 거리도 정할 수 있어요."
+      ],
+      "art": {
+        "animal": "cream ferret",
+        "expression": "relieved eyes half closed, soft exhaling smile",
+        "action": "leans backward stretching a springy fabric bridge between two posts",
+        "prop": "elastic fabric bridge"
+      },
+      "sheet": "mbti",
+      "pos": [
+        2,
+        0
+      ],
+      "columns": 4,
+      "rows": 4
+    },
+    {
+      "id": "M04",
+      "sourceName": "Sweet BV",
+      "displayName": "Sweet BV 약침",
+      "test": "mbti",
+      "resultCode": "ESFP",
+      "nick": "무대스파크",
+      "category": "동물성약침",
+      "ingredients": [
+        "분리정제 봉독"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 34,
+          "originalName": "Sweet BV(10%)"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "Sweet BV"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": "https://ajad.co.kr/sweetbv/",
+      "materialReading": "분리정제 봉독의 선명한 특성을 정돈된 무대 에너지로 비유",
+      "core": "순간의 반응을 읽고 현장에 생기를 켜는 무대스파크",
+      "paragraphs": [
+        "무대의 작은 소리에도 몸이 먼저 반응하는 날다람쥐처럼, 지금 함께 즐길 수 있는 것을 잘 찾아내요. 애써 분위기를 만들기보다 내 즐거움이 자연스럽게 주변으로 번지는 편이에요.",
+        "관심받는 순간은 좋지만 계속 밝아야 한다는 기대에는 지칠 수 있어요. 떠들썩한 자리 뒤에 혼자 조용해지는 모습도 당신의 일부예요. 아무 역할 없이 있어도 반가워해 주는 사람 곁에서 힘이 돌아와요."
+      ],
+      "art": {
+        "animal": "flying squirrel",
+        "expression": "eyes sparkling, mouth open in delighted laugh",
+        "action": "jumps diagonally with tail spread and one foot on a springboard",
+        "prop": "small tambourine"
+      },
+      "sheet": "mbti",
+      "pos": [
+        3,
+        0
+      ],
+      "columns": 4,
+      "rows": 4
+    },
+    {
+      "id": "M05",
+      "sourceName": "충만어혈",
+      "displayName": "충만어혈 약침",
+      "test": "mbti",
+      "resultCode": "ENTJ",
+      "nick": "흐름전략가",
+      "category": "혈기보양약침",
+      "ingredients": [
+        "당귀",
+        "두충",
+        "생건지황",
+        "천궁",
+        "백작약",
+        "백출",
+        "감초",
+        "홍화",
+        "오공",
+        "사향",
+        "인삼"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 54,
+          "originalName": "충만어혈"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "충만어혈"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": "https://ajad.co.kr/ch_eohyeol/",
+      "materialReading": "당귀·두충·인삼·오공 등 서로 다른 구성의 결합에서 자원 배치 모티프",
+      "core": "여러 자원의 흐름을 읽고 큰 판을 움직이는 흐름전략가",
+      "paragraphs": [
+        "사자가 맞물린 톱니의 순서를 읽듯, 사람과 자원이 어디서 막히는지 큰 그림으로 보는 편이에요. 목표가 정해지면 당장의 불편보다 앞으로 열릴 가능성에 힘을 실어요.",
+        "효율을 중요하게 여기지만 믿는 사람의 성장에는 의외로 오래 투자해요. 일이 늦어지면 답답하다가도 충분한 이유가 있으면 과감히 방향을 바꿔요. 성과로 증명하지 않는 시간에도 당신의 가치는 남아 있어요."
+      ],
+      "art": {
+        "animal": "majestic lion",
+        "expression": "focused confident gaze, restrained smile",
+        "action": "stands with one paw directing rotating rings and the other opening a route",
+        "prop": "portable interlocking gear orrery"
+      },
+      "sheet": "mbti",
+      "pos": [
+        0,
+        1
+      ],
+      "columns": 4,
+      "rows": 4
+    },
+    {
+      "id": "M06",
+      "sourceName": "BUM",
+      "displayName": "BUM 약침",
+      "test": "mbti",
+      "resultCode": "ENTP",
+      "nick": "반전논객",
+      "category": "경락장약침",
+      "ingredients": [
+        "웅담",
+        "우황",
+        "사향"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 44,
+          "originalName": "BUM"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "BUM"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": "https://ajad.co.kr/bumaccu/",
+      "materialReading": "웅담·우황·사향의 세 원료 조합에서 대비와 반전의 세 꼭짓점을 창작",
+      "core": "정해진 논리를 뒤집어 새로운 연결을 드러내는 반전논객",
+      "paragraphs": [
+        "웃음기 있는 하이에나처럼, 남들이 당연하게 넘기는 말에 다른 가능성을 던져봐요. 반대하는 것 자체보다 서로 다른 관점이 맞물리며 생각이 새로워지는 순간을 즐기는 편이에요.",
+        "말은 가볍게 오가도 공들인 아이디어를 이해받지 못하면 오래 마음에 남아요. 매번 재치 있게 응수하지 않고 잠깐 들어주는 쪽을 골라도 좋아요. 그 여백이 당신의 다음 반전을 더 설득력 있게 만들어요."
+      ],
+      "art": {
+        "animal": "spotted hyena",
+        "expression": "one eyebrow dramatically lifted, mischievous laugh",
+        "action": "twists torso while tossing three differently shaped pieces into the air",
+        "prop": "three interlocking puzzle cubes"
+      },
+      "sheet": "mbti",
+      "pos": [
+        1,
+        1
+      ],
+      "columns": 4,
+      "rows": 4
+    },
+    {
+      "id": "M07",
+      "sourceName": "재생",
+      "displayName": "재생 약침",
+      "test": "mbti",
+      "resultCode": "ENFJ",
+      "nick": "다시잇는멘토",
+      "category": "동물성약침",
+      "ingredients": [
+        "연어추출물(분리정제)",
+        "분리정제 봉독"
+      ],
+      "sources": [
+        {
+          "document": "HWP2026",
+          "heading": "재생"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": "https://ajad.co.kr/pdrn-regenerate/",
+      "materialReading": "연어추출물·분리정제 봉독의 결합과 공급자의 회복·진정 소개에서 연결 복원 모티프",
+      "core": "끊어진 자신감을 이어 다시 움직일 용기를 건네는 다시잇는멘토",
+      "paragraphs": [
+        "찢어진 잎을 천천히 잇는 유니콘처럼, 사람의 지금 모습 너머에 남아 있는 가능성을 봐요. 무조건 괜찮다고 하기보다 다시 시도할 수 있는 작은 발판을 함께 찾는 편이에요.",
+        "믿고 기다리면서도 잘되길 바라는 마음이 앞서 조언이 많아질 수 있어요. 모든 회복의 속도를 내가 책임질 필요는 없어요. 곁에 있으면서 한 발 물러나는 태도도 깊은 응원이 될 수 있어요."
+      ],
+      "art": {
+        "animal": "small ivory unicorn",
+        "expression": "intent tender gaze, hopeful little smile",
+        "action": "kneels carefully mending a torn leaf, horn gently glowing",
+        "prop": "golden thread stitching a leaf"
+      },
+      "sheet": "mbti",
+      "pos": [
+        2,
+        1
+      ],
+      "columns": 4,
+      "rows": 4
+    },
+    {
+      "id": "M08",
+      "sourceName": "산양산삼",
+      "displayName": "산양산삼 약침",
+      "test": "mbti",
+      "resultCode": "ENFP",
+      "nick": "바람개척자",
+      "category": "증류약침",
+      "ingredients": [
+        "산양삼"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 28,
+          "originalName": "산양산삼(2cc)"
+        },
+        {
+          "document": "PDF2024",
+          "page": 31,
+          "originalName": "산양산삼(20cc)"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "산양산삼(2cc)"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "산양산삼(20cc)"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": "https://ajad.co.kr/wildginseng/",
+      "materialReading": "산양삼 단일 원료와 산의 생장 환경에서 개척·자생의 이미지 창작",
+      "core": "낯선 가능성에 먼저 발을 디디며 사람을 연결하는 바람개척자",
+      "paragraphs": [
+        "씨앗 낙하산에 몸을 맡긴 토끼처럼, 아직 정해지지 않은 길에 마음이 움직여요. 서로 무관해 보이는 사람과 아이디어를 연결하고, 의미를 느낀 일에는 깊이 빠져드는 편이에요.",
+        "자유가 좋으면서도 선택지가 너무 많으면 어디로 갈지 망설여져요. 모든 바람을 따라갈 필요는 없어요. 지금 마음이 가는 한 방향을 고르면 당신의 모험에 오히려 더 넓은 여지가 생겨요."
+      ],
+      "art": {
+        "animal": "long-eared rabbit",
+        "expression": "wide curious eyes, delighted startled expression",
+        "action": "hangs from a floating seed canopy, feet reaching for a new foothold",
+        "prop": "dandelion seed parachute"
+      },
+      "sheet": "mbti",
+      "pos": [
+        3,
+        1
+      ],
+      "columns": 4,
+      "rows": 4
+    },
+    {
+      "id": "M09",
+      "sourceName": "봉약침",
+      "displayName": "봉약침",
+      "test": "mbti",
+      "resultCode": "ISTJ",
+      "nick": "봉인감찰관",
+      "category": "동물성약침",
+      "ingredients": [
+        "봉독"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 33,
+          "originalName": "봉약침(25%)"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "봉약침"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": null,
+      "materialReading": "봉독의 선명함과 취급의 정밀성에서 경계·확인이라는 캐릭터 언어를 창작",
+      "core": "작은 빈틈을 확인하며 소중한 약속의 경계를 지키는 봉인감찰관",
+      "paragraphs": [
+        "입을 꾹 다문 악어처럼, 말을 많이 하기보다 확인한 것을 책임지는 편이에요. 눈에 잘 띄지 않는 빈틈도 알아채고, 같은 기준을 꾸준히 지켜 주변을 안심시켜요.",
+        "깐깐해 보이는 순간에도 속으로는 일이 틀어져 누군가 곤란해질까 신경 쓰고 있어요. 근거가 분명하면 방식을 바꿀 줄 알고 가까운 사람에게는 은근한 농담도 건네요. 늘 긴장하지 않아도 신뢰는 쉽게 사라지지 않아요."
+      ],
+      "art": {
+        "animal": "stocky green crocodile",
+        "expression": "watchful eyes with a tiny hidden smile, calm closed jaws",
+        "action": "squats precisely pressing a seal, tail guarding a neat boundary",
+        "prop": "hexagonal beeswax seal stamp"
+      },
+      "sheet": "mbti",
+      "pos": [
+        0,
+        2
+      ],
+      "columns": 4,
+      "rows": 4
+    },
+    {
+      "id": "M10",
+      "sourceName": "요각통",
+      "displayName": "요각통 약침",
+      "test": "mbti",
+      "resultCode": "ISTP",
+      "nick": "기반장인",
+      "category": "증류약침",
+      "ingredients": [
+        "속단",
+        "구척",
+        "골쇄보",
+        "해동피",
+        "강활",
+        "독활",
+        "진교",
+        "계지",
+        "우슬",
+        "두충",
+        "현호색",
+        "유향",
+        "몰약"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 24,
+          "originalName": "요각통"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "요각통"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": "https://ajad.co.kr/sciatica/",
+      "materialReading": "속단·구척·골쇄보·두충 등의 구성과 허리·하지 소개에서 기반 지지 모티프",
+      "core": "말보다 작동하는 구조로 자기 실력을 보여주는 기반장인",
+      "paragraphs": [
+        "낮게 웅크린 고릴라처럼, 중요한 순간에 필요한 곳을 묵직하게 받쳐요. 겉으로 드러나는 장식보다 무엇이 실제로 버티고 움직이는지 확인하는 편이에요.",
+        "혼자 해내는 시간이 편하지만 믿는 사람이 곤란하면 말없이 손을 보태요. 내 공간을 지나치게 간섭받을 때는 분명한 선도 있어요. 같이 말하지 않아도 편한 관계가 당신에게는 꽤 특별해요."
+      ],
+      "art": {
+        "animal": "broad-shouldered gorilla",
+        "expression": "quietly absorbed expression, one cheek puffed in effort",
+        "action": "kneels low supporting a small bridge with one arm while adjusting a wedge",
+        "prop": "wooden bridge-support wedge"
+      },
+      "sheet": "mbti",
+      "pos": [
+        1,
+        2
+      ],
+      "columns": 4,
+      "rows": 4
+    },
+    {
+      "id": "M11",
+      "sourceName": "신음허",
+      "displayName": "신음허 약침",
+      "test": "mbti",
+      "resultCode": "ISFJ",
+      "nick": "이슬저장자",
+      "category": "팔강약침",
+      "ingredients": [
+        "우슬",
+        "차전자",
+        "숙지황",
+        "여정실",
+        "산약",
+        "산수유",
+        "구기자",
+        "복령",
+        "목단피",
+        "택사"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 9,
+          "originalName": "신음허"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "신음허"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": null,
+      "materialReading": "숙지황·여정실·구기자 등의 바탕과 우슬·차전자의 조합에서 저장·흐름의 균형을 창작",
+      "core": "자잘한 마음을 오래 기억하고 조용히 곁을 채우는 이슬저장자",
+      "paragraphs": [
+        "소중한 이슬을 감싸는 고슴도치처럼, 작은 말과 취향을 오래 기억해요. 눈에 띄는 응원보다 필요한 순간을 놓치지 않는 꾸준함으로 관계를 돌보는 편이에요.",
+        "부드럽게 맞춰주다가도 소중한 가치가 흔들리면 예상보다 단호해져요. 참고 있으면 알아주겠지 싶다가 서운함이 쌓일 때도 있죠. 내 필요를 먼저 말하는 일도 당신의 다정함을 지키는 방법이에요."
+      ],
+      "art": {
+        "animal": "small hedgehog",
+        "expression": "shy attentive eyes, small protective smile",
+        "action": "curls softly around a glowing dew vessel, spines relaxed",
+        "prop": "open shell holding a single dewdrop"
+      },
+      "sheet": "mbti",
+      "pos": [
+        2,
+        2
+      ],
+      "columns": 4,
+      "rows": 4
+    },
+    {
+      "id": "M12",
+      "sourceName": "연아",
+      "displayName": "연아 약침",
+      "test": "mbti",
+      "resultCode": "ISFP",
+      "nick": "빛결연출가",
+      "category": "동물성약침",
+      "ingredients": [
+        "연어추출물(분리정제)"
+      ],
+      "sources": [
+        {
+          "document": "HWP2026",
+          "heading": "연아"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": "https://ajad.co.kr/yeonna/",
+      "materialReading": "분리정제 연어추출물과 공급자의 조직 회복 소재 소개에서 빛결·재구성 모티프",
+      "core": "섬세한 감각으로 자기다운 분위기를 만들어내는 빛결연출가",
+      "paragraphs": [
+        "빛이 머무는 각도를 바꾸는 수달처럼, 내 취향에 맞는 분위기를 감각적으로 알아봐요. 조용히 즐기다가도 마음 맞는 자리에서는 내가 만든 장면의 중심이 되고 싶어져요.",
+        "반응은 반갑지만 남이 정한 모습으로만 보이길 요구받으면 답답해요. 대체로 유연하면서도 취향과 진심이 걸린 선택에는 쉽게 물러서지 않아요. 누가 보지 않아도 내가 좋아하는 결을 남겨둬요."
+      ],
+      "art": {
+        "animal": "sleek sea otter",
+        "expression": "playful self-assured sideways glance, lips softly pursed",
+        "action": "twirls a flowing translucent sash while catching light with a mirror",
+        "prop": "ripple-framed hand mirror"
+      },
+      "sheet": "mbti",
+      "pos": [
+        3,
+        2
+      ],
+      "columns": 4,
+      "rows": 4
+    },
+    {
+      "id": "M13",
+      "sourceName": "CF",
+      "displayName": "CF(홍화씨) 약침",
+      "test": "mbti",
+      "resultCode": "INTJ",
+      "nick": "구조직조자",
+      "category": "경락장약침",
+      "ingredients": [
+        "홍화씨"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 41,
+          "originalName": "CF"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "CF"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": null,
+      "materialReading": "홍화씨 단방에서 씨앗의 구조·결합을 캐릭터의 설계 언어로 해석",
+      "core": "흩어진 조각의 연결을 설계해 오래 버틸 구조를 만드는 구조직조자",
+      "paragraphs": [
+        "작은 씨앗에서 큰 구조를 상상하는 까마귀처럼, 보이는 현상보다 그 아래의 원리를 읽으려 해요. 여러 가능성을 머릿속에서 조립한 뒤 조용히 실행으로 옮기는 편이에요.",
+        "혼자 판단할 시간이 필요하지만 날카롭게 질문해주는 상대와의 대화는 반가워요. 계획이 바뀌면 예민해지다가도 새 근거가 납득되면 다시 설계해요. 완성 전 생각을 나누는 일도 구조를 자라게 해줘요."
+      ],
+      "art": {
+        "animal": "black raven",
+        "expression": "intensely narrowed analytical eyes, slight satisfied smirk",
+        "action": "balances on one leg folding a complex lattice with spread wings",
+        "prop": "red seed-shaped origami lattice"
+      },
+      "sheet": "mbti",
+      "pos": [
+        0,
+        3
+      ],
+      "columns": 4,
+      "rows": 4
+    },
+    {
+      "id": "M14",
+      "sourceName": "AJ-1",
+      "displayName": "AJ-1(공진단) 약침",
+      "test": "mbti",
+      "resultCode": "INTP",
+      "nick": "원리조합가",
+      "category": "증류약침",
+      "ingredients": [
+        "당귀",
+        "산수유",
+        "녹용",
+        "사향"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 27,
+          "originalName": "AJ-1(공진단)(2cc)"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "AJ-1(2cc)"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": "https://ajad.co.kr/gongjindan/",
+      "materialReading": "당귀·산수유·녹용·사향의 네 원료 구성에서 소수 요소의 조합 원리를 창작",
+      "core": "작은 요소를 새롭게 맞물려 뜻밖의 답을 찾는 원리조합가",
+      "paragraphs": [
+        "작은 자물쇠를 거꾸로 들여다보는 햄스터처럼, 남들이 넘기는 원리에 자꾸 질문이 생겨요. 조합을 바꿔보는 과정 자체가 재미있고, 납득되지 않으면 익숙한 설명도 다시 살펴요.",
+        "혼자 생각하는 것이 편하다가도 관심사를 이해해주는 사람 앞에서는 말이 많아져요. 모든 의문을 풀어야만 시작할 수 있는 것은 아니에요. 작동하는 작은 초안 하나가 새로운 질문을 데려오기도 해요."
+      ],
+      "art": {
+        "animal": "round golden hamster",
+        "expression": "one eye squinting, tongue peeking out in curious concentration",
+        "action": "leans upside down from a stool examining a mechanism from below",
+        "prop": "four-piece brass combination lock"
+      },
+      "sheet": "mbti",
+      "pos": [
+        1,
+        3
+      ],
+      "columns": 4,
+      "rows": 4
+    },
+    {
+      "id": "M15",
+      "sourceName": "청폐",
+      "displayName": "청폐 약침",
+      "test": "mbti",
+      "resultCode": "INFJ",
+      "nick": "숨틈길잡이",
+      "category": "혈기보양약침",
+      "ingredients": [
+        "길경",
+        "감초",
+        "노근",
+        "모과",
+        "미후도",
+        "오가피",
+        "포도근",
+        "앵도육",
+        "용뇌",
+        "사향"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 53,
+          "originalName": "청폐"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "청폐"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": null,
+      "materialReading": "길경·노근·용뇌 등의 구성과 이름의 맑은 숨 이미지에서 여백 모티프",
+      "core": "복잡한 마음에 숨 쉴 여백을 열어주는 숨틈길잡이",
+      "paragraphs": [
+        "바람이 지나는 틈을 찾는 코끼리처럼, 상대가 말하지 않은 마음까지 천천히 살피는 편이에요. 이야기를 조용히 모았다가 핵심을 짚는 한마디로 흐름을 정리해줘요.",
+        "깊이 이해하려고 노력하지만 같은 상처가 반복되면 말없이 거리를 둘 수 있어요. 늘 누군가의 고민을 담아낼 여유가 있는 것은 아니에요. 아직 말이 되지 않은 내 마음에도 그만큼의 여백을 주세요."
+      ],
+      "art": {
+        "animal": "gentle large elephant",
+        "expression": "deep thoughtful gaze, small encouraging smile",
+        "action": "stands sideways gently directing a ribbon of air with the trunk",
+        "prop": "spiral conch wind instrument"
+      },
+      "sheet": "mbti",
+      "pos": [
+        2,
+        3
+      ],
+      "columns": 4,
+      "rows": 4
+    },
+    {
+      "id": "M16",
+      "sourceName": "소염",
+      "displayName": "소염 약침",
+      "test": "mbti",
+      "resultCode": "INFP",
+      "nick": "구름진정가",
+      "category": "증류약침",
+      "ingredients": [
+        "포공영",
+        "금은화",
+        "생지황",
+        "연교",
+        "황련",
+        "황금",
+        "황백",
+        "치자"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 19,
+          "originalName": "소염"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "소염"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": null,
+      "materialReading": "포공영·금은화·연교와 황련해독탕 계열 구성에서 차분함을 창작 모티프로 해석",
+      "core": "들뜬 감정의 결을 가라앉히며 자기 세계를 지키는 구름진정가",
+      "paragraphs": [
+        "작은 구름에 빛을 담는 양처럼, 사소한 장면에도 오래 마음이 머물러요. 느낀 것을 상상과 이야기로 바꾸며 자기만의 의미를 천천히 찾아가는 편이에요.",
+        "남의 감정에는 너그러우면서 내 어색했던 순간은 여러 번 되짚기도 해요. 혼자가 편하면서도 나를 깊이 이해해줄 사람은 그리워요. 모든 마음을 완벽하게 설명하지 않아도 작은 행동 속에 진심이 드러나요."
+      ],
+      "art": {
+        "animal": "fluffy white sheep",
+        "expression": "dreamy half-lidded eyes, tender slightly wistful smile",
+        "action": "sits curled beneath a floating cloud cupping a dim lantern",
+        "prop": "cool blue cloud lantern"
+      },
+      "sheet": "mbti",
+      "pos": [
+        3,
+        3
+      ],
+      "columns": 4,
+      "rows": 4
+    },
+    {
+      "id": "M17",
+      "sourceName": "중초",
+      "displayName": "중초 약침",
+      "test": "dnd",
+      "resultCode": "LG",
+      "nick": "중심보급관",
+      "category": "팔강약침",
+      "ingredients": [
+        "인삼",
+        "황기",
+        "백출",
+        "백복령",
+        "황정",
+        "진피",
+        "대조",
+        "구감초"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 13,
+          "originalName": "중초"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "중초"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": null,
+      "materialReading": "인삼·황기·백출·복령의 보익 구성을 공동체의 보급이라는 역할로 해석",
+      "core": "원칙을 지키며 모두가 끝까지 갈 몫을 챙기는 중심보급관",
+      "paragraphs": [
+        "함께 버틸 식량을 먼저 세는 카피바라처럼, 좋은 뜻도 지속할 바탕이 있어야 한다고 느껴요. 약속한 몫을 지키고 뒤처진 동료의 빈칸을 챙기는 편이에요.",
+        "누구나 같은 규칙을 따르길 바라면서도 눈앞의 사정은 그냥 넘기지 못해요. 공정함과 배려가 부딪힐 때 혼자 결론을 떠안지 않아도 괜찮아요. 기준의 이유를 나누면 더 든든한 팀이 생겨요."
+      ],
+      "art": {
+        "animal": "capybara",
+        "expression": "steady warm smile, eyebrows resolute",
+        "action": "braces feet and offers a full basket forward",
+        "prop": "grain-and-ginseng supply basket"
+      },
+      "sheet": "dnd",
+      "pos": [
+        0,
+        0
+      ],
+      "columns": 3,
+      "rows": 3
+    },
+    {
+      "id": "M18",
+      "sourceName": "자하거",
+      "displayName": "자하거 약침",
+      "test": "dnd",
+      "resultCode": "NG",
+      "nick": "품안치유사",
+      "category": "동물성약침",
+      "ingredients": [
+        "자하거(인태반)"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 37,
+          "originalName": "자하거"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "자하거"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": "https://ajad.co.kr/gplacenta/",
+      "materialReading": "자하거라는 원료의 기원과 공급자의 회복 관점에서 품·돌봄을 창작",
+      "core": "정해진 편보다 지금 도움이 필요한 쪽에 마음을 주는 품안치유사",
+      "paragraphs": [
+        "큰 품을 내어주는 매너티처럼, 눈앞의 사람이 편안해질 방법부터 살펴요. 절차가 도움이 되면 따르지만 더 나은 길이 보이면 유연하게 바꿀 수 있어요.",
+        "다정하게 받아주다가도 소중한 사람을 위해서는 단호해져요. 도와주고 싶은 마음이 곧 모든 것을 책임져야 한다는 뜻은 아니에요. 곁을 내어주되 상대가 직접 움직일 자리도 남겨줘요."
+      ],
+      "art": {
+        "animal": "gentle manatee",
+        "expression": "compassionate slightly worried eyes, reassuring smile",
+        "action": "floats curled around a tiny nest and opens one flipper",
+        "prop": "soft woven nest sling"
+      },
+      "sheet": "dnd",
+      "pos": [
+        1,
+        0
+      ],
+      "columns": 3,
+      "rows": 3
+    },
+    {
+      "id": "M19",
+      "sourceName": "견비통",
+      "displayName": "견비통 약침",
+      "test": "dnd",
+      "resultCode": "CG",
+      "nick": "길여는유격수",
+      "category": "증류약침",
+      "ingredients": [
+        "해동피",
+        "현호색",
+        "강활",
+        "계지",
+        "위령선",
+        "유향",
+        "몰약"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 17,
+          "originalName": "견비통"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "견비통"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": null,
+      "materialReading": "해동피·현호색·강활 등과 어깨·팔의 가동 이미지를 통로 확보로 해석",
+      "core": "동료를 위해서라면 정해진 길 밖에도 출구를 만드는 길여는유격수",
+      "paragraphs": [
+        "갈 길이 막히면 담장 옆 틈부터 보는 오소리처럼, 방법보다 도착할 사람을 먼저 생각해요. 규칙에 없는 선택이라도 누군가를 도울 수 있다면 시도하는 편이에요.",
+        "자유롭게 움직이지만 결과가 함께하는 사람에게 어떤 영향을 줄지도 신경 써요. 마음이 앞서 혼자 뛰어나가기보다 다음 발판을 알려주면 좋아요. 당신의 모험이 다른 사람의 용기가 될 수 있어요."
+      ],
+      "art": {
+        "animal": "badger",
+        "expression": "fierce cheerful grin, eyes looking toward a companion",
+        "action": "hangs diagonally from a climbing line reaching one arm backward",
+        "prop": "climbing hook and rescue loop"
+      },
+      "sheet": "dnd",
+      "pos": [
+        2,
+        0
+      ],
+      "columns": 3,
+      "rows": 3
+    },
+    {
+      "id": "M20",
+      "sourceName": "죽염1.8%",
+      "displayName": "죽염1.8% 약침",
+      "test": "dnd",
+      "resultCode": "LN",
+      "nick": "결정감찰관",
+      "category": "증류약침",
+      "ingredients": [
+        "죽염"
+      ],
+      "sources": [
+        {
+          "document": "HWP2026",
+          "heading": "죽염1.8%"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": "https://ajad.co.kr/bamboosalt/",
+      "materialReading": "죽염 단일 원료와 규격 표기에서 단순·정확·일관성을 창작",
+      "core": "감정의 바람 속에서도 같은 기준의 모서리를 확인하는 결정감찰관",
+      "paragraphs": [
+        "결정의 모서리를 살피는 펭귄처럼, 누구에게나 같은 기준이 적용될 때 마음이 편해요. 말의 크기보다 확인 가능한 사실과 절차를 신뢰하는 편이에요.",
+        "냉정해 보이지만 예측할 수 있는 질서가 사람을 덜 불안하게 만든다고 생각해요. 기준을 바꾸지 않는 것만이 일관성은 아니에요. 새로운 근거를 공정하게 반영하는 것도 당신다운 정확함이에요."
+      ],
+      "art": {
+        "animal": "emperor penguin",
+        "expression": "unblinking precise gaze, completely straight mouth",
+        "action": "holds one square crystal to the light and measures its edge",
+        "prop": "square salt crystal and measuring caliper"
+      },
+      "sheet": "dnd",
+      "pos": [
+        0,
+        1
+      ],
+      "columns": 3,
+      "rows": 3
+    },
+    {
+      "id": "M21",
+      "sourceName": "왕도",
+      "displayName": "왕도 약침",
+      "test": "dnd",
+      "resultCode": "TN",
+      "nick": "중용관리인",
+      "category": "증류약침",
+      "ingredients": [
+        "연자육",
+        "산약(초)",
+        "백복령",
+        "의이인",
+        "맥아(초)",
+        "백편두(초)",
+        "감인"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 22,
+          "originalName": "왕도(20%)"
+        }
+      ],
+      "sourceStatus": "PDF2024_ONLY",
+      "sourceUrl": null,
+      "materialReading": "연자육·산약·복령·의이인 등 곡실류 배합에서 바탕과 중용의 이미지를 창작",
+      "core": "한쪽 구호보다 지금 유지할 수 있는 균형을 고르는 중용관리인",
+      "paragraphs": [
+        "곡식 그릇의 무게를 맞추는 판다처럼, 어느 편이든 먼저 상황을 살펴보고 싶어요. 멀리 휩쓸리기보다 지금 작동하는 타협점과 내 리듬을 중요하게 여겨요.",
+        "무심한 듯하다가도 가까운 사람이 곤란하면 기꺼이 힘을 보태요. 균형을 지키는 일과 마음을 숨기는 일은 다를 수 있어요. 어느 쪽에 조금 더 마음이 가는지 말해줘도 괜찮아요."
+      ],
+      "art": {
+        "animal": "giant panda",
+        "expression": "relaxed observant eyes, tiny closed-mouth smile",
+        "action": "sits low balancing two bowls on opposite paws",
+        "prop": "two balanced seven-grain bowls"
+      },
+      "sheet": "dnd",
+      "pos": [
+        1,
+        1
+      ],
+      "columns": 3,
+      "rows": 3
+    },
+    {
+      "id": "M22",
+      "sourceName": "이담",
+      "displayName": "이담 약침",
+      "test": "dnd",
+      "resultCode": "CN",
+      "nick": "흐름변칙가",
+      "category": "팔강약침",
+      "ingredients": [
+        "인진",
+        "치자",
+        "울금",
+        "대황",
+        "황금",
+        "포공영",
+        "황백"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 12,
+          "originalName": "이담"
+        }
+      ],
+      "sourceStatus": "PDF2024_ONLY",
+      "sourceUrl": null,
+      "materialReading": "인진·울금·치자·대황 등 구성의 흐름 이미지를 예측 밖 경로로 창작",
+      "core": "닫힌 선택지 사이로 새 흐름을 만들어내는 흐름변칙가",
+      "paragraphs": [
+        "바람을 비껴 도는 잠자리처럼, 정해진 답을 보면 다른 길도 시험하고 싶어져요. 어제 유용했던 방식이 오늘도 최선인지는 직접 확인하는 편이에요.",
+        "자유로운 선택을 좋아하지만 진짜 흥미로운 주제에는 오래 머물러요. 함께 가는 사람에게 작은 신호를 남겨두면 당신의 변칙이 불안보다 기대가 돼요. 한 번의 장난이 새 가능성을 열기도 해요."
+      ],
+      "art": {
+        "animal": "iridescent dragonfly",
+        "expression": "mischievous wink, curious tilted head",
+        "action": "loops through the air drawing an unexpected spiral",
+        "prop": "long golden flow ribbon"
+      },
+      "sheet": "dnd",
+      "pos": [
+        2,
+        1
+      ],
+      "columns": 3,
+      "rows": 3
+    },
+    {
+      "id": "M23",
+      "sourceName": "마황천오",
+      "displayName": "마황천오 약침",
+      "test": "dnd",
+      "resultCode": "LE",
+      "nick": "혹한돌격장",
+      "category": "증류약침",
+      "ingredients": [
+        "마황",
+        "천오"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 18,
+          "originalName": "마황천오"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "마황천오"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": "https://ajad.co.kr/mcp/",
+      "materialReading": "마황·천오 두 원료의 강한 대비를 겨울을 뚫는 추진력으로 창작",
+      "core": "목표를 향한 질서를 세우고 거침없이 전진하는 혹한돌격장",
+      "paragraphs": [
+        "눈보라 속 늑대처럼, 목표가 정해지면 대열과 자원을 빠르게 정리해요. 이 게임에서의 악은 내 목표를 우선하는 판타지 역할이며 현실의 인격 평가가 아니에요.",
+        "강하게 밀어붙이면서도 내가 고른 팀에는 오래 책임감을 느껴요. 성과를 얻는 방식에도 함께 남고 싶은 사람이 있는지 살펴봐요. 승리 뒤에 돌아올 자리까지 설계하면 당신의 힘이 더 오래가요."
+      ],
+      "art": {
+        "animal": "gray wolf",
+        "expression": "cold focused stare, one fang showing in a restrained grin",
+        "action": "strides forward leaning into a snow gust",
+        "prop": "ember-filled iron lantern"
+      },
+      "sheet": "dnd",
+      "pos": [
+        0,
+        2
+      ],
+      "columns": 3,
+      "rows": 3
+    },
+    {
+      "id": "M24",
+      "sourceName": "섬수",
+      "displayName": "섬수 약침",
+      "test": "dnd",
+      "resultCode": "NE",
+      "nick": "침묵독술사",
+      "category": "동물성약침",
+      "ingredients": [
+        "섬수"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 35,
+          "originalName": "섬수"
+        }
+      ],
+      "sourceStatus": "PDF2024_ONLY",
+      "sourceUrl": null,
+      "materialReading": "섬수 단일 원료의 강한 존재감을 작은 양의 압축된 선택으로 창작",
+      "core": "소란에 휩쓸리지 않고 내 기회를 정확히 기다리는 침묵독술사",
+      "paragraphs": [
+        "작은 병을 품은 두꺼비처럼, 크게 말하기보다 타이밍을 살피는 편이에요. 이 게임의 악은 자기 이익을 먼저 보는 이야기 속 설정이며 실제로 나쁜 사람이라는 뜻은 아니에요.",
+        "혼자 판단하는 것이 편하지만 가치 있는 협력에는 신중하게 마음을 열어요. 모든 속내를 감춰야만 안전한 것은 아니에요. 믿는 상대에게 한 조각의 기준을 나누면 더 넓은 선택권이 생길 수 있어요."
+      ],
+      "art": {
+        "animal": "purple toad",
+        "expression": "sidelong calculating eyes, almost invisible smirk",
+        "action": "crouches motionless under a cape with one finger raised",
+        "prop": "sealed amethyst potion ampoule"
+      },
+      "sheet": "dnd",
+      "pos": [
+        1,
+        2
+      ],
+      "columns": 3,
+      "rows": 3
+    },
+    {
+      "id": "M25",
+      "sourceName": "오공",
+      "displayName": "오공 약침",
+      "test": "dnd",
+      "resultCode": "CE",
+      "nick": "번개추격자",
+      "category": "동물성약침",
+      "ingredients": [
+        "오공"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 36,
+          "originalName": "오공"
+        }
+      ],
+      "sourceStatus": "PDF2024_ONLY",
+      "sourceUrl": null,
+      "materialReading": "오공의 다리·속도·통락 이미지에서 다방향 돌진을 창작",
+      "core": "기회가 번쩍이면 기존 판을 벗어나 먼저 붙잡는 번개추격자",
+      "paragraphs": [
+        "여러 발이 한꺼번에 뛰는 지네처럼, 기회 앞에서 생각과 행동이 빠르게 이어져요. 혼돈 악은 이 게임의 판타지 역할이며 현실의 도덕성을 판정하지 않아요.",
+        "제멋대로 움직이는 듯해도 주변 반응을 빠르게 읽고 있어요. 나의 자유를 오래 지키려면 다음 착지점도 필요해요. 함께 가는 사람에게 방향을 알려주는 작은 배려가 더 큰 모험을 가능하게 해요."
+      ],
+      "art": {
+        "animal": "cute armored centipede",
+        "expression": "wild delighted grin, intensely alert eyes",
+        "action": "runs in a zigzag with many tiny boots airborne",
+        "prop": "lightning-shaped courier satchel"
+      },
+      "sheet": "dnd",
+      "pos": [
+        2,
+        2
+      ],
+      "columns": 3,
+      "rows": 3
+    },
+    {
+      "id": "M26",
+      "sourceName": "CFC",
+      "displayName": "CFC 약침",
+      "test": "abo",
+      "resultCode": "A_POS",
+      "nick": "겹결구축가",
+      "category": "경락장약침",
+      "ingredients": [
+        "홍화씨",
+        "녹용"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 42,
+          "originalName": "CFC"
+        }
+      ],
+      "sourceStatus": "PDF2024_ONLY",
+      "sourceUrl": null,
+      "materialReading": "홍화씨·녹용의 두 원료에서 구조와 보강의 겹결을 창작",
+      "core": "조용히 준비한 구조에 실행력을 한 겹 더하는 겹결구축가",
+      "paragraphs": [
+        "큰 뿔 아래 세밀한 손을 숨긴 야크처럼, 준비한 것을 단단한 결과로 만드는 편이에요. 순서를 정리하고 빈틈을 줄이되 기회가 오면 묵직하게 밀고 나가요.",
+        "신중하다고 늘 느린 것은 아니에요. 확신이 서면 남들보다 빨리 완성하기도 하죠. 모든 층을 완벽하게 쌓으려 애쓰기보다 지금 필요한 한 겹을 고르면 당신의 정밀함이 더 편안해져요."
+      ],
+      "art": {
+        "animal": "shaggy yak",
+        "expression": "patient intent gaze, satisfied small smile",
+        "action": "carefully fits a strong outer ring around a seed-like model",
+        "prop": "seed-and-antler layered building model"
+      },
+      "sheet": "abo",
+      "pos": [
+        0,
+        0
+      ],
+      "columns": 4,
+      "rows": 2
+    },
+    {
+      "id": "M27",
+      "sourceName": "간혈허",
+      "displayName": "간혈허 약침",
+      "test": "abo",
+      "resultCode": "A_NEG",
+      "nick": "밤결기록자",
+      "category": "팔강약침",
+      "ingredients": [
+        "백작약",
+        "백하수오",
+        "여정실",
+        "산조인초",
+        "숙지황",
+        "아교",
+        "구기자",
+        "속단",
+        "당귀신",
+        "천궁"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 6,
+          "originalName": "간혈허"
+        }
+      ],
+      "sourceStatus": "PDF2024_ONLY",
+      "sourceUrl": null,
+      "materialReading": "작약·백하수오·여정실·산조인 등의 구성에서 밤의 축적·보충을 창작",
+      "core": "작은 경험과 마음을 차분히 모아 내일을 준비하는 밤결기록자",
+      "paragraphs": [
+        "밤에 조용히 실을 모으는 박쥐처럼, 작은 정보를 기억하고 익숙한 흐름을 정성스럽게 돌봐요. 눈에 띄는 표현보다 차곡차곡 쌓이는 신뢰가 편한 편이에요.",
+        "다른 사람에게 잘 맞추면서도 내 리듬이 깨지면 혼자 정리할 시간이 필요해요. 한 번에 다 받아주지 않아도 관계는 유지될 수 있어요. 내 마음에 남은 실타래부터 천천히 풀어봐요."
+      ],
+      "art": {
+        "animal": "small fruit bat",
+        "expression": "sleepy tender eyes, thoughtful furrow",
+        "action": "hangs curled gently sorting soft colored threads",
+        "prop": "dark berry spool carousel"
+      },
+      "sheet": "abo",
+      "pos": [
+        1,
+        0
+      ],
+      "columns": 4,
+      "rows": 2
+    },
+    {
+      "id": "M28",
+      "sourceName": "Sweet BV Plus",
+      "displayName": "Sweet BV Plus 약침",
+      "test": "abo",
+      "resultCode": "B_POS",
+      "nick": "고출력흥행가",
+      "category": "동물성약침",
+      "ingredients": [
+        "분리정제 봉독"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 39,
+          "originalName": "Sweet BV Plus(20%)"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "Sweet BV Plus"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": null,
+      "materialReading": "분리정제 봉독의 Plus 제품 구분에서 응축된 존재감이라는 성격 모티프를 창작",
+      "core": "호기심이 켜지는 순간 현장의 온도를 바꾸는 고출력흥행가",
+      "paragraphs": [
+        "짧게 빛나는 조명을 켜는 말벌처럼, 재미있는 순간에 존재감이 확 살아나요. 새로운 사람과 경험을 반기고 반응을 주고받으며 에너지가 커지는 편이에요.",
+        "대담해 보여도 내가 공들인 분위기가 무심히 지나가면 서운할 수 있어요. 늘 최고 출력을 유지할 필요는 없어요. 한 번 쉬는 박자가 다음 장면을 더 선명하게 만들어줘요."
+      ],
+      "art": {
+        "animal": "bold striped hornet",
+        "expression": "triumphant laughing eyes, huge smile",
+        "action": "lands in a powerful split-legged pose with one wing flared",
+        "prop": "burst-shaped stage spotlight"
+      },
+      "sheet": "abo",
+      "pos": [
+        2,
+        0
+      ],
+      "columns": 4,
+      "rows": 2
+    },
+    {
+      "id": "M29",
+      "sourceName": "연아베이직",
+      "displayName": "연아베이직 약침",
+      "test": "abo",
+      "resultCode": "B_NEG",
+      "nick": "물결감각가",
+      "category": "동물성약침",
+      "ingredients": [
+        "연어추출물(분리정제)"
+      ],
+      "sources": [
+        {
+          "document": "HWP2026",
+          "heading": "연아베이직"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": "https://ajad.co.kr/ybasic/",
+      "materialReading": "연어추출물 기반의 Basic 제품 구분에서 단순한 바탕과 섬세한 결을 창작",
+      "core": "취향을 따라 움직이되 나만의 편안한 속도를 지키는 물결감각가",
+      "paragraphs": [
+        "작은 물결을 즐기는 물범처럼, 새로움에도 내 감각이 편한 지점을 찾는 편이에요. 정해진 일정에 나를 맞추기보다 지금의 느낌을 살펴 움직이고 싶어요.",
+        "느긋해 보여도 마음에 드는 것은 세심하게 구별해요. 함께 어울리다가도 갑자기 혼자만의 시간이 필요할 수 있어요. 내 속도를 설명하는 한마디가 주변과 나를 모두 편하게 해줘요."
+      ],
+      "art": {
+        "animal": "round spotted seal",
+        "expression": "content half-smile, curious eyes glancing upward",
+        "action": "lies sideways gliding one flipper across a ripple",
+        "prop": "shell-shaped ripple resonator"
+      },
+      "sheet": "abo",
+      "pos": [
+        3,
+        0
+      ],
+      "columns": 4,
+      "rows": 2
+    },
+    {
+      "id": "M30",
+      "sourceName": "하초",
+      "displayName": "하초 약침",
+      "test": "abo",
+      "resultCode": "O_POS",
+      "nick": "불씨기동대",
+      "category": "팔강약침",
+      "ingredients": [
+        "호로파",
+        "녹용",
+        "육계",
+        "부자",
+        "파극",
+        "파고지",
+        "쇄양",
+        "선모",
+        "음양곽"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 15,
+          "originalName": "하초"
+        }
+      ],
+      "sourceStatus": "PDF2024_ONLY",
+      "sourceUrl": null,
+      "materialReading": "호로파·녹용·육계·부자 등의 구성에서 아래에서 올라오는 온기·기동을 창작",
+      "core": "일상의 불씨를 살려 사람들을 함께 움직이게 하는 불씨기동대",
+      "paragraphs": [
+        "발밑에서 불씨를 끌어올리는 용처럼, 움직일 이유가 생기면 주변까지 힘을 북돋워요. 사람들과 방향을 맞추고 실제 행동으로 바꾸는 순간에 생기가 살아나요.",
+        "늘 힘이 넘치는 것 같아도 반응이 없으면 혼자 애쓰는 느낌이 들 수 있어요. 내 속도로 모두를 끌어갈 필요는 없어요. 함께 납득한 작은 시작이 오래가는 열기를 만들어요."
+      ],
+      "art": {
+        "animal": "young eastern dragon",
+        "expression": "proud bright eyes, toothy confident grin",
+        "action": "coils upward guarding a brazier with open claws",
+        "prop": "small ember brazier"
+      },
+      "sheet": "abo",
+      "pos": [
+        0,
+        1
+      ],
+      "columns": 4,
+      "rows": 2
+    },
+    {
+      "id": "M31",
+      "sourceName": "녹용",
+      "displayName": "녹용(N·CC) 약침",
+      "test": "abo",
+      "resultCode": "O_NEG",
+      "nick": "성장후원자",
+      "category": "경락장약침",
+      "ingredients": [
+        "녹용"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 43,
+          "originalName": "CC"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "녹용(N)"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": "https://ajad.co.kr/velvet-n/",
+      "materialReading": "녹용 단방과 보익 소개에서 성장을 지켜보는 지지대 이미지를 창작",
+      "core": "사람의 속도를 기다리며 안정된 성장을 돕는 성장후원자",
+      "paragraphs": [
+        "키를 낮춰 새싹을 살피는 기린처럼, 함께 있는 사람의 작은 변화를 잘 알아봐요. 관계를 챙기되 무리하게 속도를 높이기보다 편안히 계속 갈 바탕을 좋아해요.",
+        "다정한 관심 속에도 내가 지키고 싶은 생활 리듬은 분명해요. 기다리는 것이 늘 양보한다는 뜻은 아니에요. 내 여유를 남겨두어야 다른 사람의 성장도 오래 기쁘게 볼 수 있어요."
+      ],
+      "art": {
+        "animal": "tall gentle giraffe",
+        "expression": "kind slightly bashful smile, warm attentive eyes",
+        "action": "bends long neck to hold a growth ring at a sapling's height",
+        "prop": "adjustable sapling support hoop"
+      },
+      "sheet": "abo",
+      "pos": [
+        1,
+        1
+      ],
+      "columns": 4,
+      "rows": 2
+    },
+    {
+      "id": "M32",
+      "sourceName": "슈퍼헤어A",
+      "displayName": "슈퍼헤어A 약침",
+      "test": "abo",
+      "resultCode": "AB_POS",
+      "nick": "융합연출가",
+      "category": "동물성약침",
+      "ingredients": [
+        "연어추출물(분리정제)",
+        "지황",
+        "포공영",
+        "금은화",
+        "생지황",
+        "연교",
+        "황련",
+        "황금",
+        "황백",
+        "치자"
+      ],
+      "sources": [
+        {
+          "document": "HWP2026",
+          "heading": "슈퍼헤어A"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": "https://ajad.co.kr/superhaira/",
+      "materialReading": "연어추출물·지황·소염 계열 약재의 복합 구성을 이질적 요소의 융합으로 창작",
+      "core": "서로 다른 재료를 자기 감각으로 엮어 새 장면을 만드는 융합연출가",
+      "paragraphs": [
+        "깃털의 무늬를 다시 엮는 공작처럼, 다른 분야의 조각이 연결되는 순간에 끌려요. 혼자 구상하다가도 가능성이 보이면 직접 만들어 확인하고 싶어져요.",
+        "개성 있게 보이고 싶으면서도 내 의도를 충분히 이해받고 싶은 마음이 있어요. 모든 아이디어를 한 작품에 담지 않아도 돼요. 지금 가장 살아 있는 한 결부터 보여주면 다음 연결이 찾아와요."
+      ],
+      "art": {
+        "animal": "colorful peacock",
+        "expression": "inventive focused eyes, excited raised crest",
+        "action": "fans tail while weaving different strands into one flowing pattern",
+        "prop": "multimaterial feather loom"
+      },
+      "sheet": "abo",
+      "pos": [
+        2,
+        1
+      ],
+      "columns": 4,
+      "rows": 2
+    },
+    {
+      "id": "M33",
+      "sourceName": "지황(G)",
+      "displayName": "지황(G) 약침",
+      "test": "abo",
+      "resultCode": "AB_NEG",
+      "nick": "뿌리사색가",
+      "category": "경락장약침",
+      "ingredients": [
+        "지황"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 45,
+          "originalName": "지황(G)"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "지황(G)"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": null,
+      "materialReading": "지황 단방의 뿌리 이미지에서 안쪽으로 깊어지는 탐구와 축적을 창작",
+      "core": "보이지 않는 맥락을 오래 들여다보며 자기 답을 기르는 뿌리사색가",
+      "paragraphs": [
+        "땅속의 결을 읽는 두더지처럼, 겉으로 드러난 반응보다 그 아래의 이유가 궁금해요. 내 안에서 충분히 숙성된 생각을 천천히 꺼내는 편이에요.",
+        "혼자가 편해도 누군가 내 깊은 관심을 알아봐 주면 반가워요. 말할 준비가 완벽해질 때까지 기다릴 필요는 없어요. 아직 덜 다듬어진 질문도 관계를 여는 좋은 시작이 될 수 있어요."
+      ],
+      "art": {
+        "animal": "small earth mole",
+        "expression": "pensive closed-mouth expression, one eye peeking",
+        "action": "sits deep in a little earth hollow listening through a root",
+        "prop": "branching translucent root prism"
+      },
+      "sheet": "abo",
+      "pos": [
+        3,
+        1
+      ],
+      "columns": 4,
+      "rows": 2
+    },
+    {
+      "id": "M34",
+      "sourceName": "상초",
+      "displayName": "상초(황련해독탕) 약침",
+      "test": "enneagram",
+      "resultCode": "E1",
+      "nick": "냉정정렬자",
+      "category": "팔강약침",
+      "ingredients": [
+        "황련",
+        "황금",
+        "황백",
+        "치자"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 7,
+          "originalName": "상초(황련해독탕)"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "상초"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": "https://ajad.co.kr/goldthread/",
+      "materialReading": "황련·황금·황백·치자의 네 원료와 청열 소개에서 균형 잡힌 선명함을 창작",
+      "core": "더 나은 기준을 찾아 생각의 온도를 차분히 낮추는 냉정정렬자",
+      "paragraphs": [
+        "네 조각의 높이를 맞추는 설표처럼, 무엇이 더 바른 방향인지 자연스럽게 살펴요. 눈앞의 어긋남을 발견하면 나부터 고쳐보며 주변의 기준을 선명하게 만드는 편이에요.",
+        "옳게 하고 싶은 마음이 내 실수 앞에서는 유난히 엄격해질 수 있어요. 쉼을 고른 날도 원칙을 잃은 것은 아니에요. 잘한 것부터 세어보면 당신의 개선 의지가 더 부드럽게 이어져요."
+      ],
+      "art": {
+        "animal": "snow leopard",
+        "expression": "composed sharp gaze, one brow subtly softened",
+        "action": "stands straight aligning four floating cool-colored stones",
+        "prop": "four-stone alignment mobile"
+      },
+      "sheet": "enneagram",
+      "pos": [
+        0,
+        0
+      ],
+      "columns": 3,
+      "rows": 3
+    },
+    {
+      "id": "M35",
+      "sourceName": "통원2",
+      "displayName": "통원2(작약·감초) 약침",
+      "test": "enneagram",
+      "resultCode": "E2",
+      "nick": "탄성중재자",
+      "category": "증류약침",
+      "ingredients": [
+        "작약",
+        "감초"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 30,
+          "originalName": "통원"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "통원2"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": null,
+      "materialReading": "작약·감초 두 원료의 조합에서 부드럽게 맞물리는 두 관계를 창작",
+      "core": "서로 다른 긴장을 살피며 필요한 연결을 만들어주는 탄성중재자",
+      "paragraphs": [
+        "늘어진 곡선을 이어주는 코알라처럼, 상대에게 무엇이 필요한지 먼저 느끼는 편이에요. 도움이 되었다는 감각과 반가운 반응이 관계를 이어가는 힘이 돼요.",
+        "주는 것이 좋으면서도 가끔은 먼저 알아봐 주길 바라요. 그 마음을 표현한다고 다정함이 줄어들지는 않아요. 무엇을 도울 수 있는지보다 지금 얼마나 여유가 있는지도 함께 물어봐요."
+      ],
+      "art": {
+        "animal": "koala",
+        "expression": "concerned tender eyes, patient smile",
+        "action": "stretches both arms holding two different flexible arcs together",
+        "prop": "paired rose-and-gold flexible arcs"
+      },
+      "sheet": "enneagram",
+      "pos": [
+        1,
+        0
+      ],
+      "columns": 3,
+      "rows": 3
+    },
+    {
+      "id": "M36",
+      "sourceName": "척유",
+      "displayName": "척유 약침",
+      "test": "enneagram",
+      "resultCode": "E3",
+      "nick": "등줄실행가",
+      "category": "혈기보양약침",
+      "ingredients": [
+        "숙지황",
+        "감초",
+        "녹용",
+        "곽향",
+        "오약",
+        "당귀",
+        "천궁",
+        "독활",
+        "강활",
+        "황기",
+        "육종용",
+        "오공",
+        "사향"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 51,
+          "originalName": "척유"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "척유"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": "https://ajad.co.kr/chukyu/",
+      "materialReading": "독활·강활·황기·육종용 등 다층 구성과 척추 주변 소개에서 버팀·실행을 창작",
+      "core": "묵직한 준비를 눈에 보이는 성과로 옮기는 등줄실행가",
+      "paragraphs": [
+        "짐을 다시 묶는 코뿔소처럼, 목표까지 필요한 자원을 현실적으로 챙기는 편이에요. 배운 것을 결과로 보여주고 어제보다 성장한 흔적을 발견할 때 힘이 나요.",
+        "잘해 보이려는 마음이 커지면 내 컨디션을 뒤로 미루기도 해요. 잠깐 짐을 내려놓아도 지금까지 걸어온 거리는 사라지지 않아요. 성과와 함께 내가 좋아하는 과정도 남겨두면 좋아요."
+      ],
+      "art": {
+        "animal": "armored rhinoceros",
+        "expression": "determined concentrated gaze, quiet confident grin",
+        "action": "leans forward planting a staff and lifting a heavy pack",
+        "prop": "modular expedition backpack"
+      },
+      "sheet": "enneagram",
+      "pos": [
+        2,
+        0
+      ],
+      "columns": 3,
+      "rows": 3
+    },
+    {
+      "id": "M37",
+      "sourceName": "은비산",
+      "displayName": "은비산 약침",
+      "test": "enneagram",
+      "resultCode": "E4",
+      "nick": "고유신호자",
+      "category": "혈기보양약침",
+      "ingredients": [
+        "감초",
+        "목별자",
+        "당귀",
+        "창포",
+        "사향"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 50,
+          "originalName": "은비산"
+        }
+      ],
+      "sourceStatus": "PDF2024_ONLY",
+      "sourceUrl": null,
+      "materialReading": "목별자·당귀·창포·사향 등 이질적인 구성에서 개성 있는 신호를 창작",
+      "core": "평범한 순간에서도 자기만의 감정과 의미를 찾아내는 고유신호자",
+      "paragraphs": [
+        "빛에 따라 색이 달라지는 카멜레온처럼, 감정의 미세한 차이를 소중하게 느껴요. 누구에게나 같은 표현보다 내 경험의 결이 담긴 장면을 만들고 싶어져요.",
+        "특별하게 이해받고 싶다가도 그냥 편히 섞이고 싶은 날이 있어요. 둘 중 어느 마음도 틀리지 않아요. 비교를 잠깐 내려놓으면 이미 당신 안에 있는 고유한 신호가 더 또렷해져요."
+      ],
+      "art": {
+        "animal": "iridescent chameleon",
+        "expression": "wistful curious gaze, expressive raised brow",
+        "action": "twists in an S-shaped pose sending a colored sound into the air",
+        "prop": "glowing tuning fork with a unique waveform"
+      },
+      "sheet": "enneagram",
+      "pos": [
+        0,
+        1
+      ],
+      "columns": 3,
+      "rows": 3
+    },
+    {
+      "id": "M38",
+      "sourceName": "영지(Y)",
+      "displayName": "영지(Y) 약침",
+      "test": "enneagram",
+      "resultCode": "E5",
+      "nick": "숲속탐구자",
+      "category": "경락장약침",
+      "ingredients": [
+        "영지"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 46,
+          "originalName": "영지(Y)"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "영지(Y)"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": "https://ajad.co.kr/yeongji/",
+      "materialReading": "영지 단방과 공급자의 균형·회복 소개에서 숲의 층위와 관찰을 창작",
+      "core": "충분히 이해할 때까지 조용히 원리를 파고드는 숲속탐구자",
+      "paragraphs": [
+        "버섯의 층을 들여다보는 부엉이처럼, 겉모습보다 어떻게 이루어졌는지가 궁금해요. 혼자 관찰할 시간과 공간이 있을 때 생각의 가지가 깊어지는 편이에요.",
+        "혼자가 편하면서도 관심사를 깊이 나눌 상대는 반가워요. 준비를 다 마쳐야만 참여할 수 있는 것은 아니에요. 조금 경험하고 다시 생각하는 과정도 충분히 좋은 탐구예요."
+      ],
+      "art": {
+        "animal": "spectacled owl",
+        "expression": "one eye magnified, intensely curious expression",
+        "action": "leans far forward examining layered mushroom rings",
+        "prop": "hand lens and reishi ring specimen"
+      },
+      "sheet": "enneagram",
+      "pos": [
+        1,
+        1
+      ],
+      "columns": 3,
+      "rows": 3
+    },
+    {
+      "id": "M39",
+      "sourceName": "슬통",
+      "displayName": "슬통 약침",
+      "test": "enneagram",
+      "resultCode": "E6",
+      "nick": "보폭점검자",
+      "category": "증류약침",
+      "ingredients": [
+        "현호색",
+        "강활",
+        "독활",
+        "우슬",
+        "위령선",
+        "유향",
+        "몰약",
+        "황련",
+        "황백"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 20,
+          "originalName": "슬통"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "슬통"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": null,
+      "materialReading": "현호색·강활·독활·우슬 등의 구성과 무릎 이름에서 다음 보폭의 점검을 창작",
+      "core": "가능한 변수를 살피며 믿고 디딜 다음 발판을 찾는 보폭점검자",
+      "paragraphs": [
+        "돌다리를 살피는 산양처럼, 위험을 미리 확인할 수 있으면 마음이 편해요. 믿을 수 있는 팀과 근거가 생길 때 끈기 있게 앞으로 나아가는 편이에요.",
+        "신중하다가도 내 편을 지켜야 할 순간에는 용감하게 나서요. 모든 변수를 확인하지 못해도 지금까지 해낸 선택이 좋은 근거가 될 수 있어요. 점검을 마친 뒤에는 내 발의 감각도 믿어봐요."
+      ],
+      "art": {
+        "animal": "sure-footed mountain goat",
+        "expression": "alert worried eyes, small relieved smile",
+        "action": "tests a stepping stone with one hoof before guiding others",
+        "prop": "folding trail depth probe"
+      },
+      "sheet": "enneagram",
+      "pos": [
+        2,
+        1
+      ],
+      "columns": 3,
+      "rows": 3
+    },
+    {
+      "id": "M40",
+      "sourceName": "청열",
+      "displayName": "청열 약침",
+      "test": "enneagram",
+      "resultCode": "E7",
+      "nick": "맑은바람꾼",
+      "category": "혈기보양약침",
+      "ingredients": [
+        "금은화",
+        "연교",
+        "죽엽",
+        "우방자",
+        "용담초",
+        "박하",
+        "생지황",
+        "건지황",
+        "노근",
+        "적작약",
+        "목단피",
+        "산치자",
+        "당귀",
+        "석고",
+        "수우각",
+        "자초",
+        "사향",
+        "현삼"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 52,
+          "originalName": "청열"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "청열"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": null,
+      "materialReading": "금은화·연교·박하·죽엽 등 구성에서 막힌 공기를 바꾸는 청량 모티프를 창작",
+      "core": "막힌 분위기에서도 새로운 가능성과 재미를 찾아내는 맑은바람꾼",
+      "paragraphs": [
+        "창문 사이를 빠져나가는 제비처럼, 답답한 상황에서도 바꿔볼 장면을 찾아요. 새로운 경험과 내일의 가능성을 떠올릴 때 마음에 바람이 드는 편이에요.",
+        "밝게 움직이면서도 힘든 감정은 새 일정으로 덮고 싶어질 수 있어요. 잠깐 머물러 느껴보는 시간도 당신의 자유를 빼앗지 않아요. 하나의 경험을 끝까지 음미하면 또 다른 깊이가 생겨요."
+      ],
+      "art": {
+        "animal": "blue swallow",
+        "expression": "bright delighted eyes, playful open beak",
+        "action": "dives in a sweeping arc scattering cool colored petals",
+        "prop": "mint-leaf paper windmill"
+      },
+      "sheet": "enneagram",
+      "pos": [
+        0,
+        2
+      ],
+      "columns": 3,
+      "rows": 3
+    },
+    {
+      "id": "M41",
+      "sourceName": "신양허",
+      "displayName": "신양허 약침",
+      "test": "enneagram",
+      "resultCode": "E8",
+      "nick": "온기수호대",
+      "category": "팔강약침",
+      "ingredients": [
+        "숙지황",
+        "여정실",
+        "산약",
+        "산수유",
+        "구기자",
+        "복령",
+        "목단피",
+        "택사",
+        "녹용",
+        "육계",
+        "부자",
+        "우슬",
+        "두충"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 8,
+          "originalName": "신양허"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "신양허"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": null,
+      "materialReading": "숙지황·여정실의 바탕에 녹용·육계·부자가 더해진 구성에서 바탕·온기의 공존을 창작",
+      "core": "내 선택권과 소중한 사람의 자리를 따뜻하게 지키는 온기수호대",
+      "paragraphs": [
+        "큰 날개로 둥지를 감싸는 피닉스처럼, 내가 지킬 것을 정하면 분명하게 나서는 편이에요. 통제받기보다 직접 결정하고 그 선택의 책임도 감당하고 싶어 해요.",
+        "강하게 버티는 모습 속에도 믿는 사람에게만 보여주는 부드러움이 있어요. 늘 내가 앞에 서지 않아도 안전한 관계가 있을 수 있어요. 도움을 받아들이는 일도 든든함의 한 모습이에요."
+      ],
+      "art": {
+        "animal": "large amber phoenix",
+        "expression": "fierce protective gaze, softened eyes toward the nest",
+        "action": "spreads a vast wing like a cloak while bracing one claw",
+        "prop": "amber feather shield around a nest"
+      },
+      "sheet": "enneagram",
+      "pos": [
+        1,
+        2
+      ],
+      "columns": 3,
+      "rows": 3
+    },
+    {
+      "id": "M42",
+      "sourceName": "삼정",
+      "displayName": "삼정 약침",
+      "test": "enneagram",
+      "resultCode": "E9",
+      "nick": "심지조율사",
+      "category": "혈기보양약침",
+      "ingredients": [
+        "조구등",
+        "감초",
+        "맥문동",
+        "시호",
+        "창출",
+        "황금",
+        "황련",
+        "황백",
+        "사향",
+        "웅담",
+        "생율"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 49,
+          "originalName": "삼정"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "삼정"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": "https://ajad.co.kr/samjeong/",
+      "materialReading": "맥문동·조구등·시호·황련류 등의 구성에서 여러 긴장을 함께 조율하는 이미지 창작",
+      "core": "서로 다른 흐름 사이에 평온한 중심을 남기는 심지조율사",
+      "paragraphs": [
+        "무게 있게 앉아 작은 종을 울리는 해태처럼, 서로 다른 입장을 차분히 들어보려 해요. 어느 한쪽을 몰아세우기보다 모두가 숨 쉴 수 있는 접점을 찾는 편이에요.",
+        "유연하게 맞춰주다 보면 내 바람을 마지막으로 미루기도 해요. 갈등을 줄이는 것과 내 목소리를 숨기는 것은 다를 수 있어요. 작은 선호부터 말하면 당신이 원하는 평온도 더 분명해져요."
+      ],
+      "art": {
+        "animal": "round blue haetae",
+        "expression": "serene half-smile, attentive slightly tilted eyes",
+        "action": "sits grounding its heavy paws while gently ringing a small bell",
+        "prop": "three balanced lantern bells"
+      },
+      "sheet": "enneagram",
+      "pos": [
+        2,
+        2
+      ],
+      "columns": 3,
+      "rows": 3
+    },
+    {
+      "id": "M43",
+      "sourceName": "통원1",
+      "displayName": "통원(인삼) 약침",
+      "test": "fortune",
+      "resultCode": "F1",
+      "nick": "첫발씨앗꾼",
+      "category": "증류약침",
+      "ingredients": [
+        "인삼"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 29,
+          "originalName": "통원"
+        }
+      ],
+      "sourceStatus": "PDF2024_ONLY",
+      "sourceUrl": null,
+      "materialReading": "인삼 단방으로 기재된 PDF 처방에서 단순한 한 시작을 창작",
+      "core": "여러 결심보다 작은 시작 하나를 고르는 날의 첫발씨앗꾼",
+      "paragraphs": [
+        "오늘은 아직 눈에 띄지 않는 시작에 마음을 줘보세요. 다람쥐가 작은 싹을 옮기듯 미뤄둔 연락 한 줄이나 책상 한 칸 정리부터 해도 좋아요.",
+        "크게 바꾸고 싶은 마음과 익숙한 곳에 머물고 싶은 마음이 함께할 수 있어요. 한 번에 삶 전체를 새로 만들 필요는 없어요. 오늘의 작은 한 발도 충분한 시작이에요."
+      ],
+      "art": {
+        "animal": "tiny chipmunk",
+        "expression": "hopeful surprised eyes, eager little grin",
+        "action": "tiptoes forward planting one root-shaped sprout",
+        "prop": "single ginseng-root sprout"
+      },
+      "sheet": "fortune",
+      "pos": [
+        0,
+        0
+      ],
+      "columns": 4,
+      "rows": 2
+    },
+    {
+      "id": "M44",
+      "sourceName": "간기울결",
+      "displayName": "간기울결 약침",
+      "test": "fortune",
+      "resultCode": "F2",
+      "nick": "말문연결자",
+      "category": "팔강약침",
+      "ingredients": [
+        "백작약",
+        "단삼",
+        "익모초",
+        "여정실",
+        "백하수오",
+        "산조인",
+        "향부자",
+        "시호",
+        "울금",
+        "감초",
+        "청피"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 5,
+          "originalName": "간기울결"
+        }
+      ],
+      "sourceStatus": "PDF2024_ONLY",
+      "sourceUrl": null,
+      "materialReading": "작약·단삼·향부자·시호·울금 등에서 얽힌 마음과 말의 흐름을 창작",
+      "core": "마음속에 두었던 한마디를 다정하게 건네보는 날의 말문연결자",
+      "paragraphs": [
+        "오늘은 정답보다 안부 한마디가 잘 어울려요. 학이 날개를 펴듯 고맙거나 궁금했던 마음을 짧게 꺼내보면 대화의 분위기가 달라질 수 있어요.",
+        "누군가를 만나고 싶다가도 말할 준비가 덜 된 것처럼 느껴질 수 있어요. 모든 속마음을 한 번에 설명하지 않아도 돼요. 나에게 편한 길이의 문장부터 건네봐요."
+      ],
+      "art": {
+        "animal": "elegant crane",
+        "expression": "thoughtful gentle gaze, shy smile",
+        "action": "unfolds one wing offering a letter while a reed bends",
+        "prop": "sealed envelope tied to a supple reed"
+      },
+      "sheet": "fortune",
+      "pos": [
+        1,
+        0
+      ],
+      "columns": 4,
+      "rows": 2
+    },
+    {
+      "id": "M45",
+      "sourceName": "한비",
+      "displayName": "한비 약침",
+      "test": "fortune",
+      "resultCode": "F3",
+      "nick": "해빙선발대",
+      "category": "증류약침",
+      "ingredients": [
+        "천오",
+        "위령선",
+        "오가피",
+        "홍화",
+        "현호색",
+        "부자",
+        "육계",
+        "계지",
+        "당귀미",
+        "유향",
+        "몰약",
+        "강활",
+        "독활"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 25,
+          "originalName": "한비"
+        }
+      ],
+      "sourceStatus": "PDF2024_ONLY",
+      "sourceUrl": null,
+      "materialReading": "천오·부자·육계·계지 등 구성에서 굳은 경계를 녹이는 온기의 서사를 창작",
+      "core": "멈춰 있던 일을 작게 다시 움직여보는 날의 해빙선발대",
+      "paragraphs": [
+        "오늘은 오래 생각한 일을 되돌릴 수 있는 크기로 시험해봐요. 도롱뇽이 얼음 가장자리를 녹이듯 초안 한 장이나 짧은 시도가 좋은 출발점이 될 수 있어요.",
+        "움직이고 싶으면서도 시작 직전에는 망설여질 수 있어요. 용기가 생긴 뒤에만 행동할 수 있는 것은 아니에요. 조심스러운 한 번도 굳은 흐름을 바꾸는 시도가 돼요."
+      ],
+      "art": {
+        "animal": "fire salamander",
+        "expression": "brave squint, slightly nervous but determined smile",
+        "action": "pushes against an ice wall as warm light curls around its feet",
+        "prop": "orange thawing lantern"
+      },
+      "sheet": "fortune",
+      "pos": [
+        2,
+        0
+      ],
+      "columns": 4,
+      "rows": 2
+    },
+    {
+      "id": "M46",
+      "sourceName": "습담",
+      "displayName": "습담 약침",
+      "test": "fortune",
+      "resultCode": "F4",
+      "nick": "틈새정리자",
+      "category": "증류약침",
+      "ingredients": [
+        "남성",
+        "반하",
+        "백출",
+        "복령",
+        "창출",
+        "곽향",
+        "목향",
+        "진피",
+        "구감초"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 21,
+          "originalName": "습담"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "습담"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": null,
+      "materialReading": "남성·반하·백출·복령·창출 등의 구성에서 쌓인 것을 구분하는 모티프 창작",
+      "core": "흩어진 일을 한 가지씩 나누어보는 날의 틈새정리자",
+      "paragraphs": [
+        "오늘은 많은 일을 한꺼번에 잡기보다 작은 칸으로 나눠봐요. 너구리가 바구니를 정리하듯 지금 손댈 한 가지가 보이면 마음의 소음이 조금 줄어들 수 있어요.",
+        "정리하고 싶은 마음과 그냥 두고 싶은 마음이 함께할 수 있어요. 전부 끝내야만 의미 있는 하루는 아니에요. 비워낸 한 칸을 잠깐 바라보며 내가 만든 여유를 느껴봐요."
+      ],
+      "art": {
+        "animal": "raccoon",
+        "expression": "focused puckered expression, pleased raised eyebrows",
+        "action": "squats sorting clutter with tail curled into a basket",
+        "prop": "tiny brush and dry reed sorting tray"
+      },
+      "sheet": "fortune",
+      "pos": [
+        3,
+        0
+      ],
+      "columns": 4,
+      "rows": 2
+    },
+    {
+      "id": "M47",
+      "sourceName": "폐음허",
+      "displayName": "폐음허 약침",
+      "test": "fortune",
+      "resultCode": "F5",
+      "nick": "구름휴식가",
+      "category": "팔강약침",
+      "ingredients": [
+        "현삼",
+        "백합",
+        "맥문동",
+        "천화분",
+        "사삼",
+        "패모",
+        "비파엽"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 14,
+          "originalName": "폐음허"
+        }
+      ],
+      "sourceStatus": "PDF2024_ONLY",
+      "sourceUrl": null,
+      "materialReading": "현삼·백합·맥문동 등 구성에서 부드러운 쉼과 여백의 이미지를 창작",
+      "core": "비워둔 시간에 마음의 호흡을 찾아보는 날의 구름휴식가",
+      "paragraphs": [
+        "오늘은 아무것도 더하지 않는 시간을 일정에 넣어봐요. 백조가 날개를 접듯 익숙한 음악이나 편한 자리에서 잠깐 내 속도를 되찾아도 좋아요.",
+        "쉬고 싶다가도 뒤처지는 것 같아 조급해질 수 있어요. 휴식이 반드시 다음 성과로 증명되어야 하는 것은 아니에요. 지금의 나를 편안하게 두는 것만으로도 충분한 시간이 있어요."
+      ],
+      "art": {
+        "animal": "white swan",
+        "expression": "soft tired eyes becoming peaceful, relaxed smile",
+        "action": "rests with one wing wrapped around the body and neck curved low",
+        "prop": "white lily and soft blue scarf"
+      },
+      "sheet": "fortune",
+      "pos": [
+        0,
+        1
+      ],
+      "columns": 4,
+      "rows": 2
+    },
+    {
+      "id": "M48",
+      "sourceName": "위적체",
+      "displayName": "위적체 약침",
+      "test": "fortune",
+      "resultCode": "F6",
+      "nick": "경험소화자",
+      "category": "팔강약침",
+      "ingredients": [
+        "산사",
+        "맥아",
+        "나복자",
+        "지실",
+        "황련",
+        "빈랑",
+        "신곡"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 11,
+          "originalName": "위적체"
+        }
+      ],
+      "sourceStatus": "PDF2024_ONLY",
+      "sourceUrl": null,
+      "materialReading": "산사·맥아·나복자·신곡 등 구성에서 경험을 나누고 소화하는 비유를 창작",
+      "core": "새로운 자극을 내 방식으로 천천히 이해해보는 날의 경험소화자",
+      "paragraphs": [
+        "오늘은 익숙한 것에도 질문 하나를 더해봐요. 펠리컨이 열매를 골라 나누듯 새로 본 것에서 마음에 남는 한 조각만 천천히 살펴보면 좋아요.",
+        "궁금한 것은 많은데 무엇부터 볼지 망설여질 수 있어요. 모든 정보를 오늘 다 받아들일 필요는 없어요. 내 것으로 남기고 싶은 질문 하나를 골라봐요."
+      ],
+      "art": {
+        "animal": "pelican",
+        "expression": "curious puzzled gaze, one cheek raised thoughtfully",
+        "action": "tilts a basket to sort varied fruits into small portions",
+        "prop": "fruit mosaic tray and small mortar"
+      },
+      "sheet": "fortune",
+      "pos": [
+        1,
+        1
+      ],
+      "columns": 4,
+      "rows": 2
+    },
+    {
+      "id": "M49",
+      "sourceName": "심화왕",
+      "displayName": "심화왕 약침",
+      "test": "fortune",
+      "resultCode": "F7",
+      "nick": "잔물결화자",
+      "category": "팔강약침",
+      "ingredients": [
+        "황련",
+        "황금",
+        "황백",
+        "치자",
+        "연자육",
+        "백합"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 10,
+          "originalName": "심화왕"
+        }
+      ],
+      "sourceStatus": "PDF2024_ONLY",
+      "sourceUrl": null,
+      "materialReading": "황련해독탕 계열에 연자육·백합을 더한 구성에서 뜨거운 말의 온도를 낮추는 서사 창작",
+      "core": "마음의 색을 차분한 말로 바꿔보는 날의 잔물결화자",
+      "paragraphs": [
+        "오늘은 내 느낌을 예쁘게 정리하려 애쓰기보다 편한 방식으로 표현해봐요. 해파리가 물결을 만들듯 짧은 문장이나 작은 몸짓으로도 마음을 건넬 수 있어요.",
+        "이해받고 싶으면서도 반응이 두려워질 때가 있어요. 모두에게 보여주지 않고 나만 보는 기록으로 남겨도 좋아요. 내 감정의 존재를 인정하는 데 거창한 설명은 필요 없어요."
+      ],
+      "art": {
+        "animal": "friendly translucent jellyfish",
+        "expression": "calm empathetic eyes, small expressive smile",
+        "action": "floats sideways shaping a cool wave into a speech bubble",
+        "prop": "lotus-shaped voice resonator"
+      },
+      "sheet": "fortune",
+      "pos": [
+        2,
+        1
+      ],
+      "columns": 4,
+      "rows": 2
+    },
+    {
+      "id": "M50",
+      "sourceName": "Sweet BV Safe",
+      "displayName": "Sweet BV Safe 약침",
+      "test": "fortune",
+      "resultCode": "F8",
+      "nick": "미세조율자",
+      "category": "동물성약침",
+      "ingredients": [
+        "분리정제 봉독"
+      ],
+      "sources": [
+        {
+          "document": "PDF2024",
+          "page": 38,
+          "originalName": "Sweet BV Safe(1%)"
+        },
+        {
+          "document": "HWP2026",
+          "heading": "Sweet BV Safe"
+        }
+      ],
+      "sourceStatus": "HWP2026",
+      "sourceUrl": null,
+      "materialReading": "Safe라는 제품명·원료 규격에서 미세 조절의 모티프를 창작하며 안전성의 보증으로 해석하지 않음",
+      "core": "하루의 강약을 작게 조정해보는 날의 미세조율자",
+      "paragraphs": [
+        "오늘은 할 일을 모두 바꾸기보다 중요한 한 가지의 세기를 조절해봐요. 나비가 작은 다이얼을 돌리듯 집중할 시간과 비워둘 시간을 나누면 조금 편해질 수 있어요.",
+        "계획이 생기면 안심하면서도 예상 밖의 재미는 놓치고 싶지 않을 수 있어요. 일정에 빈칸을 남기면 두 마음을 함께 챙길 수 있어요. 계획을 고치는 것도 좋은 운영이에요."
+      ],
+      "art": {
+        "animal": "pastel butterfly",
+        "expression": "carefully narrowed eyes, delicate satisfied smile",
+        "action": "hovers motionless adjusting a tiny dial with one wing-tip",
+        "prop": "fine gold calibration dial"
+      },
+      "sheet": "fortune",
+      "pos": [
+        3,
+        1
+      ],
+      "columns": 4,
+      "rows": 2
+    }
+  ]
+}

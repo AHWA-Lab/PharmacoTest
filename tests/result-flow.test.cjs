@@ -1,7 +1,8 @@
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const vm=require('node:vm'),fs=require('node:fs'),path=require('node:path');
-const source=fs.readFileSync(path.join(__dirname,'../index.html'),'utf8').match(/<script>([\s\S]*?)<\/script>/)[1];
+const source=fs.readFileSync(path.join(__dirname,'../mbti/index.html'),'utf8').match(/<script>([\s\S]*?)<\/script>/)[1];
+const catalogContext={window:{}};vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../catalog.js'),'utf8'),catalogContext);
 function boot({search='',storage=new Map(),rows=null}={}){
  const elements={},records=[];let now=0,timerId=0;const timers=new Map();
  const node=()=>({style:{},attrs:{},setAttribute(k,v){this.attrs[k]=v},getAttribute(k){return this.attrs[k]},getBoundingClientRect(){return {left:20,bottom:100}},showModal(){this.open=true},close(){this.open=false;this.onclose?.()}});
@@ -10,7 +11,7 @@ function boot({search='',storage=new Map(),rows=null}={}){
  const app={innerHTML:'',querySelectorAll(selector){return selector==='.choice'?choices:selector==='.feedback button'?feedback:[]}};elements.app=app;
  const api={id:()=> 'test-run-id',record:(...r)=>{records.push(r);return Promise.resolve(true)},status:()=>rows?'ready':'unconfigured',refresh:()=>Promise.resolve(rows)};
  class Clock extends Date { static now(){return now} }
- vm.runInNewContext(source,{Date:Clock,setInterval(fn){const id=++timerId;timers.set(id,fn);return id},clearInterval(id){timers.delete(id)},document:{getElementById(id){return elements[id] ||= node()}},localStorage:{getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)},location:{origin:'https://example.com',pathname:'/',search},URLSearchParams,navigator:{},history:{replaceState(){}},setTimeout,window:{PharmacoStats:api,scrollTo(){},innerWidth:390,innerHeight:844}});
+ vm.runInNewContext(source,{Date:Clock,setInterval(fn){const id=++timerId;timers.set(id,fn);return id},clearInterval(id){timers.delete(id)},document:{getElementById(id){return elements[id] ||= node()}},localStorage:{getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)},location:{origin:'https://example.com',pathname:'/',search},URLSearchParams,navigator:{},history:{replaceState(){}},setTimeout,window:{PharmacoCompatibility:{markup:()=>"",bind(){},summary:()=>""},PharmacoCatalog:catalogContext.window.PharmacoCatalog,PharmacoStats:api,scrollTo(){},innerWidth:390,innerHeight:844}});
  return {app,elements,records,choices,feedback,storage,advance(ms){now+=ms;[...timers.values()].forEach(fn=>fn())},timerCount(){return timers.size}};
 }
 const settle=()=>new Promise(resolve=>setImmediate(resolve));
