@@ -125,6 +125,7 @@ main:has(.types-page) { max-width: 960px; }
 .types-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(6px, 2vw, 18px); }
 .type-tile { display: flex; flex-direction: column; min-width: 0; padding: clamp(6px, 2vw, 16px); background: var(--surface); border: 1px solid var(--line); border-radius: 14px; }
 .type-tile .character-frame { width: 100%; margin-bottom: 10px; border-radius: 10px; }
+.type-icon { display: block; padding: 0; cursor: pointer; }
 .tile-code { font-weight: 700; color: #43866d; font-size: clamp(12px, 2.5vw, 19px); }
 .tile-name { font-size: clamp(11px, 2vw, 16px); margin: 4px 0; overflow-wrap: anywhere; }
 .tile-nick { font-size: clamp(10px, 1.8vw, 13px); color: var(--muted); margin: 0 0 12px; }
@@ -430,6 +431,24 @@ main:has(.types-page) { max-width: 960px; }
   // 공용 집계 연결 전에는 빈 데이터로 유지합니다. 형식: { ESTJ: { up: 8, down: 2 } }
   var satisfactionStats = {};
 
+
+  function typeDialogMarkup() {
+    return '<dialog class="type-dialog" id="type-dialog" aria-labelledby="dialog-type-name"><button type="button" class="dialog-close" id="dialog-close" aria-label="닫기">×</button><div id="dialog-content"></div></dialog>';
+  }
+
+  function setupTypeDialog(tooltip) {
+    var dialog = document.getElementById('type-dialog');
+    document.getElementById('dialog-close').onclick = function () { dialog.close(); };
+    dialog.onclose = function () { tooltip.hidden = true; };
+    return function (code) {
+        tooltip.hidden = true;
+        var r = RESULTS[code], pos = CHARACTER_POSITIONS[code];
+        document.getElementById('dialog-content').innerHTML = '<div class="character-frame" role="img" aria-label="' + r[2] + ' 캐릭터"><div class="character" style="background-position:' + (pos[0] * 100 / 3) + '% ' + (pos[1] * 100 / 3) + '%"></div></div>' +
+          '<h2 id="dialog-type-name">' + r[2] + '</h2><p class="cat">' + code + ' · ' + r[0] + ' · ' + r[1] + '</p><p>' + r[3] + ' 타입입니다.</p>';
+        dialog.showModal();
+    };
+  }
+
   function renderAllTypes(back) {
     var tiles = Object.keys(RESULTS).map(function (code) {
       var r = RESULTS[code];
@@ -441,15 +460,19 @@ main:has(.types-page) { max-width: 960px; }
       // 집계 전의 두 색은 비율을 나타내지 않습니다.
       var width = percent === null ? 50 : percent;
       return '<article class="type-tile" tabindex="0" data-satisfaction="' + label + '" aria-label="' + code + ' ' + r[2] + ', ' + label + '">' +
-        '<div class="character-frame" role="img" aria-label="' + r[0] + ' 캐릭터"><div class="character" style="background-position:' + (pos[0] * 100 / 3) + '% ' + (pos[1] * 100 / 3) + '%"></div></div>' +
+        '<button type="button" class="character-frame type-icon" data-code="' + code + '" aria-label="' + r[2] + ' 상세 보기"><div class="character" style="background-position:' + (pos[0] * 100 / 3) + '% ' + (pos[1] * 100 / 3) + '%"></div></button>' +
         '<span class="tile-code">' + code + '</span><h2 class="tile-name">' + r[2] + '</h2><p class="tile-nick">' + r[0] + '</p>' +
         '<div class="satisfaction-bar' + (percent === null ? ' no-data' : '') + '" aria-hidden="true"><span class="positive" style="width:' + width + '%"></span><span class="negative" style="width:' + (100 - width) + '%"></span></div></article>';
     }).join("");
     el('<section class="types-page"><h1>약침타입 전체보기</h1><div class="types-grid">' + tiles + '</div>' +
       '<p class="foot">초록: 만족 · 빨강: 불만족. 흐린 막대는 아직 집계된 평가가 없는 타입입니다.</p>' +
       '<button type="button" class="ghost" id="types-back">결과로 돌아가기</button>' +
-      '<div class="satisfaction-tooltip" id="satisfaction-tooltip" role="tooltip" hidden></div></section>');
+      '<div class="satisfaction-tooltip" id="satisfaction-tooltip" role="tooltip" hidden></div>' + typeDialogMarkup() + '</section>');
     var tooltip = document.getElementById("satisfaction-tooltip");
+    var openTypeDialog = setupTypeDialog(tooltip);
+    Array.prototype.forEach.call(app.querySelectorAll('.type-icon'), function (button) {
+      button.onclick = function (event) { event.stopPropagation(); openTypeDialog(button.getAttribute('data-code')); };
+    });
     function show(tile, x, y) {
       tooltip.textContent = tile.getAttribute("data-satisfaction");
       tooltip.hidden = false;
@@ -484,9 +507,9 @@ main:has(.types-page) { max-width: 960px; }
     el('<section class="stats-page"><h1>약침타입 통계보기</h1><div class="stats-list">' + rows + '</div>' +
       '<button type="button" class="ghost" id="stats-back">결과로 돌아가기</button>' +
       '<div class="satisfaction-tooltip" id="type-name-tooltip" role="tooltip" hidden></div>' +
-      '<dialog class="type-dialog" id="type-dialog" aria-labelledby="dialog-type-name"><button type="button" class="dialog-close" id="dialog-close" aria-label="닫기">×</button><div id="dialog-content"></div></dialog></section>');
+      typeDialogMarkup() + '</section>');
     var tooltip = document.getElementById('type-name-tooltip');
-    var dialog = document.getElementById('type-dialog');
+    var openTypeDialog = setupTypeDialog(tooltip);
     function showName(button, x, y) {
       tooltip.textContent = RESULTS[button.getAttribute('data-code')][2];
       tooltip.hidden = false;
@@ -498,15 +521,9 @@ main:has(.types-page) { max-width: 960px; }
       button.onpointerleave = button.onblur = function () { tooltip.hidden = true; };
       button.onfocus = function () { var rect = button.getBoundingClientRect(); showName(button, rect.left, rect.bottom); };
       button.onclick = function () {
-        tooltip.hidden = true;
-        var code = button.getAttribute('data-code'), r = RESULTS[code], pos = CHARACTER_POSITIONS[code];
-        document.getElementById('dialog-content').innerHTML = '<div class="character-frame" role="img" aria-label="' + r[2] + ' 캐릭터"><div class="character" style="background-position:' + (pos[0] * 100 / 3) + '% ' + (pos[1] * 100 / 3) + '%"></div></div>' +
-          '<h2 id="dialog-type-name">' + r[2] + '</h2><p class="cat">' + code + ' · ' + r[0] + ' · ' + r[1] + '</p><p>' + r[3] + ' 타입입니다.</p>';
-        dialog.showModal();
+        openTypeDialog(button.getAttribute('data-code'));
       };
     });
-    document.getElementById('dialog-close').onclick = function () { dialog.close(); };
-    dialog.onclose = function () { tooltip.hidden = true; };
     document.getElementById('stats-back').onclick = back;
     window.scrollTo(0, 0);
   }
