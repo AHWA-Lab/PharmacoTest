@@ -22,7 +22,7 @@ function boot(route, storage=new Map(), connected=false){
  return {w,dom,requests,q:s=>w.document.querySelector(s),all:s=>[...w.document.querySelectorAll(s)],click(s){const e=w.document.querySelector(s);assert(e,'Missing '+s);e.click()},advance(ms){now+=ms;[...timers.values()].forEach(f=>f())},store(){return new Map(Array.from({length:w.localStorage.length},(_,i)=>{const k=w.localStorage.key(i);return[k,w.localStorage.getItem(k)]}))},timerCount:()=>timers.size};
 }
 const settle=async()=>{for(let i=0;i<5;i++)await new Promise(r=>setImmediate(r))};
-for(const [id,count,total]of [['dnd',12,9],['abo',12,8],['enneagram',18,9]])test(id+' complete game, saved result, all/stats, tooltips, modal and isolated RPC',async()=>{
+for(const [id,count,total]of [['dnd',12,9],['abo',12,8],['enneagram',15,9]])test(id+' complete game, saved result, all/stats, tooltips, modal and isolated RPC',async()=>{
  const b=boot(id,new Map(),true);
  try{
   assert(b.q('.time-notice').textContent.includes('10초'));assert.equal(b.all('.bottom-nav button').length,4);b.click('#game-go');
@@ -69,7 +69,7 @@ test('fortune has no quiz, one-click reveal, eight mini characters and 50-card s
 
 for(const route of ['mbti','abo','enneagram','dnd'])test(route+' result has selected traits and eight cross-test compatibility cards',()=>{
  const b=boot(route);try{
-  b.click(route==='mbti'?'#go':'#game-go');for(let i=0;i<(route==='mbti'?16:route==='enneagram'?18:12);i++)b.click(route==='mbti'?'.choice[data-pick="0"]':'[data-choice="0"]');
+  b.click(route==='mbti'?'#go':'#game-go');for(let i=0;i<(route==='mbti'?16:route==='enneagram'?15:12);i++)b.click(route==='mbti'?'.choice[data-pick="0"]':'[data-choice="0"]');
   assert.equal(b.all('.result-traits td').length,route==='mbti'||route==='abo'?8:9);
   assert.equal(b.all('.result-traits .selected').length,route==='mbti'?4:1);
   assert(b.q('.result-traits').compareDocumentPosition(b.q('.type-description'))&b.w.Node.DOCUMENT_POSITION_FOLLOWING);

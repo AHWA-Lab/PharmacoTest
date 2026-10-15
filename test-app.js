@@ -50,7 +50,7 @@
     document.getElementById('game-go').onclick = startQuiz;
   }
   function startQuiz() {
-    game = { questions: shuffle(config.questions), answers: [], flips: [], i: 0, id: service.id() };
+    game = { questions: config.selectQuestions ? config.selectQuestions() : shuffle(config.questions).slice(0, config.count), answers: [], flips: [], i: 0, id: service.id() };
     game.flips = game.questions.map(function () { return Math.random() < 0.5; });
     showQuestion();
   }
@@ -58,7 +58,7 @@
     var question = game.questions[game.i], indices = game.flips[game.i] ? [1, 0] : [0, 1];
     var progress = game.questions.map(function (q, i) { return '<i class="' + (i < game.i ? (game.answers[i] === null ? 'skipped' : 'done') : i === game.i ? 'now' : '') + '"></i>'; }).join('');
     var choices = indices.map(function (index) { return '<button type="button" class="choice" data-choice="' + index + '">' + escape(question.choices[index]) + '</button>'; }).join('<div class="choice-divider"><span class="vs" aria-hidden="true">VS</span><button type="button" class="unknown" id="unknown">모르겠다</button></div>');
-    render('<section><div class="rack" style="grid-template-columns:repeat(' + game.questions.length + ',1fr)" role="img" aria-label="' + game.i + '문항 완료, 모르겠다 ' + game.answers.filter(function (a) { return a === null; }).length + '문항">' + progress + '</div><p class="count">' + (game.i + 1) + ' / ' + game.questions.length + '</p><p class="q-title">' + escape(config.id === 'enneagram' ? '지금 내 마음에 더 가까운 쪽' : '둘 중 나와 가까운 쪽') + '</p><div class="choices">' + choices + '</div><div class="countdown" id="countdown" role="timer" aria-label="남은 시간 10초">10</div><button type="button" class="back" id="back"' + (game.i === 0 ? ' disabled' : '') + '>이전 문항</button></section>', 'quiz');
+    render('<section><div class="rack" style="grid-template-columns:repeat(' + game.questions.length + ',1fr)" role="img" aria-label="' + game.i + '문항 완료, 모르겠다 ' + game.answers.filter(function (a) { return a === null; }).length + '문항">' + progress + '</div><p class="count">' + (game.i + 1) + ' / ' + game.questions.length + '</p><p class="q-title">' + escape(question.prompt || '둘 중 나와 가까운 쪽') + '</p><div class="choices">' + choices + '</div><div class="countdown" id="countdown" role="timer" aria-label="남은 시간 10초">10</div><button type="button" class="back" id="back"' + (game.i === 0 ? ' disabled' : '') + '>이전 문항</button></section>', 'quiz');
     var token = version;
     deadline = Date.now() + 10000;
     function answer(value) {

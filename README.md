@@ -7,14 +7,14 @@
 | 약침MBTI | 16 | 16 | [플레이](https://ahwa-lab.github.io/PharmacoTest/mbti/) |
 | 약침D&D | 12 | 9 | [플레이](https://ahwa-lab.github.io/PharmacoTest/dnd/) |
 | 약침ABO± | 12 | 8 | [플레이](https://ahwa-lab.github.io/PharmacoTest/abo/) |
-| 약침에니어그램 | 18 | 9 | [플레이](https://ahwa-lab.github.io/PharmacoTest/enneagram/) |
+| 약침에니어그램 | 15 (풀 50) | 9 | [플레이](https://ahwa-lab.github.io/PharmacoTest/enneagram/) |
 | 오늘의 약침운세 | 질문 없음 | 50 | [플레이](https://ahwa-lab.github.io/PharmacoTest/fortune/) |
 
 네 성격 테스트는 다시하기 / 결과보기 / 전체보기 / 통계보기, 10초 타이머, 모르겠다, 마지막 결과 저장, 만족도 평가와 상세 팝업을 제공합니다. 오늘의 약침운세는 질문 없이 한 번 클릭하면 카드가 뒤집히며 표시됩니다.
 
 `catalog.json`이 50종의 구성·출처·캐릭터 배정 원본입니다. [설계 근거](research/약침-캐릭터-설계.md)와 [이미지 프롬프트](research/character-prompts.json)를 함께 보관합니다. 캐릭터 시트 5개는 `assets/characters-*.png`이며 OpenAI 내장 이미지 생성 도구를 사용했습니다.
 
-- D&D는 2개 축의 조합, ABO±는 3개 리듬 축, 에니어그램은 18개 비교 선택, 운세는 한국 날짜에 따라 50종 중 하나로 고정되는 카드입니다. 모두 자체 창작 게임입니다. 오늘의 행운·불운 캐릭터는 네 성격 체계에서 하나씩 날짜에 따라 고르며, 같은 체계에서 행운·불운이 겹치지 않습니다.
+- D&D는 2개 축의 조합, ABO±는 3개 리듬 축, 에니어그램은 50개 상황 중 비교 기회를 고르게 맞춘 무작위 15개 비교 선택, 운세는 한국 날짜에 따라 50종 중 하나로 고정되는 카드입니다. 모두 자체 창작 게임입니다. 오늘의 행운·불운 캐릭터는 네 성격 체계에서 하나씩 날짜에 따라 고르며, 같은 체계에서 행운·불운이 겹치지 않습니다.
 - 실제 혈액형을 예측하거나 심리·의학적 진단을 제공하지 않습니다.
 - 과거 자료에만 존재하는 약침도 포함되며 현재 공급 여부를 뜻하지 않습니다.
 - 기존 루트의 `?type=ESTJ` 링크는 MBTI 하위 페이지로 연결합니다.
