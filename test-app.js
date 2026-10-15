@@ -46,7 +46,7 @@
     if (!keepScroll) window.scrollTo(0, 0);
   }
   function showStart() {
-    render('<section class="start"><p class="eyebrow">' + escape(config.eyebrow) + '</p><div class="game-symbol" aria-hidden="true">' + config.emoji + '</div><h1>' + escape(config.title) + '</h1><p class="lead">' + escape(config.lead) + '</p><p class="time-notice">질문당 시간제한 10초</p><p class="foot">시간 안에 고르지 못하면 ‘모르겠다’로 넘어갑니다.</p><ul class="spec"><li>' + config.count + '문항</li><li>결과 ' + config.results.length + '종</li><li>한 문항씩 가볍게</li></ul><button class="go" id="game-go">테스트 시작</button><p class="foot">' + escape(config.note) + '</p></section>', 'start');
+    render('<section class="start"><p class="eyebrow">' + escape(config.eyebrow) + '</p><div class="game-symbol" aria-hidden="true">' + config.emoji + '</div><h1>' + escape(config.title) + '</h1><p class="lead">' + escape(config.lead) + '</p><p class="time-notice">질문당 시간제한 10초</p><p class="foot">시간 안에 고르지 못하면 ‘모르겠다’로 넘어갑니다.</p><ul class="spec"><li>' + config.count + '문항</li><li>결과 ' + config.results.length + '종</li>' + (config.questions.length > config.count ? '<li>문항풀 ' + config.questions.length + '개 중 무작위</li>' : '<li>한 문항씩 가볍게</li>') + '</ul><button class="go" id="game-go">테스트 시작</button><p class="foot">' + escape(config.note) + '</p>' + safety() + '</section>', 'start');
     document.getElementById('game-go').onclick = startQuiz;
   }
   function startQuiz() {
@@ -88,11 +88,14 @@
     saved = { type: outcome.id, id: game.id, vote: null, summary: outcome.summary, scores: outcome.scores || null, date: outcome.date || null, skipped: unanswered };
     persist(); service.record(saved.id, saved.type, null, config.id); showResult();
   }
+  function safety() { return config.safety ? '<p class="safety-note" role="note">' + escape(config.safety) + '</p>' : ''; }
+  function intro(r) { return r.info ? '<div class="type-intro"><h2>' + escape(r.info.title) + '</h2><p>' + escape(r.info.text) + '</p></div>' : ''; }
+  function traits(r) { return config.summary ? config.summary(r.id, saved && saved.type === r.id ? saved.scores : null) : window.PharmacoCompatibility.summary(config.id, r.id); }
   function paragraphs(r) { return '<div class="type-description">' + r.paragraphs.map(function (p) { return '<p>' + escape(p) + '</p>'; }).join('') + '</div>'; }
   function showResult() {
     if (!saved || !results[saved.type]) { showStart(); return; }
     var r = results[saved.type];
-    render('<section><p class="eyebrow">' + escape(config.title) + ' · ' + (saved.id ? '조제 완료' : '결과 카드') + '</p><article class="label"><div class="label-cap"><span>' + escape(r.category) + '</span><span>' + escape(r.label) + '</span></div><div class="label-body"><p class="cat">당신의 약침</p><div class="result-icon" tabindex="0" data-result="' + r.id + '">' + character(r) + '</div><h1 class="vial-name">' + escape(r.name) + '</h1><div class="type-row"><span class="nick">' + escape(r.nick) + '</span><span class="code">' + escape(r.label) + '</span></div><p class="you"><b>' + escape(r.core) + '</b> 타입입니다.</p><p class="foot">' + escape(saved.summary || '') + '</p>' + (saved.skipped ? '<p class="foot">모르겠다 ' + Number(saved.skipped) + '문항은 성향 점수에서 제외했어요.</p>' : '') + window.PharmacoCompatibility.summary(config.id,r.id) + paragraphs(r) + '</div></article><p class="foot">' + escape(config.note) + ' 실제 효능·치료 적합성과는 관계가 없는 창작 캐릭터입니다.</p><div class="feedback" role="group" aria-label="이 결과가 마음에 드나요?"><button type="button" data-vote="1" aria-label="이 결과가 마음에 들어요" aria-pressed="' + (saved.vote === 1) + '"' + (!saved.id ? ' disabled' : '') + '>👍</button><button type="button" data-vote="-1" aria-label="이 결과가 마음에 들지 않아요" aria-pressed="' + (saved.vote === -1) + '"' + (!saved.id ? ' disabled' : '') + '>👎</button></div><p class="foot" id="vote-status" role="status"></p>' + window.PharmacoCompatibility.markup(window.PharmacoCatalog.byTest[config.id][r.id]) + tooltipMarkup() + '</section>', 'result');
+    render('<section><p class="eyebrow">' + escape(config.title) + ' · ' + (saved.id ? '조제 완료' : '결과 카드') + '</p><article class="label"><div class="label-cap"><span>' + escape(r.category) + '</span><span>' + escape(r.label) + '</span></div><div class="label-body"><p class="cat">당신의 약침</p><div class="result-icon" tabindex="0" data-result="' + r.id + '">' + character(r) + '</div><h1 class="vial-name">' + escape(r.name) + '</h1><div class="type-row"><span class="nick">' + escape(r.nick) + '</span><span class="code">' + escape(r.label) + '</span></div><p class="you"><b>' + escape(r.core) + '</b> 타입입니다.</p><p class="foot">' + escape(saved.summary || '') + '</p>' + (saved.skipped ? '<p class="foot">모르겠다 ' + Number(saved.skipped) + '문항은 성향 점수에서 제외했어요.</p>' : '') + intro(r) + traits(r) + paragraphs(r) + '</div></article><p class="foot">' + escape(config.note) + ' 실제 효능·치료 적합성과는 관계가 없는 창작 캐릭터입니다.</p>' + safety() + '<div class="feedback" role="group" aria-label="이 결과가 마음에 드나요?"><button type="button" data-vote="1" aria-label="이 결과가 마음에 들어요" aria-pressed="' + (saved.vote === 1) + '"' + (!saved.id ? ' disabled' : '') + '>👍</button><button type="button" data-vote="-1" aria-label="이 결과가 마음에 들지 않아요" aria-pressed="' + (saved.vote === -1) + '"' + (!saved.id ? ' disabled' : '') + '>👎</button></div><p class="foot" id="vote-status" role="status"></p>' + window.PharmacoCompatibility.markup(r.profile) + tooltipMarkup() + '</section>', 'result');
     bindTooltips(); window.PharmacoCompatibility.bind(app);
     app.querySelectorAll('[data-vote]').forEach(function (button) {
       button.onclick = function () {
@@ -162,14 +165,14 @@
       element.onpointerleave = element.onblur = function () { tooltip.hidden = true; };
       element.onfocus = function () { var r = element.getBoundingClientRect(); show(r.left, r.bottom); };
     }
-    app.querySelectorAll('[data-result]').forEach(function (e) { bind(e, function () { var r = results[e.dataset.result]; return r.name + ' · ' + r.nick + '\n\n' + r.paragraphs.join('\n\n'); }); });
+    app.querySelectorAll('[data-result]').forEach(function (e) { bind(e, function () { var r = results[e.dataset.result]; return r.name + ' · ' + r.nick + (r.info ? '\n' + r.info.title + '\n' + r.info.text : '') + '\n\n' + r.paragraphs.join('\n\n'); }); });
     app.querySelectorAll('[data-satisfaction]').forEach(function (e) { bind(e, function () { return e.dataset.satisfaction; }); e.onclick = e.onfocus; });
   }
   function bindDialog() {
     var dialog = document.getElementById('type-dialog');
     app.querySelectorAll('[data-result]').forEach(function (e) { e.onclick = function () {
       var r = results[e.dataset.result]; document.getElementById('game-tooltip').hidden = true;
-      document.getElementById('dialog-content').innerHTML = character(r) + '<h2 id="dialog-name">' + escape(r.name) + '</h2><div class="type-row"><span class="nick">' + escape(r.nick) + '</span><span class="code">' + escape(r.label) + '</span></div><p>' + escape(r.core) + ' 타입입니다.' + '</p>' + paragraphs(r);
+      document.getElementById('dialog-content').innerHTML = character(r) + '<h2 id="dialog-name">' + escape(r.name) + '</h2><div class="type-row"><span class="nick">' + escape(r.nick) + '</span><span class="code">' + escape(r.label) + '</span></div><p>' + escape(r.core) + ' 타입입니다.' + '</p>' + intro(r) + paragraphs(r);
       dialog.showModal();
     }; });
     document.getElementById('dialog-close').onclick = function () { dialog.close(); };

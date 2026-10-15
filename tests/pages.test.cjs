@@ -12,7 +12,8 @@ function boot(route, storage=new Map(), connected=false){
  for(const [k,v]of storage)w.localStorage.setItem(k,v);
  w.HTMLDialogElement.prototype.showModal=function(){this.open=true};w.HTMLDialogElement.prototype.close=function(){this.open=false;this.dispatchEvent(new w.Event('close'))};
  w.fetch=async(url,options)=>{const body=JSON.parse(options.body);requests.push({url,body});let data;
-  if(url.endsWith('pharmaco_test_stats'))data=[{code:body.p_test==='dnd'?'LG':body.p_test==='abo'?'A_POS':body.p_test==='enneagram'?'E1':'M01',result_count:3,up_count:2,down_count:1}];
+  if(url.endsWith('pharmaco_test_stats'))data=[{code:w.PharmacoTests&&w.PharmacoTests[body.p_test]?w.PharmacoTests[body.p_test].results[0].id:'M01',result_count:3,up_count:2,down_count:1}];
+  else if(url.endsWith('pharmaco_character_stats'))data=[{profile_id:'M21',result_count:9,up_count:7,down_count:1},{profile_id:'M05',result_count:4,up_count:4,down_count:0},{profile_id:'M02',result_count:3,up_count:1,down_count:2}];
   else if(url.endsWith('pharmaco_stats'))data=[{code:'ESTJ',result_count:3,up_count:2,down_count:1}];else data={saved:true};return {ok:true,json:async()=>data};
  };
  for(const script of [...w.document.scripts]){
@@ -22,7 +23,7 @@ function boot(route, storage=new Map(), connected=false){
  return {w,dom,requests,q:s=>w.document.querySelector(s),all:s=>[...w.document.querySelectorAll(s)],click(s){const e=w.document.querySelector(s);assert(e,'Missing '+s);e.click()},advance(ms){now+=ms;[...timers.values()].forEach(f=>f())},store(){return new Map(Array.from({length:w.localStorage.length},(_,i)=>{const k=w.localStorage.key(i);return[k,w.localStorage.getItem(k)]}))},timerCount:()=>timers.size};
 }
 const settle=async()=>{for(let i=0;i<5;i++)await new Promise(r=>setImmediate(r))};
-for(const [id,count,total]of [['dnd',12,9],['abo',12,8],['enneagram',15,9]])test(id+' complete game, saved result, all/stats, tooltips, modal and isolated RPC',async()=>{
+for(const [id,count,total]of [['dnd',12,9],['abo',12,8],['enneagram',15,9],['constitution',15,9],['ohaeng',15,5],['bigfive',15,10],['teto',15,4],['stress',15,4]])test(id+' complete game, saved result, all/stats, tooltips, modal and isolated RPC',async()=>{
  const b=boot(id,new Map(),true);
  try{
   assert(b.q('.time-notice').textContent.includes('10초'));assert.equal(b.all('.bottom-nav button').length,4);b.click('#game-go');
@@ -49,9 +50,9 @@ test('the encyclopedia lists 50 complete profiles, filters, searches and opens d
   b.q('#dex-search').value='not-a-drug';b.q('#dex-search').dispatchEvent(new b.w.Event('input'));assert(b.q('.dex-empty'));
  }finally{b.dom.window.close()}
 });
-test('collection has five playable entries and a separate encyclopedia entry; local references exist',()=>{
+test('collection has ten playable entries plus encyclopedia, ranking and reserve links; local references exist',()=>{
  const doc=new JSDOM(fs.readFileSync(path.join(root,'index.html'),'utf8')).window.document;
- assert.equal(doc.querySelectorAll('.test-card').length,5);assert.equal(doc.querySelector('.encyclopedia-link').getAttribute('href'),'encyclopedia/');
+ assert.equal(doc.querySelectorAll('.test-card').length,10);assert.deepEqual([...doc.querySelectorAll('.encyclopedia-link')].map(a=>a.getAttribute('href')),['encyclopedia/','ranking/','reserve/']);
  for(const a of doc.querySelectorAll('a[href]')){const href=a.getAttribute('href');if(!href.startsWith('http'))assert(fs.existsSync(path.join(root,href,'index.html')))}
 });
 test('fortune has no quiz, one-click reveal, eight mini characters and 50-card statistics',async()=>{

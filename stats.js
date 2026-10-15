@@ -59,7 +59,20 @@
     return rows[test] || null;
   }
 
+  // 모든 테스트의 결과·평가를 50종 캐릭터 단위로 합산한 집계(인기순위용).
+  async function characters() {
+    if (!enabled) return null;
+    await flush();
+    try {
+      var data = await rpc('pharmaco_character_stats', {});
+      if (!Array.isArray(data)) throw new Error('잘못된 통계 응답');
+      status = Object.keys(pending).length ? 'pending' : 'ready';
+      return data;
+    } catch (error) { status = 'error'; return null; }
+  }
+
   window.PharmacoStats = {
+    characters: characters,
     id: function () { return crypto.randomUUID(); },
     record: function (id, code, vote, test) {
       if (!id) return Promise.resolve(false);

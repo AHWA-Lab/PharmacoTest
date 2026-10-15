@@ -1,14 +1,31 @@
 # 약침 테스트 모음 (PharmacoTest)
 
-네 가지 창작 성격 테스트·오늘의 운세와 50개 고유 약침 캐릭터입니다.
+열 가지 테스트와 50개 약침 캐릭터, 그리고 출동을 기다리는 예비 캐릭터 100종입니다.
 
-| 테스트 | 문항 | 결과 | 링크 |
+| 테스트 | 문항 (풀) | 결과 | 링크 |
 | --- | ---: | ---: | --- |
 | 약침MBTI | 16 | 16 | [플레이](https://ahwa-lab.github.io/PharmacoTest/mbti/) |
-| 약침D&D | 12 | 9 | [플레이](https://ahwa-lab.github.io/PharmacoTest/dnd/) |
+| 약침D&D | 12 (62) | 9 | [플레이](https://ahwa-lab.github.io/PharmacoTest/dnd/) |
 | 약침ABO± | 12 | 8 | [플레이](https://ahwa-lab.github.io/PharmacoTest/abo/) |
-| 약침에니어그램 | 15 (풀 50) | 9 | [플레이](https://ahwa-lab.github.io/PharmacoTest/enneagram/) |
+| 약침에니어그램 | 15 (50) | 9 | [플레이](https://ahwa-lab.github.io/PharmacoTest/enneagram/) |
 | 오늘의 약침운세 | 질문 없음 | 50 | [플레이](https://ahwa-lab.github.io/PharmacoTest/fortune/) |
+| 약침9체질 | 15 (72) | 9 | [플레이](https://ahwa-lab.github.io/PharmacoTest/constitution/) |
+| 약침오행 | 15 (70) | 5 | [플레이](https://ahwa-lab.github.io/PharmacoTest/ohaeng/) |
+| 약침빅파이브 | 15 (65) | 10 | [플레이](https://ahwa-lab.github.io/PharmacoTest/bigfive/) |
+| 테토에겐 | 15 (64) | 4 | [플레이](https://ahwa-lab.github.io/PharmacoTest/teto/) |
+| 약침번아웃체크 | 15 (64) | 4 | [플레이](https://ahwa-lab.github.io/PharmacoTest/stress/) |
+
+- [캐릭터 인기순위](https://ahwa-lab.github.io/PharmacoTest/ranking/): 모든 테스트 결과의 👍·👎를 캐릭터 단위로 합산해 윌슨 점수(95% 하한)로 정렬합니다.
+- [사용되지 않은 캐릭터들](https://ahwa-lab.github.io/PharmacoTest/reserve/): 예비 캐릭터 100종. `scripts/build-reserve.cjs`가 `reserve-data.js`와 이미지 프롬프트(`research/reserve-character-prompts.json`)를 만들고, `reserve-art.js`가 SVG 스티커 그림을 그립니다.
+- 모든 하위 페이지 상단의 ‘약침 테스트 모음’ 배지로 첫 화면에 돌아갈 수 있습니다.
+
+### 문항 출제 방식 (편향 방지)
+
+- 9체질·에니어그램: 매번 무작위로 고른 3유형은 4번, 나머지는 3번 비교되도록 쌍을 고르고 같은 쌍은 반복하지 않습니다. 점수는 비교 기회 대비 선택 비율입니다.
+- 오행: 10개 쌍을 한 번씩 + 무작위 5각 순환 5쌍 → 다섯 기운이 정확히 6번씩 비교됩니다.
+- 빅파이브: 다섯 차원에서 3문항씩. 가장 한쪽으로 기운 차원이 대표 성향입니다.
+- 테토에겐·번아웃체크·D&D: 두 축에 7~8문항(D&D는 6문항)씩 나누고, 축 안에서는 4개 세부 영역을 고르게 섞습니다. 동점이면 그 축의 마지막 응답을 따릅니다.
+- 결과 약침은 기존 50종을 다시 사용하며 테스트끼리 겹칠 수 있습니다. 번아웃체크는 진단이 아님을 알리고 자살예방상담전화 109를 안내합니다.
 
 네 성격 테스트는 다시하기 / 결과보기 / 전체보기 / 통계보기, 10초 타이머, 모르겠다, 마지막 결과 저장, 만족도 평가와 상세 팝업을 제공합니다. 오늘의 약침운세는 질문 없이 한 번 클릭하면 카드가 뒤집히며 표시됩니다.
 
@@ -38,7 +55,7 @@ GitHub Pages는 정적 호스팅이므로 전체 이용자 집계에는 Supabase
 
 1. Supabase 프로젝트의 SQL Editor에서 `supabase/schema.sql`을 실행합니다.
 2. `stats-config.js`에 프로젝트 URL과 공개 **publishable** 키(또는 legacy anon 키)를 입력합니다. **secret / service_role 키는 사용하지 않습니다.**
-3. GitHub에 반영하면 새 테스트 결과부터 공용 집계가 동작합니다. 연결 전에 같은 브라우저에 임시 보관한 결과도 다음 통계 조회/전송 때 재시도합니다. 기존 설치에서는 schema.sql을 다시 실행하면 새 네 테스트용 테이블·RPC가 추가됩니다. 기존 MBTI 집계는 유지합니다.
+3. GitHub에 반영하면 새 테스트 결과부터 공용 집계가 동작합니다. 연결 전에 같은 브라우저에 임시 보관한 결과도 다음 통계 조회/전송 때 재시도합니다. 기존 설치에서는 schema.sql을 다시 실행하면 새 테스트용 결과 코드와 캐릭터 인기순위 RPC(`pharmaco_character_stats`)가 추가됩니다. 결과 코드를 바꾸면 `node scripts/schema-character-map.cjs`로 해당 블록을 다시 만드세요. 기존 MBTI 집계는 유지합니다.
 
 - 결과 비율 = 해당 타입의 완료 건수 ÷ 전체 완료 건수.
 - 만족도 = 👍 ÷ (👍 + 👎). 평가하지 않은 결과는 만족도 분모에 넣지 않습니다.

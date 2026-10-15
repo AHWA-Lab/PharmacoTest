@@ -122,3 +122,162 @@ revoke all on function public.pharmaco_test_stats(text) from public, anon, authe
 grant execute on function public.pharmaco_record_test_result(uuid, text, smallint, text) to anon;
 grant execute on function public.pharmaco_test_stats(text) to anon;
 commit;
+
+-- PharmacoTest 확장 2: 다섯 새 테스트와 캐릭터 인기순위.
+-- 결과는 (test, code)로 저장되고, character_map이 이를 50종 캐릭터(profile_id)로 묶습니다.
+-- 같은 캐릭터가 여러 테스트의 결과로 쓰여도 👍/👎가 한 캐릭터로 합산됩니다.
+begin;
+insert into pharmaco_private.test_types (test, code) values
+  ('constitution','PEACE'),('constitution','QI'),('constitution','YANG'),('constitution','YIN'),('constitution','PHLEGM'),('constitution','DAMPHEAT'),('constitution','STASIS'),('constitution','QISTAG'),('constitution','SENSE'),('ohaeng','WOOD'),('ohaeng','FIRE'),('ohaeng','EARTH'),('ohaeng','METAL'),('ohaeng','WATER'),('bigfive','O_H'),('bigfive','O_L'),('bigfive','C_H'),('bigfive','C_L'),('bigfive','E_H'),('bigfive','E_L'),('bigfive','A_H'),('bigfive','A_L'),('bigfive','N_H'),('bigfive','N_L'),('teto','TT'),('teto','TE'),('teto','ET'),('teto','EE'),('stress','LH'),('stress','LL'),('stress','HH'),('stress','HL')
+on conflict do nothing;
+create table if not exists pharmaco_private.character_map (
+  test text not null,
+  code text not null,
+  profile_id text not null,
+  primary key (test, code)
+);
+alter table pharmaco_private.character_map enable row level security;
+revoke all on pharmaco_private.character_map from public, anon, authenticated;
+insert into pharmaco_private.character_map (test, code, profile_id) values
+  ('mbti','ESTJ','M01'),
+  ('mbti','ESTP','M02'),
+  ('mbti','ESFJ','M03'),
+  ('mbti','ESFP','M04'),
+  ('mbti','ENTJ','M05'),
+  ('mbti','ENTP','M06'),
+  ('mbti','ENFJ','M07'),
+  ('mbti','ENFP','M08'),
+  ('mbti','ISTJ','M09'),
+  ('mbti','ISTP','M10'),
+  ('mbti','ISFJ','M11'),
+  ('mbti','ISFP','M12'),
+  ('mbti','INTJ','M13'),
+  ('mbti','INTP','M14'),
+  ('mbti','INFJ','M15'),
+  ('mbti','INFP','M16'),
+  ('dnd','LG','M17'),
+  ('dnd','NG','M18'),
+  ('dnd','CG','M19'),
+  ('dnd','LN','M20'),
+  ('dnd','TN','M21'),
+  ('dnd','CN','M22'),
+  ('dnd','LE','M23'),
+  ('dnd','NE','M24'),
+  ('dnd','CE','M25'),
+  ('abo','A_POS','M26'),
+  ('abo','A_NEG','M27'),
+  ('abo','B_POS','M28'),
+  ('abo','B_NEG','M29'),
+  ('abo','O_POS','M30'),
+  ('abo','O_NEG','M31'),
+  ('abo','AB_POS','M32'),
+  ('abo','AB_NEG','M33'),
+  ('enneagram','E1','M34'),
+  ('enneagram','E2','M35'),
+  ('enneagram','E3','M36'),
+  ('enneagram','E4','M37'),
+  ('enneagram','E5','M38'),
+  ('enneagram','E6','M39'),
+  ('enneagram','E7','M40'),
+  ('enneagram','E8','M41'),
+  ('enneagram','E9','M42'),
+  ('constitution','PEACE','M21'),
+  ('constitution','QI','M17'),
+  ('constitution','YANG','M41'),
+  ('constitution','YIN','M11'),
+  ('constitution','PHLEGM','M46'),
+  ('constitution','DAMPHEAT','M40'),
+  ('constitution','STASIS','M02'),
+  ('constitution','QISTAG','M44'),
+  ('constitution','SENSE','M50'),
+  ('ohaeng','WOOD','M08'),
+  ('ohaeng','FIRE','M30'),
+  ('ohaeng','EARTH','M42'),
+  ('ohaeng','METAL','M20'),
+  ('ohaeng','WATER','M29'),
+  ('bigfive','O_H','M06'),
+  ('bigfive','O_L','M09'),
+  ('bigfive','C_H','M13'),
+  ('bigfive','C_L','M22'),
+  ('bigfive','E_H','M04'),
+  ('bigfive','E_L','M38'),
+  ('bigfive','A_H','M35'),
+  ('bigfive','A_L','M34'),
+  ('bigfive','N_H','M49'),
+  ('bigfive','N_L','M21'),
+  ('teto','TT','M36'),
+  ('teto','TE','M01'),
+  ('teto','ET','M20'),
+  ('teto','EE','M16'),
+  ('stress','LH','M43'),
+  ('stress','LL','M47'),
+  ('stress','HH','M03'),
+  ('stress','HL','M15'),
+  ('fortune','M01','M01'),
+  ('fortune','M02','M02'),
+  ('fortune','M03','M03'),
+  ('fortune','M04','M04'),
+  ('fortune','M05','M05'),
+  ('fortune','M06','M06'),
+  ('fortune','M07','M07'),
+  ('fortune','M08','M08'),
+  ('fortune','M09','M09'),
+  ('fortune','M10','M10'),
+  ('fortune','M11','M11'),
+  ('fortune','M12','M12'),
+  ('fortune','M13','M13'),
+  ('fortune','M14','M14'),
+  ('fortune','M15','M15'),
+  ('fortune','M16','M16'),
+  ('fortune','M17','M17'),
+  ('fortune','M18','M18'),
+  ('fortune','M19','M19'),
+  ('fortune','M20','M20'),
+  ('fortune','M21','M21'),
+  ('fortune','M22','M22'),
+  ('fortune','M23','M23'),
+  ('fortune','M24','M24'),
+  ('fortune','M25','M25'),
+  ('fortune','M26','M26'),
+  ('fortune','M27','M27'),
+  ('fortune','M28','M28'),
+  ('fortune','M29','M29'),
+  ('fortune','M30','M30'),
+  ('fortune','M31','M31'),
+  ('fortune','M32','M32'),
+  ('fortune','M33','M33'),
+  ('fortune','M34','M34'),
+  ('fortune','M35','M35'),
+  ('fortune','M36','M36'),
+  ('fortune','M37','M37'),
+  ('fortune','M38','M38'),
+  ('fortune','M39','M39'),
+  ('fortune','M40','M40'),
+  ('fortune','M41','M41'),
+  ('fortune','M42','M42'),
+  ('fortune','M43','M43'),
+  ('fortune','M44','M44'),
+  ('fortune','M45','M45'),
+  ('fortune','M46','M46'),
+  ('fortune','M47','M47'),
+  ('fortune','M48','M48'),
+  ('fortune','M49','M49'),
+  ('fortune','M50','M50')
+on conflict (test, code) do update set profile_id = excluded.profile_id;
+create or replace function public.pharmaco_character_stats()
+returns table (profile_id text, result_count bigint, up_count bigint, down_count bigint)
+language sql stable security definer set search_path = ''
+as $$
+  with all_results as (
+    select 'mbti'::text as test, r.code, r.vote from pharmaco_private.results r
+    union all
+    select t.test, t.code, t.vote from pharmaco_private.test_results t
+  )
+  select m.profile_id, count(a.code), count(a.code) filter (where a.vote = 1), count(a.code) filter (where a.vote = -1)
+  from pharmaco_private.character_map m
+  left join all_results a on a.test = m.test and a.code = m.code
+  group by m.profile_id;
+$$;
+revoke all on function public.pharmaco_character_stats() from public, anon, authenticated;
+grant execute on function public.pharmaco_character_stats() to anon;
+commit;

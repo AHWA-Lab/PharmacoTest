@@ -14,11 +14,18 @@ test('all 50 drugs are assigned once across five tests with unique character dir
  }
 });
 for(const id of ['dnd','abo'])test(id+' can reach every result and has valid question counts',()=>{
- const c=configs[id];assert.equal(c.questions.length,c.count);const found=new Set();
+ const c=configs[id],qs=c.selectQuestions?c.selectQuestions():c.questions;assert.equal(qs.length,c.count);const found=new Set();
  for(let mask=0;mask<Math.pow(2,c.count)&&found.size<c.results.length;mask++){
-  const answers=c.questions.map((_,i)=>(mask>>>i)&1);const r=c.score(answers,c.questions,'2026-10-15');assert(c.results.some(x=>x.id===r.id));found.add(r.id);
+  const answers=qs.map((_,i)=>(mask>>>i)&1);const r=c.score(answers,qs,'2026-10-15');assert(c.results.some(x=>x.id===r.id));found.add(r.id);
  }
  assert.equal(found.size,c.results.length);
+});
+test('dnd draws 6 order and 6 care questions from 62 unique situations',()=>{
+ const c=configs.dnd;assert.equal(c.questions.length,62);assert.equal(new Set(c.questions.map(q=>q.prompt)).size,62);
+ assert(c.questions.every(q=>q.prompt.length>12&&q.choices.length===2&&q.choices[0]!==q.choices[1]));
+ assert.equal(c.questions.filter(q=>q.axis==='order').length,31);assert(c.lead.includes('동료'));const seen=new Set();
+ for(let n=0;n<400;n++){const qs=c.selectQuestions();assert.equal(new Set(qs.map(q=>q.id)).size,12);assert.equal(qs.filter(q=>q.axis==='order').length,6);qs.forEach(q=>seen.add(q.id));}
+ assert.equal(seen.size,62);
 });
 
 test('enneagram has 50 original shared-situation pairs and draws 15 balanced unique comparisons',()=>{

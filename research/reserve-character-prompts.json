@@ -1,0 +1,667 @@
+{
+  "style": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.",
+  "characters": [
+    {
+      "id": "R001",
+      "nick": "낮잠감별사",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: calico cat (삼색고양이). Personality: 느긋함, 직감, 고집.\nFacial expression: sleepy half-closed eyes.\nAction and pose (Korean): 햇볕 드는 자리를 가리키며 찻잔을 들고 기지개를 켠다.\nOutfit: Korean hanbok jacket with a long ribbon tie in #e86f6f with #ffd76a accents, subtle 감초 herb motif pattern. Headwear: tiny golden crown. Prop: teacup.\nMood/theme accents around the character: spring flower garden with falling petals. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R002",
+      "nick": "마이웨이산책러",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: shiba inu (시바견). Personality: 독립심, 충직, 새침.\nFacial expression: smug confident smirk.\nAction and pose (Korean): 좋아하는 나뭇잎을 꼭 쥐고 고개를 새침하게 돌린다.\nOutfit: denim-style overalls with buttons in #9b7be0 with #ffd1e8 accents, subtle 박하 herb motif pattern. Headwear: little sprout growing on the head. Prop: large leaf.\nMood/theme accents around the character: winter snowflakes. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R003",
+      "nick": "냄새탐정",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: beagle (비글). Personality: 호기심, 끈기, 명랑.\nFacial expression: sparkling starry eyes.\nAction and pose (Korean): 돋보기를 들고 바닥 냄새를 킁킁 맡는다.\nOutfit: small chest armor plate with rivets in #e76fa3 with #ffffff accents, subtle 칡 herb motif pattern. Headwear: knit beanie with a pompom. Prop: magnifying glass.\nMood/theme accents around the character: fluffy cloud village. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R004",
+      "nick": "짧은다리지휘관",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: welsh corgi (웰시코기). Personality: 리더십, 활발, 책임감.\nFacial expression: determined look with firm eyebrows.\nAction and pose (Korean): 작은 깃발을 높이 들고 앞장서 행진한다.\nOutfit: cozy hoodie with a front pocket in #8fc1e3 with #2f5d8a accents, subtle 진피 herb motif pattern. Headwear: star hairpin. Prop: small flag.\nMood/theme accents around the character: Korean palace stroll with dancheong patterns. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R005",
+      "nick": "긴허리터널러",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: dachshund (닥스훈트). Personality: 집요함, 용감, 장난기.\nFacial expression: mischievous toothy grin.\nAction and pose (Korean): 등불을 들고 굴 입구로 쏙 뛰어든다.\nOutfit: sailor collar top with a neck tie in #7a6bb0 with #b8f0d8 accents, subtle 대추 herb motif pattern. Headwear: flower crown. Prop: glowing lantern.\nMood/theme accents around the character: autumn maple leaves. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R006",
+      "nick": "솜사탕미소천사",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: samoyed (사모예드). Personality: 다정, 낙천, 사교적.\nFacial expression: big open-mouthed laugh with closed happy eyes.\nAction and pose (Korean): 두 팔을 활짝 벌려 포옹을 기다린다.\nOutfit: flowing short cape with a round clasp in #f2d16b with #c05a3a accents, subtle 쑥 herb motif pattern. Headwear: no hat. Prop: empty hands.\nMood/theme accents around the character: herb field with sprouts. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R007",
+      "nick": "공물어오기장인",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: golden retriever (골든리트리버). Personality: 성실, 헌신, 순수.\nFacial expression: gentle smile.\nAction and pose (Korean): 바구니 가득 공을 담아 품에 안고 온다.\nOutfit: traditional robe with a sash belt in #6cc49a with #fff3b0 accents, subtle 당귀 herb motif pattern. Headwear: headband with a bow. Prop: woven basket.\nMood/theme accents around the character: lantern festival lights. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R008",
+      "nick": "주름철학자",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: pug (퍼그). Personality: 여유, 유머, 솔직.\nFacial expression: deadpan unimpressed face.\nAction and pose (Korean): 찻잔을 들고 의자에 털썩 앉아 있다.\nOutfit: striped knit sweater in #3e8e8a with #f6c85f accents, subtle 천궁 herb motif pattern. Headwear: no hat. Prop: teacup.\nMood/theme accents around the character: summer seaside with gentle waves. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R009",
+      "nick": "큰귀레이더",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: fennec fox (사막여우). Personality: 경청, 예민, 재치.\nFacial expression: wide surprised eyes and round mouth.\nAction and pose (Korean): 커다란 귀를 쫑긋 세우고 한 손을 귀에 댄다.\nOutfit: long knitted scarf in #c9a46a with #7a4f2a accents, subtle 결명자 herb motif pattern. Headwear: straw hat with a ribbon. Prop: empty hands.\nMood/theme accents around the character: starry night walk. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R010",
+      "nick": "눈꽃변신술사",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: arctic fox (북극여우). Personality: 적응력, 침착, 신비.\nFacial expression: playful wink.\nAction and pose (Korean): 눈꽃 지팡이를 빙글 돌린다.\nOutfit: glossy raincoat with buttons in #f4b6c2 with #c24f6a accents, subtle 둥굴레 herb motif pattern. Headwear: Korean traditional gat hat. Prop: star wand.\nMood/theme accents around the character: rainy alley with raindrops. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R011",
+      "nick": "위협포즈귀요미",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: red panda (레서판다). Personality: 수줍음, 용기, 귀여움.\nFacial expression: determined look with firm eyebrows.\nAction and pose (Korean): 두 팔을 번쩍 들어 몸을 크게 보이려 한다.\nOutfit: cute apron with a front pocket in #58b3c9 with #ffe08a accents, subtle 복령 herb motif pattern. Headwear: adventure goggles on the forehead. Prop: empty hands.\nMood/theme accents around the character: summer seaside with gentle waves. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R012",
+      "nick": "망보기당번",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: meerkat (미어캣). Personality: 경계심, 협동, 부지런.\nFacial expression: determined look with firm eyebrows.\nAction and pose (Korean): 망원경을 들고 까치발로 선다.\nOutfit: open vest with buttons in #5b8def with #ffffff accents, subtle 생강 herb motif pattern. Headwear: tilted beret. Prop: brass telescope.\nMood/theme accents around the character: starry night walk. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R013",
+      "nick": "도토리저축왕",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: red squirrel (청설모). Personality: 계획성, 알뜰, 부지런.\nFacial expression: gentle smile.\nAction and pose (Korean): 단지에 도토리를 하나씩 넣으며 품에 안는다.\nOutfit: Korean hanbok jacket with a long ribbon tie in #f29b52 with #5b4a8a accents, subtle 연꽃 herb motif pattern. Headwear: big ribbon bow. Prop: round clay jar.\nMood/theme accents around the character: rainy alley with raindrops. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R014",
+      "nick": "뀨뀨알람",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: guinea pig (기니피그). Personality: 소심, 다정, 수다.\nFacial expression: big open-mouthed laugh with closed happy eyes.\nAction and pose (Korean): 작은 종을 흔들며 폴짝 뛴다.\nOutfit: denim-style overalls with buttons in #4a5a8c with #e8c26a accents, subtle 황기 herb motif pattern. Headwear: tiny golden crown. Prop: small bell.\nMood/theme accents around the character: spring flower garden with falling petals. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R015",
+      "nick": "먼지목욕전문가",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: chinchilla (친칠라). Personality: 깔끔, 섬세, 야행성.\nFacial expression: calm content closed-eye smile.\nAction and pose (Korean): 깃털 붓으로 털을 정성껏 쓸어낸다.\nOutfit: small chest armor plate with rivets in #b5d86a with #4f7a2a accents, subtle 오가피 herb motif pattern. Headwear: little sprout growing on the head. Prop: calligraphy brush.\nMood/theme accents around the character: winter snowflakes. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R016",
+      "nick": "치즈지도제작자",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: field mouse (들쥐). Personality: 꼼꼼, 모험, 재빠름.\nFacial expression: sparkling starry eyes.\nAction and pose (Korean): 펼친 지도를 들고 길을 가리킨다.\nOutfit: cozy hoodie with a front pocket in #d65a4a with #2f2f3a accents, subtle 구기자 herb motif pattern. Headwear: knit beanie with a pompom. Prop: rolled map.\nMood/theme accents around the character: fluffy cloud village. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R017",
+      "nick": "댐설계사",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: beaver (비버). Personality: 근면, 공학, 협력.\nFacial expression: determined look with firm eyebrows.\nAction and pose (Korean): 나무토막을 어깨에 메고 걸어간다.\nOutfit: sailor collar top with a neck tie in #5b8def with #ffffff accents, subtle 더덕 herb motif pattern. Headwear: star hairpin. Prop: wooden log.\nMood/theme accents around the character: Korean palace stroll with dancheong patterns. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R018",
+      "nick": "동글방패",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: armadillo (아르마딜로). Personality: 신중, 방어적, 끈기.\nFacial expression: shy blushing glance.\nAction and pose (Korean): 방패를 앞세우고 조심스레 다가온다.\nOutfit: flowing short cape with a round clasp in #f29b52 with #5b4a8a accents, subtle 산수유 herb motif pattern. Headwear: flower crown. Prop: round shield.\nMood/theme accents around the character: autumn maple leaves. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R019",
+      "nick": "비늘갑옷수집가",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: pangolin (천산갑). Personality: 수줍음, 인내, 고귀함.\nFacial expression: shy blushing glance.\nAction and pose (Korean): 꼬리를 감싸 안고 조용히 앉아 있다.\nOutfit: traditional robe with a sash belt in #4a5a8c with #e8c26a accents, subtle 계피 herb motif pattern. Headwear: no hat. Prop: empty hands.\nMood/theme accents around the character: herb field with sprouts. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R020",
+      "nick": "긴코미식가",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: giant anteater (큰개미핥기). Personality: 집중력, 여유, 독특함.\nFacial expression: sparkling starry eyes.\nAction and pose (Korean): 긴 코 앞에 찻잔을 들고 향을 음미한다.\nOutfit: striped knit sweater in #b5d86a with #4f7a2a accents, subtle 국화 herb motif pattern. Headwear: headband with a bow. Prop: teacup.\nMood/theme accents around the character: lantern festival lights. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R021",
+      "nick": "느림의미학자",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: sloth (나무늘보). Personality: 느긋함, 평화, 관찰력.\nFacial expression: sleepy half-closed eyes.\nAction and pose (Korean): 모래시계를 들고 꾸벅꾸벅 존다.\nOutfit: long knitted scarf in #d65a4a with #2f2f3a accents, subtle 인삼 herb motif pattern. Headwear: no hat. Prop: hourglass.\nMood/theme accents around the character: autumn maple leaves. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R022",
+      "nick": "숲속지혜어른",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: orangutan (오랑우탄). Personality: 지혜, 관대, 손재주.\nFacial expression: calm content closed-eye smile.\nAction and pose (Korean): 커다란 잎을 우산처럼 들고 앉아 있다.\nOutfit: glossy raincoat with buttons in #e86f6f with #ffd76a accents, subtle 매실 herb motif pattern. Headwear: straw hat with a ribbon. Prop: large leaf.\nMood/theme accents around the character: herb field with sprouts. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R023",
+      "nick": "온천명상가",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: snow monkey (일본원숭이). Personality: 휴식, 감성, 여유.\nFacial expression: calm content closed-eye smile.\nAction and pose (Korean): 머리에 작은 수건을 얹고 눈을 감는다.\nOutfit: cute apron with a front pocket in #9b7be0 with #ffd1e8 accents, subtle 오미자 herb motif pattern. Headwear: folded hot-spring towel. Prop: empty hands.\nMood/theme accents around the character: lantern festival lights. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R024",
+      "nick": "해맞이체조대장",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: ring-tailed lemur (알락꼬리여우원숭이). Personality: 사교적, 활기, 리듬감.\nFacial expression: big open-mouthed laugh with closed happy eyes.\nAction and pose (Korean): 두 팔을 벌려 햇빛을 받으며 체조한다.\nOutfit: open vest with buttons in #e76fa3 with #ffffff accents, subtle 도라지 herb motif pattern. Headwear: adventure goggles on the forehead. Prop: empty hands.\nMood/theme accents around the character: summer seaside with gentle waves. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R025",
+      "nick": "왕눈이야경꾼",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: tarsier (안경원숭이). Personality: 관찰력, 내향, 집중.\nFacial expression: wide surprised eyes and round mouth.\nAction and pose (Korean): 초를 들고 커다란 눈을 깜빡인다.\nOutfit: Korean hanbok jacket with a long ribbon tie in #8fc1e3 with #2f5d8a accents, subtle 작약 herb motif pattern. Headwear: tilted beret. Prop: candle.\nMood/theme accents around the character: starry night walk. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R026",
+      "nick": "주머니보부상",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: kangaroo (캥거루). Personality: 든든함, 행동력, 보호본능.\nFacial expression: mischievous toothy grin.\nAction and pose (Korean): 주머니에서 꽃 한 송이를 꺼내 건넨다.\nOutfit: denim-style overalls with buttons in #7a6bb0 with #b8f0d8 accents, subtle 감초 herb motif pattern. Headwear: big ribbon bow. Prop: flower.\nMood/theme accents around the character: rainy alley with raindrops. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R027",
+      "nick": "굴파기장인",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: wombat (웜뱃). Personality: 끈기, 단단함, 무덤덤.\nFacial expression: determined look with firm eyebrows.\nAction and pose (Korean): 작은 삽을 들고 흙을 퍼낸다.\nOutfit: small chest armor plate with rivets in #f2d16b with #c05a3a accents, subtle 박하 herb motif pattern. Headwear: tiny golden crown. Prop: small shovel.\nMood/theme accents around the character: spring flower garden with falling petals. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R028",
+      "nick": "행복전도사",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: quokka (쿼카). Personality: 낙천, 친화력, 해맑음.\nFacial expression: big open-mouthed laugh with closed happy eyes.\nAction and pose (Korean): 풍선을 들고 활짝 웃는다.\nOutfit: cozy hoodie with a front pocket in #6cc49a with #fff3b0 accents, subtle 칡 herb motif pattern. Headwear: little sprout growing on the head. Prop: balloon.\nMood/theme accents around the character: winter snowflakes. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R029",
+      "nick": "장르파괴자",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: platypus (오리너구리). Personality: 독창성, 엉뚱, 자신감.\nFacial expression: mischievous toothy grin.\nAction and pose (Korean): 물안경을 이마에 올리고 손을 흔든다.\nOutfit: sailor collar top with a neck tie in #3e8e8a with #f6c85f accents, subtle 진피 herb motif pattern. Headwear: adventure goggles on the forehead. Prop: empty hands.\nMood/theme accents around the character: fluffy cloud village. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R030",
+      "nick": "얼음낚시명인",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: polar bear (북극곰). Personality: 인내, 차분, 든든함.\nFacial expression: calm content closed-eye smile.\nAction and pose (Korean): 낚싯대를 드리우고 얼음 위에 앉아 있다.\nOutfit: flowing short cape with a round clasp in #c9a46a with #7a4f2a accents, subtle 대추 herb motif pattern. Headwear: star hairpin. Prop: fishing rod.\nMood/theme accents around the character: Korean palace stroll with dancheong patterns. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R031",
+      "nick": "달빛산지기",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: asiatic black bear (반달가슴곰). Personality: 수호, 과묵, 따뜻함.\nFacial expression: calm content closed-eye smile.\nAction and pose (Korean): 등불을 들고 산길을 비춘다.\nOutfit: traditional robe with a sash belt in #f4b6c2 with #c24f6a accents, subtle 쑥 herb motif pattern. Headwear: flower crown. Prop: glowing lantern.\nMood/theme accents around the character: winter snowflakes. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R032",
+      "nick": "꿀단지탐험가",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: sun bear (말레이곰). Personality: 호기심, 솔직, 달달함.\nFacial expression: happy face with tongue out.\nAction and pose (Korean): 꿀단지를 끌어안고 혀를 날름거린다.\nOutfit: striped knit sweater in #58b3c9 with #ffe08a accents, subtle 당귀 herb motif pattern. Headwear: no hat. Prop: round clay jar.\nMood/theme accents around the character: fluffy cloud village. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R033",
+      "nick": "산중호걸",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: tiger (호랑이). Personality: 용맹, 정의, 카리스마.\nFacial expression: determined look with firm eyebrows.\nAction and pose (Korean): 북을 둥둥 치며 기세를 올린다.\nOutfit: long knitted scarf in #6cc49a with #fff3b0 accents, subtle 천궁 herb motif pattern. Headwear: headband with a bow. Prop: Korean drum.\nMood/theme accents around the character: Korean palace stroll with dancheong patterns. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R034",
+      "nick": "순간가속러",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: cheetah (치타). Personality: 순발력, 집중, 승부욕.\nFacial expression: determined look with firm eyebrows.\nAction and pose (Korean): 몸을 낮추고 출발선을 박차고 달린다.\nOutfit: glossy raincoat with buttons in #3e8e8a with #f6c85f accents, subtle 결명자 herb motif pattern. Headwear: no hat. Prop: empty hands.\nMood/theme accents around the character: autumn maple leaves. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R035",
+      "nick": "나무위전략가",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: leopard (표범). Personality: 신중, 독립, 우아함.\nFacial expression: smug confident smirk.\nAction and pose (Korean): 나침반을 들여다보며 다음 수를 고른다.\nOutfit: cute apron with a front pocket in #c9a46a with #7a4f2a accents, subtle 둥굴레 herb motif pattern. Headwear: straw hat with a ribbon. Prop: compass.\nMood/theme accents around the character: herb field with sprouts. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R036",
+      "nick": "눈숲의그림자",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: lynx (스라소니). Personality: 신비, 예리함, 조용함.\nFacial expression: calm content closed-eye smile.\nAction and pose (Korean): 귀털을 쫑긋 세우고 눈송이를 바라본다.\nOutfit: open vest with buttons in #f4b6c2 with #c24f6a accents, subtle 복령 herb motif pattern. Headwear: Korean traditional gat hat. Prop: empty hands.\nMood/theme accents around the character: lantern festival lights. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R037",
+      "nick": "심드렁표정왕",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: pallas's cat (마눌고양이). Personality: 무심, 솔직, 츤데레.\nFacial expression: deadpan unimpressed face.\nAction and pose (Korean): 털을 부풀린 채 팔짱을 끼고 앉아 있다.\nOutfit: Korean hanbok jacket with a long ribbon tie in #58b3c9 with #ffe08a accents, subtle 생강 herb motif pattern. Headwear: adventure goggles on the forehead. Prop: empty hands.\nMood/theme accents around the character: summer seaside with gentle waves. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R038",
+      "nick": "향기조향사",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: skunk (스컹크). Personality: 개성, 자존감, 유쾌.\nFacial expression: playful wink.\nAction and pose (Korean): 향수병을 들고 윙크하며 칙 뿌린다.\nOutfit: denim-style overalls with buttons in #5b8def with #ffffff accents, subtle 연꽃 herb motif pattern. Headwear: tilted beret. Prop: perfume bottle.\nMood/theme accents around the character: starry night walk. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R039",
+      "nick": "날쌘배달부",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: yellow-throated marten (담비). Personality: 민첩, 책임감, 명랑.\nFacial expression: mischievous toothy grin.\nAction and pose (Korean): 편지 꾸러미를 들고 달려간다.\nOutfit: small chest armor plate with rivets in #f29b52 with #5b4a8a accents, subtle 황기 herb motif pattern. Headwear: big ribbon bow. Prop: letter envelope.\nMood/theme accents around the character: rainy alley with raindrops. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R040",
+      "nick": "숲속시인",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: sika deer (꽃사슴). Personality: 감수성, 온화, 낭만.\nFacial expression: shy blushing glance.\nAction and pose (Korean): 꽃 한 송이를 들고 고개를 갸웃한다.\nOutfit: cozy hoodie with a front pocket in #4a5a8c with #e8c26a accents, subtle 오가피 herb motif pattern. Headwear: tiny golden crown. Prop: flower.\nMood/theme accents around the character: spring flower garden with falling petals. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R041",
+      "nick": "썰매길안내자",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: reindeer (순록). Personality: 책임감, 인내, 따뜻함.\nFacial expression: determined look with firm eyebrows.\nAction and pose (Korean): 종을 흔들며 썰매길을 알린다.\nOutfit: sailor collar top with a neck tie in #b5d86a with #4f7a2a accents, subtle 구기자 herb motif pattern. Headwear: little sprout growing on the head. Prop: small bell.\nMood/theme accents around the character: starry night walk. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R042",
+      "nick": "소리지르기챔피언",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: water deer (고라니). Personality: 솔직, 엉뚱, 순수.\nFacial expression: wide surprised eyes and round mouth.\nAction and pose (Korean): 두 팔을 번쩍 들고 크게 외친다.\nOutfit: flowing short cape with a round clasp in #d65a4a with #2f2f3a accents, subtle 더덕 herb motif pattern. Headwear: knit beanie with a pompom. Prop: empty hands.\nMood/theme accents around the character: rainy alley with raindrops. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R043",
+      "nick": "복슬패션리더",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: alpaca (알파카). Personality: 자신감, 멋, 여유.\nFacial expression: smug confident smirk.\nAction and pose (Korean): 머리털을 쓸어넘기며 포즈를 잡는다.\nOutfit: traditional robe with a sash belt in #e86f6f with #ffd76a accents, subtle 산수유 herb motif pattern. Headwear: star hairpin. Prop: empty hands.\nMood/theme accents around the character: spring flower garden with falling petals. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R044",
+      "nick": "짐꾼여행자",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: llama (라마). Personality: 끈기, 솔직, 모험.\nFacial expression: deadpan unimpressed face.\nAction and pose (Korean): 지도를 펼쳐 다음 고개를 확인한다.\nOutfit: striped knit sweater in #9b7be0 with #ffd1e8 accents, subtle 계피 herb motif pattern. Headwear: flower crown. Prop: rolled map.\nMood/theme accents around the character: winter snowflakes. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R045",
+      "nick": "오아시스기억자",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: camel (낙타). Personality: 인내, 기억력, 차분함.\nFacial expression: calm content closed-eye smile.\nAction and pose (Korean): 물단지를 품에 안고 천천히 걷는다.\nOutfit: long knitted scarf in #e76fa3 with #ffffff accents, subtle 국화 herb motif pattern. Headwear: no hat. Prop: round clay jar.\nMood/theme accents around the character: fluffy cloud village. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R046",
+      "nick": "줄무늬조정자",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: zebra (얼룩말). Personality: 공정, 균형, 사교적.\nFacial expression: determined look with firm eyebrows.\nAction and pose (Korean): 붓으로 바닥에 반듯한 선을 긋는다.\nOutfit: glossy raincoat with buttons in #8fc1e3 with #2f5d8a accents, subtle 인삼 herb motif pattern. Headwear: headband with a bow. Prop: calligraphy brush.\nMood/theme accents around the character: Korean palace stroll with dancheong patterns. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R047",
+      "nick": "들판달리기선수",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: pony (조랑말). Personality: 활기, 순수, 끈기.\nFacial expression: big open-mouthed laugh with closed happy eyes.\nAction and pose (Korean): 바람개비를 들고 힘차게 뛴다.\nOutfit: cute apron with a front pocket in #7a6bb0 with #b8f0d8 accents, subtle 매실 herb motif pattern. Headwear: no hat. Prop: pinwheel.\nMood/theme accents around the character: autumn maple leaves. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R048",
+      "nick": "느긋한목장주",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: holstein cow (젖소). Personality: 온화, 성실, 여유.\nFacial expression: gentle smile.\nAction and pose (Korean): 물뿌리개로 풀밭에 물을 준다.\nOutfit: open vest with buttons in #f2d16b with #c05a3a accents, subtle 오미자 herb motif pattern. Headwear: straw hat with a ribbon. Prop: watering can.\nMood/theme accents around the character: herb field with sprouts. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R049",
+      "nick": "논두렁장사",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: water buffalo (물소). Personality: 우직함, 힘, 성실.\nFacial expression: determined look with firm eyebrows.\nAction and pose (Korean): 큰 바구니를 번쩍 들어올린다.\nOutfit: Korean hanbok jacket with a long ribbon tie in #9b7be0 with #ffd1e8 accents, subtle 도라지 herb motif pattern. Headwear: Korean traditional gat hat. Prop: woven basket.\nMood/theme accents around the character: lantern festival lights. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R050",
+      "nick": "행복먹방러",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: piglet (아기돼지). Personality: 낙천, 솔직, 먹성.\nFacial expression: big open-mouthed laugh with closed happy eyes.\nAction and pose (Korean): 찻잔을 번쩍 들고 건배를 외친다.\nOutfit: denim-style overalls with buttons in #e76fa3 with #ffffff accents, subtle 작약 herb motif pattern. Headwear: adventure goggles on the forehead. Prop: teacup.\nMood/theme accents around the character: summer seaside with gentle waves. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R051",
+      "nick": "줄무늬돌격대",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: wild boar piglet (아기멧돼지). Personality: 용감, 직진, 장난기.\nFacial expression: mischievous toothy grin.\nAction and pose (Korean): 나무 방패를 들고 돌진한다.\nOutfit: small chest armor plate with rivets in #8fc1e3 with #2f5d8a accents, subtle 감초 herb motif pattern. Headwear: tilted beret. Prop: round shield.\nMood/theme accents around the character: herb field with sprouts. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R052",
+      "nick": "물속명상가",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: hippo (하마). Personality: 평온, 든든함, 반전.\nFacial expression: calm content closed-eye smile.\nAction and pose (Korean): 연꽃을 들고 느긋하게 앉아 있다.\nOutfit: cozy hoodie with a front pocket in #7a6bb0 with #b8f0d8 accents, subtle 박하 herb motif pattern. Headwear: big ribbon bow. Prop: flower.\nMood/theme accents around the character: lantern festival lights. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R053",
+      "nick": "꿈먹는수집가",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: malayan tapir (말레이맥). Personality: 몽상, 다정, 수집.\nFacial expression: sleepy half-closed eyes.\nAction and pose (Korean): 꿈이 담긴 유리병을 품에 안는다.\nOutfit: sailor collar top with a neck tie in #f2d16b with #c05a3a accents, subtle 칡 herb motif pattern. Headwear: tiny golden crown. Prop: round clay jar.\nMood/theme accents around the character: summer seaside with gentle waves. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R054",
+      "nick": "숨은숲의비밀",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: okapi (오카피). Personality: 신비, 내향, 우아함.\nFacial expression: shy blushing glance.\nAction and pose (Korean): 큰 잎 뒤에서 반쯤 얼굴을 내민다.\nOutfit: flowing short cape with a round clasp in #6cc49a with #fff3b0 accents, subtle 진피 herb motif pattern. Headwear: little sprout growing on the head. Prop: large leaf.\nMood/theme accents around the character: starry night walk. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R055",
+      "nick": "무지개부리어부",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: atlantic puffin (퍼핀). Personality: 성실, 귀여움, 가족애.\nFacial expression: sparkling starry eyes.\nAction and pose (Korean): 작은 물고기 꾸러미를 자랑스럽게 든다.\nOutfit: traditional robe with a sash belt in #3e8e8a with #f6c85f accents, subtle 대추 herb motif pattern. Headwear: knit beanie with a pompom. Prop: bundle of small fish.\nMood/theme accents around the character: rainy alley with raindrops. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R056",
+      "nick": "말따라쟁이가수",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: scarlet macaw (금강앵무). Personality: 수다, 흉내, 재능.\nFacial expression: big open-mouthed laugh with closed happy eyes.\nAction and pose (Korean): 피리를 불며 리듬을 탄다.\nOutfit: striped knit sweater in #c9a46a with #7a4f2a accents, subtle 쑥 herb motif pattern. Headwear: star hairpin. Prop: bamboo flute.\nMood/theme accents around the character: spring flower garden with falling petals. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R057",
+      "nick": "열대과일감별사",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: toucan (큰부리새). Personality: 미식, 쾌활, 색감.\nFacial expression: mischievous toothy grin.\nAction and pose (Korean): 과일 바구니를 들고 하나를 골라 든다.\nOutfit: long knitted scarf in #f4b6c2 with #c24f6a accents, subtle 당귀 herb motif pattern. Headwear: flower crown. Prop: woven basket.\nMood/theme accents around the character: winter snowflakes. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R058",
+      "nick": "외다리발레리나",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: flamingo (플라밍고). Personality: 우아함, 균형, 자기관리.\nFacial expression: playful wink.\nAction and pose (Korean): 한 다리로 서서 부채를 펼친다.\nOutfit: glossy raincoat with buttons in #58b3c9 with #ffe08a accents, subtle 천궁 herb motif pattern. Headwear: no hat. Prop: folding fan.\nMood/theme accents around the character: fluffy cloud village. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R059",
+      "nick": "물길안내원",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: mallard duck (청둥오리). Personality: 차분, 부지런, 친절.\nFacial expression: gentle smile.\nAction and pose (Korean): 작은 우산을 쓰고 빗속을 걷는다.\nOutfit: cute apron with a front pocket in #5b8def with #ffffff accents, subtle 결명자 herb motif pattern. Headwear: headband with a bow. Prop: umbrella.\nMood/theme accents around the character: Korean palace stroll with dancheong patterns. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R060",
+      "nick": "첫걸음응원단",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: chick (병아리). Personality: 순수, 용기, 호기심.\nFacial expression: big open-mouthed laugh with closed happy eyes.\nAction and pose (Korean): 작은 깃발을 흔들며 응원한다.\nOutfit: open vest with buttons in #f29b52 with #5b4a8a accents, subtle 둥굴레 herb motif pattern. Headwear: no hat. Prop: small flag.\nMood/theme accents around the character: autumn maple leaves. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R061",
+      "nick": "새벽알람장군",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: rooster (수탉). Personality: 성실, 자신감, 큰목소리.\nFacial expression: determined look with firm eyebrows.\nAction and pose (Korean): 가슴을 펴고 나팔을 힘차게 분다.\nOutfit: Korean hanbok jacket with a long ribbon tie in #4a5a8c with #e8c26a accents, subtle 복령 herb motif pattern. Headwear: straw hat with a ribbon. Prop: little trumpet.\nMood/theme accents around the character: fluffy cloud village. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R062",
+      "nick": "방앗간단골",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: sparrow (참새). Personality: 수다, 사교, 부지런.\nFacial expression: mischievous toothy grin.\nAction and pose (Korean): 곡식 바구니 옆에서 손을 흔들며 수다를 떤다.\nOutfit: denim-style overalls with buttons in #b5d86a with #4f7a2a accents, subtle 생강 herb motif pattern. Headwear: Korean traditional gat hat. Prop: empty hands.\nMood/theme accents around the character: Korean palace stroll with dancheong patterns. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R063",
+      "nick": "반가운소식배달부",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: magpie (까치). Personality: 명랑, 눈치, 행운.\nFacial expression: big open-mouthed laugh with closed happy eyes.\nAction and pose (Korean): 편지를 높이 들고 날개를 펼친다.\nOutfit: small chest armor plate with rivets in #d65a4a with #2f2f3a accents, subtle 연꽃 herb motif pattern. Headwear: adventure goggles on the forehead. Prop: letter envelope.\nMood/theme accents around the character: autumn maple leaves. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R064",
+      "nick": "동백꿀배달부",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: japanese white-eye (동박새). Personality: 다정, 섬세, 부지런.\nFacial expression: shy blushing glance.\nAction and pose (Korean): 동백꽃 한 송이를 소중히 안고 있다.\nOutfit: cozy hoodie with a front pocket in #e86f6f with #ffd76a accents, subtle 황기 herb motif pattern. Headwear: tilted beret. Prop: flower.\nMood/theme accents around the character: herb field with sprouts. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R065",
+      "nick": "하늘감독관",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: golden eagle (검독수리). Personality: 통찰, 책임감, 자존심.\nFacial expression: determined look with firm eyebrows.\nAction and pose (Korean): 망원경으로 먼 곳을 살핀다.\nOutfit: sailor collar top with a neck tie in #f29b52 with #5b4a8a accents, subtle 오가피 herb motif pattern. Headwear: big ribbon bow. Prop: brass telescope.\nMood/theme accents around the character: lantern festival lights. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R066",
+      "nick": "번개배달특급",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: peregrine falcon (매). Personality: 속도, 정확, 집중.\nFacial expression: determined look with firm eyebrows.\nAction and pose (Korean): 나침반을 쥐고 급강하하듯 달려 나간다.\nOutfit: flowing short cape with a round clasp in #4a5a8c with #e8c26a accents, subtle 구기자 herb motif pattern. Headwear: tiny golden crown. Prop: compass.\nMood/theme accents around the character: summer seaside with gentle waves. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R067",
+      "nick": "꽃잔치호버러",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: hummingbird (벌새). Personality: 에너지, 섬세, 부지런.\nFacial expression: sparkling starry eyes.\nAction and pose (Korean): 꽃 앞에서 날갯짓하며 인사한다.\nOutfit: traditional robe with a sash belt in #b5d86a with #4f7a2a accents, subtle 더덕 herb motif pattern. Headwear: little sprout growing on the head. Prop: flower.\nMood/theme accents around the character: starry night walk. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R068",
+      "nick": "밤산책탐색가",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: kiwi bird (키위새). Personality: 내향, 호기심, 끈기.\nFacial expression: calm content closed-eye smile.\nAction and pose (Korean): 등불을 들고 땅을 콕콕 짚는다.\nOutfit: striped knit sweater in #d65a4a with #2f2f3a accents, subtle 산수유 herb motif pattern. Headwear: knit beanie with a pompom. Prop: glowing lantern.\nMood/theme accents around the character: rainy alley with raindrops. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R069",
+      "nick": "모래폭풍질주자",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: ostrich (타조). Personality: 대담, 속도, 엉뚱.\nFacial expression: mischievous toothy grin.\nAction and pose (Korean): 고글을 쓰고 전력 질주한다.\nOutfit: long knitted scarf in #e86f6f with #ffd76a accents, subtle 계피 herb motif pattern. Headwear: adventure goggles on the forehead. Prop: empty hands.\nMood/theme accents around the character: spring flower garden with falling petals. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R070",
+      "nick": "다정한커플매니저",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: mandarin duck (원앙). Personality: 다정, 의리, 로맨틱.\nFacial expression: playful wink.\nAction and pose (Korean): 꽃 한 송이를 건네며 윙크한다.\nOutfit: glossy raincoat with buttons in #9b7be0 with #ffd1e8 accents, subtle 국화 herb motif pattern. Headwear: flower crown. Prop: flower.\nMood/theme accents around the character: winter snowflakes. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R071",
+      "nick": "천년항해사",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: sea turtle (바다거북). Personality: 인내, 지혜, 여유.\nFacial expression: calm content closed-eye smile.\nAction and pose (Korean): 나침반을 들고 파도 위를 유유히 나아간다.\nOutfit: cute apron with a front pocket in #e76fa3 with #ffffff accents, subtle 인삼 herb motif pattern. Headwear: no hat. Prop: compass.\nMood/theme accents around the character: rainy alley with raindrops. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R072",
+      "nick": "일광욕왕",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: green iguana (이구아나). Personality: 여유, 자존감, 무심.\nFacial expression: sleepy half-closed eyes.\nAction and pose (Korean): 돌 위에 앉아 눈을 감고 해바라기를 한다.\nOutfit: open vest with buttons in #8fc1e3 with #2f5d8a accents, subtle 매실 herb motif pattern. Headwear: headband with a bow. Prop: empty hands.\nMood/theme accents around the character: spring flower garden with falling petals. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R073",
+      "nick": "벽타기곡예사",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: leopard gecko (표범도마뱀붙이). Personality: 민첩, 호기심, 유쾌.\nFacial expression: mischievous toothy grin.\nAction and pose (Korean): 한 손으로 벽에 붙은 채 손을 흔든다.\nOutfit: Korean hanbok jacket with a long ribbon tie in #7a6bb0 with #b8f0d8 accents, subtle 오미자 herb motif pattern. Headwear: no hat. Prop: empty hands.\nMood/theme accents around the character: winter snowflakes. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R074",
+      "nick": "웃는재생요정",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: axolotl (우파루파). Personality: 회복력, 해맑음, 느긋함.\nFacial expression: big open-mouthed laugh with closed happy eyes.\nAction and pose (Korean): 물방울 지팡이를 흔든다.\nOutfit: denim-style overalls with buttons in #f2d16b with #c05a3a accents, subtle 도라지 herb motif pattern. Headwear: straw hat with a ribbon. Prop: star wand.\nMood/theme accents around the character: fluffy cloud village. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R075",
+      "nick": "반대로점프러",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: tree frog (청개구리). Personality: 반골, 재치, 유연.\nFacial expression: playful wink.\nAction and pose (Korean): 연잎 우산을 쓰고 폴짝 뛴다.\nOutfit: small chest armor plate with rivets in #6cc49a with #fff3b0 accents, subtle 작약 herb motif pattern. Headwear: Korean traditional gat hat. Prop: umbrella.\nMood/theme accents around the character: Korean palace stroll with dancheong patterns. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R076",
+      "nick": "여덟손멀티태스커",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: octopus (문어). Personality: 다재다능, 지능, 창의.\nFacial expression: sparkling starry eyes.\nAction and pose (Korean): 붓을 들고 동시에 다른 손으로 박수를 친다.\nOutfit: cozy hoodie with a front pocket in #3e8e8a with #f6c85f accents, subtle 감초 herb motif pattern. Headwear: adventure goggles on the forehead. Prop: calligraphy brush.\nMood/theme accents around the character: autumn maple leaves. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R077",
+      "nick": "먹물서예가",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: squid (오징어). Personality: 예술성, 자유, 즉흥.\nFacial expression: determined look with firm eyebrows.\nAction and pose (Korean): 큰 붓으로 휘리릭 글씨를 쓴다.\nOutfit: sailor collar top with a neck tie in #c9a46a with #7a4f2a accents, subtle 박하 herb motif pattern. Headwear: tilted beret. Prop: calligraphy brush.\nMood/theme accents around the character: herb field with sprouts. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R078",
+      "nick": "빵빵화남주의",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: pufferfish (복어). Personality: 감정표현, 솔직, 귀여움.\nFacial expression: puffed-cheek pout.\nAction and pose (Korean): 볼을 잔뜩 부풀리고 팔짱을 낀 채 앉아 있다.\nOutfit: flowing short cape with a round clasp in #f4b6c2 with #c24f6a accents, subtle 칡 herb motif pattern. Headwear: big ribbon bow. Prop: empty hands.\nMood/theme accents around the character: lantern festival lights. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R079",
+      "nick": "3초기억낭만파",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: goldfish (금붕어). Personality: 낭만, 낙천, 순간집중.\nFacial expression: gentle smile.\nAction and pose (Korean): 거품 방울 사이에서 손을 흔든다.\nOutfit: traditional robe with a sash belt in #58b3c9 with #ffe08a accents, subtle 진피 herb motif pattern. Headwear: tiny golden crown. Prop: empty hands.\nMood/theme accents around the character: summer seaside with gentle waves. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R080",
+      "nick": "품안의수호자",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: seahorse (해마). Personality: 헌신, 섬세, 차분.\nFacial expression: gentle smile.\nAction and pose (Korean): 작은 바구니를 꼭 끌어안는다.\nOutfit: striped knit sweater in #5b8def with #ffffff accents, subtle 대추 herb motif pattern. Headwear: little sprout growing on the head. Prop: woven basket.\nMood/theme accents around the character: starry night walk. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R081",
+      "nick": "바다의가수",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: humpback whale (혹등고래). Personality: 감성, 포용, 깊이.\nFacial expression: singing with eyes closed and round mouth.\nAction and pose (Korean): 두 팔을 벌리고 눈을 감은 채 노래한다.\nOutfit: long knitted scarf in #3e8e8a with #f6c85f accents, subtle 쑥 herb motif pattern. Headwear: knit beanie with a pompom. Prop: empty hands.\nMood/theme accents around the character: lantern festival lights. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R082",
+      "nick": "파도서핑리더",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: dolphin (돌고래). Personality: 사교, 장난, 지능.\nFacial expression: big open-mouthed laugh with closed happy eyes.\nAction and pose (Korean): 공을 높이 들고 묘기를 준비한다.\nOutfit: glossy raincoat with buttons in #c9a46a with #7a4f2a accents, subtle 당귀 herb motif pattern. Headwear: star hairpin. Prop: striped ball.\nMood/theme accents around the character: summer seaside with gentle waves. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R083",
+      "nick": "바다팀장",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: orca (범고래). Personality: 리더십, 전략, 의리.\nFacial expression: determined look with firm eyebrows.\nAction and pose (Korean): 지도를 펼쳐 작전을 설명한다.\nOutfit: cute apron with a front pocket in #f4b6c2 with #c24f6a accents, subtle 천궁 herb motif pattern. Headwear: flower crown. Prop: rolled map.\nMood/theme accents around the character: starry night walk. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R084",
+      "nick": "겉바속촉수영선수",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: baby shark (아기상어). Personality: 반전매력, 열정, 솔직.\nFacial expression: mischievous toothy grin.\nAction and pose (Korean): 이빨을 보이며 웃다가 수줍게 손을 흔든다.\nOutfit: open vest with buttons in #58b3c9 with #ffe08a accents, subtle 결명자 herb motif pattern. Headwear: no hat. Prop: empty hands.\nMood/theme accents around the character: rainy alley with raindrops. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R085",
+      "nick": "모래바닥요가강사",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: stingray (가오리). Personality: 유연, 평온, 우아.\nFacial expression: calm content closed-eye smile.\nAction and pose (Korean): 두 팔을 넓게 펴고 명상한다.\nOutfit: Korean hanbok jacket with a long ribbon tie in #5b8def with #ffffff accents, subtle 둥굴레 herb motif pattern. Headwear: headband with a bow. Prop: empty hands.\nMood/theme accents around the character: spring flower garden with falling petals. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R086",
+      "nick": "옆걸음협상가",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: blue crab (꽃게). Personality: 실리, 유연, 단호.\nFacial expression: smug confident smirk.\nAction and pose (Korean): 집게로 열쇠를 들고 옆으로 걷는다.\nOutfit: denim-style overalls with buttons in #f29b52 with #5b4a8a accents, subtle 복령 herb motif pattern. Headwear: no hat. Prop: golden key.\nMood/theme accents around the character: winter snowflakes. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R087",
+      "nick": "껍질갈이성장가",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: lobster (바닷가재). Personality: 성장, 용기, 끈기.\nFacial expression: mischievous toothy grin.\nAction and pose (Korean): 방패 같은 껍질을 들고 자랑한다.\nOutfit: small chest armor plate with rivets in #4a5a8c with #e8c26a accents, subtle 생강 herb motif pattern. Headwear: straw hat with a ribbon. Prop: round shield.\nMood/theme accents around the character: fluffy cloud village. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R088",
+      "nick": "이사전문가",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: hermit crab (소라게). Personality: 신중, 적응, 실용.\nFacial expression: wide surprised eyes and round mouth.\nAction and pose (Korean): 예쁜 소라껍데기를 들고 크기를 재본다.\nOutfit: cozy hoodie with a front pocket in #b5d86a with #4f7a2a accents, subtle 연꽃 herb motif pattern. Headwear: Korean traditional gat hat. Prop: spiral seashell.\nMood/theme accents around the character: Korean palace stroll with dancheong patterns. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R089",
+      "nick": "행운점박이",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: ladybug (무당벌레). Personality: 행운, 명랑, 보호.\nFacial expression: big open-mouthed laugh with closed happy eyes.\nAction and pose (Korean): 네잎클로버를 들고 날개를 편다.\nOutfit: sailor collar top with a neck tie in #d65a4a with #2f2f3a accents, subtle 황기 herb motif pattern. Headwear: adventure goggles on the forehead. Prop: four-leaf clover.\nMood/theme accents around the character: autumn maple leaves. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R090",
+      "nick": "큰턱씨름왕",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: stag beetle (사슴벌레). Personality: 승부욕, 의리, 힘.\nFacial expression: determined look with firm eyebrows.\nAction and pose (Korean): 두 팔을 들어 힘자랑을 한다.\nOutfit: flowing short cape with a round clasp in #e86f6f with #ffd76a accents, subtle 오가피 herb motif pattern. Headwear: tilted beret. Prop: empty hands.\nMood/theme accents around the character: herb field with sprouts. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R091",
+      "nick": "밤길등불지기",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: firefly (반딧불이). Personality: 따뜻함, 희망, 조용함.\nFacial expression: gentle smile.\nAction and pose (Korean): 초롱을 들고 꼬리 불빛을 반짝인다.\nOutfit: traditional robe with a sash belt in #9b7be0 with #ffd1e8 accents, subtle 구기자 herb motif pattern. Headwear: big ribbon bow. Prop: glowing lantern.\nMood/theme accents around the character: Korean palace stroll with dancheong patterns. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R092",
+      "nick": "비단실장인",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: silkworm (누에). Personality: 장인정신, 인내, 섬세.\nFacial expression: calm content closed-eye smile.\nAction and pose (Korean): 실타래를 품에 안고 천천히 감는다.\nOutfit: striped knit sweater in #e76fa3 with #ffffff accents, subtle 더덕 herb motif pattern. Headwear: tiny golden crown. Prop: ball of silk yarn.\nMood/theme accents around the character: autumn maple leaves. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R093",
+      "nick": "협동물류반장",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: ant (개미). Personality: 협동, 근면, 책임감.\nFacial expression: determined look with firm eyebrows.\nAction and pose (Korean): 자기보다 큰 바구니를 번쩍 들어 나른다.\nOutfit: long knitted scarf in #8fc1e3 with #2f5d8a accents, subtle 산수유 herb motif pattern. Headwear: little sprout growing on the head. Prop: woven basket.\nMood/theme accents around the character: herb field with sprouts. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R094",
+      "nick": "무림고수",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: praying mantis (사마귀). Personality: 집중, 침착, 기품.\nFacial expression: calm content closed-eye smile.\nAction and pose (Korean): 한 손을 들어 무술 자세를 잡는다.\nOutfit: glossy raincoat with buttons in #7a6bb0 with #b8f0d8 accents, subtle 계피 herb motif pattern. Headwear: knit beanie with a pompom. Prop: empty hands.\nMood/theme accents around the character: lantern festival lights. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R095",
+      "nick": "여름콘서트가수",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: cicada (매미). Personality: 열정, 인내, 무대체질.\nFacial expression: singing with eyes closed and round mouth.\nAction and pose (Korean): 마이크를 들고 목청껏 노래한다.\nOutfit: cute apron with a front pocket in #f2d16b with #c05a3a accents, subtle 국화 herb motif pattern. Headwear: star hairpin. Prop: microphone.\nMood/theme accents around the character: summer seaside with gentle waves. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R096",
+      "nick": "아홉꼬리이야기꾼",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: nine-tailed fox (구미호). Personality: 매혹, 재치, 신비.\nFacial expression: playful wink.\nAction and pose (Korean): 부채를 펼치고 꼬리를 살랑인다.\nOutfit: open vest with buttons in #6cc49a with #fff3b0 accents, subtle 인삼 herb motif pattern. Headwear: flower crown. Prop: folding fan.\nMood/theme accents around the character: starry night walk. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R097",
+      "nick": "태양의전령",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: three-legged crow (삼족오). Personality: 사명감, 빛, 결단.\nFacial expression: determined look with firm eyebrows.\nAction and pose (Korean): 해 모양 원반을 높이 들어 올린다.\nOutfit: Korean hanbok jacket with a long ribbon tie in #e76fa3 with #ffffff accents, subtle 매실 herb motif pattern. Headwear: no hat. Prop: sun disc.\nMood/theme accents around the character: rainy alley with raindrops. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R098",
+      "nick": "보물창고수호자",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: baby griffin (아기그리핀). Personality: 충성, 용기, 자존심.\nFacial expression: determined look with firm eyebrows.\nAction and pose (Korean): 열쇠를 꼭 쥐고 당당히 선다.\nOutfit: denim-style overalls with buttons in #8fc1e3 with #2f5d8a accents, subtle 오미자 herb motif pattern. Headwear: headband with a bow. Prop: golden key.\nMood/theme accents around the character: spring flower garden with falling petals. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R099",
+      "nick": "북쪽바다수문장",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: black tortoise guardian (현무). Personality: 신중, 인내, 수호.\nFacial expression: calm content closed-eye smile.\nAction and pose (Korean): 방패를 세우고 묵직하게 서 있다.\nOutfit: small chest armor plate with rivets in #7a6bb0 with #b8f0d8 accents, subtle 도라지 herb motif pattern. Headwear: no hat. Prop: round shield.\nMood/theme accents around the character: winter snowflakes. Keep the background mostly plain warm cream."
+    },
+    {
+      "id": "R100",
+      "nick": "박수갈채응원단장",
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nSubject: sea lion (바다사자). Personality: 응원, 쾌활, 무대체질.\nFacial expression: big open-mouthed laugh with closed happy eyes.\nAction and pose (Korean): 공을 높이 들고 박수를 친다.\nOutfit: cozy hoodie with a front pocket in #f2d16b with #c05a3a accents, subtle 작약 herb motif pattern. Headwear: straw hat with a ribbon. Prop: striped ball.\nMood/theme accents around the character: fluffy cloud village. Keep the background mostly plain warm cream."
+    }
+  ],
+  "sheets": [
+    {
+      "sheet": "reserve-01",
+      "ids": [
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R005",
+        "R006",
+        "R007",
+        "R008",
+        "R009",
+        "R010"
+      ],
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nCreate EXACTLY 5 columns and 2 rows, 10 EQUAL cells, row-major order, 2:1 canvas. No labels, text, numbers, borders or gutters. Each full-body subject centered in its own cell with 10% padding.\nCell 1: calico cat; expression: sleepy half-closed eyes; action (Korean): 햇볕 드는 자리를 가리키며 찻잔을 들고 기지개를 켠다; outfit: Korean hanbok jacket with a long ribbon tie (#e86f6f/#ffd76a); headwear: tiny golden crown; prop: teacup.\nCell 2: shiba inu; expression: smug confident smirk; action (Korean): 좋아하는 나뭇잎을 꼭 쥐고 고개를 새침하게 돌린다; outfit: denim-style overalls with buttons (#9b7be0/#ffd1e8); headwear: little sprout growing on the head; prop: large leaf.\nCell 3: beagle; expression: sparkling starry eyes; action (Korean): 돋보기를 들고 바닥 냄새를 킁킁 맡는다; outfit: small chest armor plate with rivets (#e76fa3/#ffffff); headwear: knit beanie with a pompom; prop: magnifying glass.\nCell 4: welsh corgi; expression: determined look with firm eyebrows; action (Korean): 작은 깃발을 높이 들고 앞장서 행진한다; outfit: cozy hoodie with a front pocket (#8fc1e3/#2f5d8a); headwear: star hairpin; prop: small flag.\nCell 5: dachshund; expression: mischievous toothy grin; action (Korean): 등불을 들고 굴 입구로 쏙 뛰어든다; outfit: sailor collar top with a neck tie (#7a6bb0/#b8f0d8); headwear: flower crown; prop: glowing lantern.\nCell 6: samoyed; expression: big open-mouthed laugh with closed happy eyes; action (Korean): 두 팔을 활짝 벌려 포옹을 기다린다; outfit: flowing short cape with a round clasp (#f2d16b/#c05a3a); headwear: no hat; prop: empty hands.\nCell 7: golden retriever; expression: gentle smile; action (Korean): 바구니 가득 공을 담아 품에 안고 온다; outfit: traditional robe with a sash belt (#6cc49a/#fff3b0); headwear: headband with a bow; prop: woven basket.\nCell 8: pug; expression: deadpan unimpressed face; action (Korean): 찻잔을 들고 의자에 털썩 앉아 있다; outfit: striped knit sweater (#3e8e8a/#f6c85f); headwear: no hat; prop: teacup.\nCell 9: fennec fox; expression: wide surprised eyes and round mouth; action (Korean): 커다란 귀를 쫑긋 세우고 한 손을 귀에 댄다; outfit: long knitted scarf (#c9a46a/#7a4f2a); headwear: straw hat with a ribbon; prop: empty hands.\nCell 10: arctic fox; expression: playful wink; action (Korean): 눈꽃 지팡이를 빙글 돌린다; outfit: glossy raincoat with buttons (#f4b6c2/#c24f6a); headwear: Korean traditional gat hat; prop: star wand."
+    },
+    {
+      "sheet": "reserve-02",
+      "ids": [
+        "R011",
+        "R012",
+        "R013",
+        "R014",
+        "R015",
+        "R016",
+        "R017",
+        "R018",
+        "R019",
+        "R020"
+      ],
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nCreate EXACTLY 5 columns and 2 rows, 10 EQUAL cells, row-major order, 2:1 canvas. No labels, text, numbers, borders or gutters. Each full-body subject centered in its own cell with 10% padding.\nCell 1: red panda; expression: determined look with firm eyebrows; action (Korean): 두 팔을 번쩍 들어 몸을 크게 보이려 한다; outfit: cute apron with a front pocket (#58b3c9/#ffe08a); headwear: adventure goggles on the forehead; prop: empty hands.\nCell 2: meerkat; expression: determined look with firm eyebrows; action (Korean): 망원경을 들고 까치발로 선다; outfit: open vest with buttons (#5b8def/#ffffff); headwear: tilted beret; prop: brass telescope.\nCell 3: red squirrel; expression: gentle smile; action (Korean): 단지에 도토리를 하나씩 넣으며 품에 안는다; outfit: Korean hanbok jacket with a long ribbon tie (#f29b52/#5b4a8a); headwear: big ribbon bow; prop: round clay jar.\nCell 4: guinea pig; expression: big open-mouthed laugh with closed happy eyes; action (Korean): 작은 종을 흔들며 폴짝 뛴다; outfit: denim-style overalls with buttons (#4a5a8c/#e8c26a); headwear: tiny golden crown; prop: small bell.\nCell 5: chinchilla; expression: calm content closed-eye smile; action (Korean): 깃털 붓으로 털을 정성껏 쓸어낸다; outfit: small chest armor plate with rivets (#b5d86a/#4f7a2a); headwear: little sprout growing on the head; prop: calligraphy brush.\nCell 6: field mouse; expression: sparkling starry eyes; action (Korean): 펼친 지도를 들고 길을 가리킨다; outfit: cozy hoodie with a front pocket (#d65a4a/#2f2f3a); headwear: knit beanie with a pompom; prop: rolled map.\nCell 7: beaver; expression: determined look with firm eyebrows; action (Korean): 나무토막을 어깨에 메고 걸어간다; outfit: sailor collar top with a neck tie (#5b8def/#ffffff); headwear: star hairpin; prop: wooden log.\nCell 8: armadillo; expression: shy blushing glance; action (Korean): 방패를 앞세우고 조심스레 다가온다; outfit: flowing short cape with a round clasp (#f29b52/#5b4a8a); headwear: flower crown; prop: round shield.\nCell 9: pangolin; expression: shy blushing glance; action (Korean): 꼬리를 감싸 안고 조용히 앉아 있다; outfit: traditional robe with a sash belt (#4a5a8c/#e8c26a); headwear: no hat; prop: empty hands.\nCell 10: giant anteater; expression: sparkling starry eyes; action (Korean): 긴 코 앞에 찻잔을 들고 향을 음미한다; outfit: striped knit sweater (#b5d86a/#4f7a2a); headwear: headband with a bow; prop: teacup."
+    },
+    {
+      "sheet": "reserve-03",
+      "ids": [
+        "R021",
+        "R022",
+        "R023",
+        "R024",
+        "R025",
+        "R026",
+        "R027",
+        "R028",
+        "R029",
+        "R030"
+      ],
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nCreate EXACTLY 5 columns and 2 rows, 10 EQUAL cells, row-major order, 2:1 canvas. No labels, text, numbers, borders or gutters. Each full-body subject centered in its own cell with 10% padding.\nCell 1: sloth; expression: sleepy half-closed eyes; action (Korean): 모래시계를 들고 꾸벅꾸벅 존다; outfit: long knitted scarf (#d65a4a/#2f2f3a); headwear: no hat; prop: hourglass.\nCell 2: orangutan; expression: calm content closed-eye smile; action (Korean): 커다란 잎을 우산처럼 들고 앉아 있다; outfit: glossy raincoat with buttons (#e86f6f/#ffd76a); headwear: straw hat with a ribbon; prop: large leaf.\nCell 3: snow monkey; expression: calm content closed-eye smile; action (Korean): 머리에 작은 수건을 얹고 눈을 감는다; outfit: cute apron with a front pocket (#9b7be0/#ffd1e8); headwear: folded hot-spring towel; prop: empty hands.\nCell 4: ring-tailed lemur; expression: big open-mouthed laugh with closed happy eyes; action (Korean): 두 팔을 벌려 햇빛을 받으며 체조한다; outfit: open vest with buttons (#e76fa3/#ffffff); headwear: adventure goggles on the forehead; prop: empty hands.\nCell 5: tarsier; expression: wide surprised eyes and round mouth; action (Korean): 초를 들고 커다란 눈을 깜빡인다; outfit: Korean hanbok jacket with a long ribbon tie (#8fc1e3/#2f5d8a); headwear: tilted beret; prop: candle.\nCell 6: kangaroo; expression: mischievous toothy grin; action (Korean): 주머니에서 꽃 한 송이를 꺼내 건넨다; outfit: denim-style overalls with buttons (#7a6bb0/#b8f0d8); headwear: big ribbon bow; prop: flower.\nCell 7: wombat; expression: determined look with firm eyebrows; action (Korean): 작은 삽을 들고 흙을 퍼낸다; outfit: small chest armor plate with rivets (#f2d16b/#c05a3a); headwear: tiny golden crown; prop: small shovel.\nCell 8: quokka; expression: big open-mouthed laugh with closed happy eyes; action (Korean): 풍선을 들고 활짝 웃는다; outfit: cozy hoodie with a front pocket (#6cc49a/#fff3b0); headwear: little sprout growing on the head; prop: balloon.\nCell 9: platypus; expression: mischievous toothy grin; action (Korean): 물안경을 이마에 올리고 손을 흔든다; outfit: sailor collar top with a neck tie (#3e8e8a/#f6c85f); headwear: adventure goggles on the forehead; prop: empty hands.\nCell 10: polar bear; expression: calm content closed-eye smile; action (Korean): 낚싯대를 드리우고 얼음 위에 앉아 있다; outfit: flowing short cape with a round clasp (#c9a46a/#7a4f2a); headwear: star hairpin; prop: fishing rod."
+    },
+    {
+      "sheet": "reserve-04",
+      "ids": [
+        "R031",
+        "R032",
+        "R033",
+        "R034",
+        "R035",
+        "R036",
+        "R037",
+        "R038",
+        "R039",
+        "R040"
+      ],
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nCreate EXACTLY 5 columns and 2 rows, 10 EQUAL cells, row-major order, 2:1 canvas. No labels, text, numbers, borders or gutters. Each full-body subject centered in its own cell with 10% padding.\nCell 1: asiatic black bear; expression: calm content closed-eye smile; action (Korean): 등불을 들고 산길을 비춘다; outfit: traditional robe with a sash belt (#f4b6c2/#c24f6a); headwear: flower crown; prop: glowing lantern.\nCell 2: sun bear; expression: happy face with tongue out; action (Korean): 꿀단지를 끌어안고 혀를 날름거린다; outfit: striped knit sweater (#58b3c9/#ffe08a); headwear: no hat; prop: round clay jar.\nCell 3: tiger; expression: determined look with firm eyebrows; action (Korean): 북을 둥둥 치며 기세를 올린다; outfit: long knitted scarf (#6cc49a/#fff3b0); headwear: headband with a bow; prop: Korean drum.\nCell 4: cheetah; expression: determined look with firm eyebrows; action (Korean): 몸을 낮추고 출발선을 박차고 달린다; outfit: glossy raincoat with buttons (#3e8e8a/#f6c85f); headwear: no hat; prop: empty hands.\nCell 5: leopard; expression: smug confident smirk; action (Korean): 나침반을 들여다보며 다음 수를 고른다; outfit: cute apron with a front pocket (#c9a46a/#7a4f2a); headwear: straw hat with a ribbon; prop: compass.\nCell 6: lynx; expression: calm content closed-eye smile; action (Korean): 귀털을 쫑긋 세우고 눈송이를 바라본다; outfit: open vest with buttons (#f4b6c2/#c24f6a); headwear: Korean traditional gat hat; prop: empty hands.\nCell 7: pallas's cat; expression: deadpan unimpressed face; action (Korean): 털을 부풀린 채 팔짱을 끼고 앉아 있다; outfit: Korean hanbok jacket with a long ribbon tie (#58b3c9/#ffe08a); headwear: adventure goggles on the forehead; prop: empty hands.\nCell 8: skunk; expression: playful wink; action (Korean): 향수병을 들고 윙크하며 칙 뿌린다; outfit: denim-style overalls with buttons (#5b8def/#ffffff); headwear: tilted beret; prop: perfume bottle.\nCell 9: yellow-throated marten; expression: mischievous toothy grin; action (Korean): 편지 꾸러미를 들고 달려간다; outfit: small chest armor plate with rivets (#f29b52/#5b4a8a); headwear: big ribbon bow; prop: letter envelope.\nCell 10: sika deer; expression: shy blushing glance; action (Korean): 꽃 한 송이를 들고 고개를 갸웃한다; outfit: cozy hoodie with a front pocket (#4a5a8c/#e8c26a); headwear: tiny golden crown; prop: flower."
+    },
+    {
+      "sheet": "reserve-05",
+      "ids": [
+        "R041",
+        "R042",
+        "R043",
+        "R044",
+        "R045",
+        "R046",
+        "R047",
+        "R048",
+        "R049",
+        "R050"
+      ],
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nCreate EXACTLY 5 columns and 2 rows, 10 EQUAL cells, row-major order, 2:1 canvas. No labels, text, numbers, borders or gutters. Each full-body subject centered in its own cell with 10% padding.\nCell 1: reindeer; expression: determined look with firm eyebrows; action (Korean): 종을 흔들며 썰매길을 알린다; outfit: sailor collar top with a neck tie (#b5d86a/#4f7a2a); headwear: little sprout growing on the head; prop: small bell.\nCell 2: water deer; expression: wide surprised eyes and round mouth; action (Korean): 두 팔을 번쩍 들고 크게 외친다; outfit: flowing short cape with a round clasp (#d65a4a/#2f2f3a); headwear: knit beanie with a pompom; prop: empty hands.\nCell 3: alpaca; expression: smug confident smirk; action (Korean): 머리털을 쓸어넘기며 포즈를 잡는다; outfit: traditional robe with a sash belt (#e86f6f/#ffd76a); headwear: star hairpin; prop: empty hands.\nCell 4: llama; expression: deadpan unimpressed face; action (Korean): 지도를 펼쳐 다음 고개를 확인한다; outfit: striped knit sweater (#9b7be0/#ffd1e8); headwear: flower crown; prop: rolled map.\nCell 5: camel; expression: calm content closed-eye smile; action (Korean): 물단지를 품에 안고 천천히 걷는다; outfit: long knitted scarf (#e76fa3/#ffffff); headwear: no hat; prop: round clay jar.\nCell 6: zebra; expression: determined look with firm eyebrows; action (Korean): 붓으로 바닥에 반듯한 선을 긋는다; outfit: glossy raincoat with buttons (#8fc1e3/#2f5d8a); headwear: headband with a bow; prop: calligraphy brush.\nCell 7: pony; expression: big open-mouthed laugh with closed happy eyes; action (Korean): 바람개비를 들고 힘차게 뛴다; outfit: cute apron with a front pocket (#7a6bb0/#b8f0d8); headwear: no hat; prop: pinwheel.\nCell 8: holstein cow; expression: gentle smile; action (Korean): 물뿌리개로 풀밭에 물을 준다; outfit: open vest with buttons (#f2d16b/#c05a3a); headwear: straw hat with a ribbon; prop: watering can.\nCell 9: water buffalo; expression: determined look with firm eyebrows; action (Korean): 큰 바구니를 번쩍 들어올린다; outfit: Korean hanbok jacket with a long ribbon tie (#9b7be0/#ffd1e8); headwear: Korean traditional gat hat; prop: woven basket.\nCell 10: piglet; expression: big open-mouthed laugh with closed happy eyes; action (Korean): 찻잔을 번쩍 들고 건배를 외친다; outfit: denim-style overalls with buttons (#e76fa3/#ffffff); headwear: adventure goggles on the forehead; prop: teacup."
+    },
+    {
+      "sheet": "reserve-06",
+      "ids": [
+        "R051",
+        "R052",
+        "R053",
+        "R054",
+        "R055",
+        "R056",
+        "R057",
+        "R058",
+        "R059",
+        "R060"
+      ],
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nCreate EXACTLY 5 columns and 2 rows, 10 EQUAL cells, row-major order, 2:1 canvas. No labels, text, numbers, borders or gutters. Each full-body subject centered in its own cell with 10% padding.\nCell 1: wild boar piglet; expression: mischievous toothy grin; action (Korean): 나무 방패를 들고 돌진한다; outfit: small chest armor plate with rivets (#8fc1e3/#2f5d8a); headwear: tilted beret; prop: round shield.\nCell 2: hippo; expression: calm content closed-eye smile; action (Korean): 연꽃을 들고 느긋하게 앉아 있다; outfit: cozy hoodie with a front pocket (#7a6bb0/#b8f0d8); headwear: big ribbon bow; prop: flower.\nCell 3: malayan tapir; expression: sleepy half-closed eyes; action (Korean): 꿈이 담긴 유리병을 품에 안는다; outfit: sailor collar top with a neck tie (#f2d16b/#c05a3a); headwear: tiny golden crown; prop: round clay jar.\nCell 4: okapi; expression: shy blushing glance; action (Korean): 큰 잎 뒤에서 반쯤 얼굴을 내민다; outfit: flowing short cape with a round clasp (#6cc49a/#fff3b0); headwear: little sprout growing on the head; prop: large leaf.\nCell 5: atlantic puffin; expression: sparkling starry eyes; action (Korean): 작은 물고기 꾸러미를 자랑스럽게 든다; outfit: traditional robe with a sash belt (#3e8e8a/#f6c85f); headwear: knit beanie with a pompom; prop: bundle of small fish.\nCell 6: scarlet macaw; expression: big open-mouthed laugh with closed happy eyes; action (Korean): 피리를 불며 리듬을 탄다; outfit: striped knit sweater (#c9a46a/#7a4f2a); headwear: star hairpin; prop: bamboo flute.\nCell 7: toucan; expression: mischievous toothy grin; action (Korean): 과일 바구니를 들고 하나를 골라 든다; outfit: long knitted scarf (#f4b6c2/#c24f6a); headwear: flower crown; prop: woven basket.\nCell 8: flamingo; expression: playful wink; action (Korean): 한 다리로 서서 부채를 펼친다; outfit: glossy raincoat with buttons (#58b3c9/#ffe08a); headwear: no hat; prop: folding fan.\nCell 9: mallard duck; expression: gentle smile; action (Korean): 작은 우산을 쓰고 빗속을 걷는다; outfit: cute apron with a front pocket (#5b8def/#ffffff); headwear: headband with a bow; prop: umbrella.\nCell 10: chick; expression: big open-mouthed laugh with closed happy eyes; action (Korean): 작은 깃발을 흔들며 응원한다; outfit: open vest with buttons (#f29b52/#5b4a8a); headwear: no hat; prop: small flag."
+    },
+    {
+      "sheet": "reserve-07",
+      "ids": [
+        "R061",
+        "R062",
+        "R063",
+        "R064",
+        "R065",
+        "R066",
+        "R067",
+        "R068",
+        "R069",
+        "R070"
+      ],
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nCreate EXACTLY 5 columns and 2 rows, 10 EQUAL cells, row-major order, 2:1 canvas. No labels, text, numbers, borders or gutters. Each full-body subject centered in its own cell with 10% padding.\nCell 1: rooster; expression: determined look with firm eyebrows; action (Korean): 가슴을 펴고 나팔을 힘차게 분다; outfit: Korean hanbok jacket with a long ribbon tie (#4a5a8c/#e8c26a); headwear: straw hat with a ribbon; prop: little trumpet.\nCell 2: sparrow; expression: mischievous toothy grin; action (Korean): 곡식 바구니 옆에서 손을 흔들며 수다를 떤다; outfit: denim-style overalls with buttons (#b5d86a/#4f7a2a); headwear: Korean traditional gat hat; prop: empty hands.\nCell 3: magpie; expression: big open-mouthed laugh with closed happy eyes; action (Korean): 편지를 높이 들고 날개를 펼친다; outfit: small chest armor plate with rivets (#d65a4a/#2f2f3a); headwear: adventure goggles on the forehead; prop: letter envelope.\nCell 4: japanese white-eye; expression: shy blushing glance; action (Korean): 동백꽃 한 송이를 소중히 안고 있다; outfit: cozy hoodie with a front pocket (#e86f6f/#ffd76a); headwear: tilted beret; prop: flower.\nCell 5: golden eagle; expression: determined look with firm eyebrows; action (Korean): 망원경으로 먼 곳을 살핀다; outfit: sailor collar top with a neck tie (#f29b52/#5b4a8a); headwear: big ribbon bow; prop: brass telescope.\nCell 6: peregrine falcon; expression: determined look with firm eyebrows; action (Korean): 나침반을 쥐고 급강하하듯 달려 나간다; outfit: flowing short cape with a round clasp (#4a5a8c/#e8c26a); headwear: tiny golden crown; prop: compass.\nCell 7: hummingbird; expression: sparkling starry eyes; action (Korean): 꽃 앞에서 날갯짓하며 인사한다; outfit: traditional robe with a sash belt (#b5d86a/#4f7a2a); headwear: little sprout growing on the head; prop: flower.\nCell 8: kiwi bird; expression: calm content closed-eye smile; action (Korean): 등불을 들고 땅을 콕콕 짚는다; outfit: striped knit sweater (#d65a4a/#2f2f3a); headwear: knit beanie with a pompom; prop: glowing lantern.\nCell 9: ostrich; expression: mischievous toothy grin; action (Korean): 고글을 쓰고 전력 질주한다; outfit: long knitted scarf (#e86f6f/#ffd76a); headwear: adventure goggles on the forehead; prop: empty hands.\nCell 10: mandarin duck; expression: playful wink; action (Korean): 꽃 한 송이를 건네며 윙크한다; outfit: glossy raincoat with buttons (#9b7be0/#ffd1e8); headwear: flower crown; prop: flower."
+    },
+    {
+      "sheet": "reserve-08",
+      "ids": [
+        "R071",
+        "R072",
+        "R073",
+        "R074",
+        "R075",
+        "R076",
+        "R077",
+        "R078",
+        "R079",
+        "R080"
+      ],
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nCreate EXACTLY 5 columns and 2 rows, 10 EQUAL cells, row-major order, 2:1 canvas. No labels, text, numbers, borders or gutters. Each full-body subject centered in its own cell with 10% padding.\nCell 1: sea turtle; expression: calm content closed-eye smile; action (Korean): 나침반을 들고 파도 위를 유유히 나아간다; outfit: cute apron with a front pocket (#e76fa3/#ffffff); headwear: no hat; prop: compass.\nCell 2: green iguana; expression: sleepy half-closed eyes; action (Korean): 돌 위에 앉아 눈을 감고 해바라기를 한다; outfit: open vest with buttons (#8fc1e3/#2f5d8a); headwear: headband with a bow; prop: empty hands.\nCell 3: leopard gecko; expression: mischievous toothy grin; action (Korean): 한 손으로 벽에 붙은 채 손을 흔든다; outfit: Korean hanbok jacket with a long ribbon tie (#7a6bb0/#b8f0d8); headwear: no hat; prop: empty hands.\nCell 4: axolotl; expression: big open-mouthed laugh with closed happy eyes; action (Korean): 물방울 지팡이를 흔든다; outfit: denim-style overalls with buttons (#f2d16b/#c05a3a); headwear: straw hat with a ribbon; prop: star wand.\nCell 5: tree frog; expression: playful wink; action (Korean): 연잎 우산을 쓰고 폴짝 뛴다; outfit: small chest armor plate with rivets (#6cc49a/#fff3b0); headwear: Korean traditional gat hat; prop: umbrella.\nCell 6: octopus; expression: sparkling starry eyes; action (Korean): 붓을 들고 동시에 다른 손으로 박수를 친다; outfit: cozy hoodie with a front pocket (#3e8e8a/#f6c85f); headwear: adventure goggles on the forehead; prop: calligraphy brush.\nCell 7: squid; expression: determined look with firm eyebrows; action (Korean): 큰 붓으로 휘리릭 글씨를 쓴다; outfit: sailor collar top with a neck tie (#c9a46a/#7a4f2a); headwear: tilted beret; prop: calligraphy brush.\nCell 8: pufferfish; expression: puffed-cheek pout; action (Korean): 볼을 잔뜩 부풀리고 팔짱을 낀 채 앉아 있다; outfit: flowing short cape with a round clasp (#f4b6c2/#c24f6a); headwear: big ribbon bow; prop: empty hands.\nCell 9: goldfish; expression: gentle smile; action (Korean): 거품 방울 사이에서 손을 흔든다; outfit: traditional robe with a sash belt (#58b3c9/#ffe08a); headwear: tiny golden crown; prop: empty hands.\nCell 10: seahorse; expression: gentle smile; action (Korean): 작은 바구니를 꼭 끌어안는다; outfit: striped knit sweater (#5b8def/#ffffff); headwear: little sprout growing on the head; prop: woven basket."
+    },
+    {
+      "sheet": "reserve-09",
+      "ids": [
+        "R081",
+        "R082",
+        "R083",
+        "R084",
+        "R085",
+        "R086",
+        "R087",
+        "R088",
+        "R089",
+        "R090"
+      ],
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nCreate EXACTLY 5 columns and 2 rows, 10 EQUAL cells, row-major order, 2:1 canvas. No labels, text, numbers, borders or gutters. Each full-body subject centered in its own cell with 10% padding.\nCell 1: humpback whale; expression: singing with eyes closed and round mouth; action (Korean): 두 팔을 벌리고 눈을 감은 채 노래한다; outfit: long knitted scarf (#3e8e8a/#f6c85f); headwear: knit beanie with a pompom; prop: empty hands.\nCell 2: dolphin; expression: big open-mouthed laugh with closed happy eyes; action (Korean): 공을 높이 들고 묘기를 준비한다; outfit: glossy raincoat with buttons (#c9a46a/#7a4f2a); headwear: star hairpin; prop: striped ball.\nCell 3: orca; expression: determined look with firm eyebrows; action (Korean): 지도를 펼쳐 작전을 설명한다; outfit: cute apron with a front pocket (#f4b6c2/#c24f6a); headwear: flower crown; prop: rolled map.\nCell 4: baby shark; expression: mischievous toothy grin; action (Korean): 이빨을 보이며 웃다가 수줍게 손을 흔든다; outfit: open vest with buttons (#58b3c9/#ffe08a); headwear: no hat; prop: empty hands.\nCell 5: stingray; expression: calm content closed-eye smile; action (Korean): 두 팔을 넓게 펴고 명상한다; outfit: Korean hanbok jacket with a long ribbon tie (#5b8def/#ffffff); headwear: headband with a bow; prop: empty hands.\nCell 6: blue crab; expression: smug confident smirk; action (Korean): 집게로 열쇠를 들고 옆으로 걷는다; outfit: denim-style overalls with buttons (#f29b52/#5b4a8a); headwear: no hat; prop: golden key.\nCell 7: lobster; expression: mischievous toothy grin; action (Korean): 방패 같은 껍질을 들고 자랑한다; outfit: small chest armor plate with rivets (#4a5a8c/#e8c26a); headwear: straw hat with a ribbon; prop: round shield.\nCell 8: hermit crab; expression: wide surprised eyes and round mouth; action (Korean): 예쁜 소라껍데기를 들고 크기를 재본다; outfit: cozy hoodie with a front pocket (#b5d86a/#4f7a2a); headwear: Korean traditional gat hat; prop: spiral seashell.\nCell 9: ladybug; expression: big open-mouthed laugh with closed happy eyes; action (Korean): 네잎클로버를 들고 날개를 편다; outfit: sailor collar top with a neck tie (#d65a4a/#2f2f3a); headwear: adventure goggles on the forehead; prop: four-leaf clover.\nCell 10: stag beetle; expression: determined look with firm eyebrows; action (Korean): 두 팔을 들어 힘자랑을 한다; outfit: flowing short cape with a round clasp (#e86f6f/#ffd76a); headwear: tilted beret; prop: empty hands."
+    },
+    {
+      "sheet": "reserve-10",
+      "ids": [
+        "R091",
+        "R092",
+        "R093",
+        "R094",
+        "R095",
+        "R096",
+        "R097",
+        "R098",
+        "R099",
+        "R100"
+      ],
+      "prompt": "Use case: stylized-concept. Cute chibi mascot character for a Korean pharmacopuncture personality-test site. Match the existing PharmacoTest art: bold clean dark outlines, chibi proportions with a big head, soft pastel colors, warm cream background, full body, centered, no text, no logos.\nCreate EXACTLY 5 columns and 2 rows, 10 EQUAL cells, row-major order, 2:1 canvas. No labels, text, numbers, borders or gutters. Each full-body subject centered in its own cell with 10% padding.\nCell 1: firefly; expression: gentle smile; action (Korean): 초롱을 들고 꼬리 불빛을 반짝인다; outfit: traditional robe with a sash belt (#9b7be0/#ffd1e8); headwear: big ribbon bow; prop: glowing lantern.\nCell 2: silkworm; expression: calm content closed-eye smile; action (Korean): 실타래를 품에 안고 천천히 감는다; outfit: striped knit sweater (#e76fa3/#ffffff); headwear: tiny golden crown; prop: ball of silk yarn.\nCell 3: ant; expression: determined look with firm eyebrows; action (Korean): 자기보다 큰 바구니를 번쩍 들어 나른다; outfit: long knitted scarf (#8fc1e3/#2f5d8a); headwear: little sprout growing on the head; prop: woven basket.\nCell 4: praying mantis; expression: calm content closed-eye smile; action (Korean): 한 손을 들어 무술 자세를 잡는다; outfit: glossy raincoat with buttons (#7a6bb0/#b8f0d8); headwear: knit beanie with a pompom; prop: empty hands.\nCell 5: cicada; expression: singing with eyes closed and round mouth; action (Korean): 마이크를 들고 목청껏 노래한다; outfit: cute apron with a front pocket (#f2d16b/#c05a3a); headwear: star hairpin; prop: microphone.\nCell 6: nine-tailed fox; expression: playful wink; action (Korean): 부채를 펼치고 꼬리를 살랑인다; outfit: open vest with buttons (#6cc49a/#fff3b0); headwear: flower crown; prop: folding fan.\nCell 7: three-legged crow; expression: determined look with firm eyebrows; action (Korean): 해 모양 원반을 높이 들어 올린다; outfit: Korean hanbok jacket with a long ribbon tie (#e76fa3/#ffffff); headwear: no hat; prop: sun disc.\nCell 8: baby griffin; expression: determined look with firm eyebrows; action (Korean): 열쇠를 꼭 쥐고 당당히 선다; outfit: denim-style overalls with buttons (#8fc1e3/#2f5d8a); headwear: headband with a bow; prop: golden key.\nCell 9: black tortoise guardian; expression: calm content closed-eye smile; action (Korean): 방패를 세우고 묵직하게 서 있다; outfit: small chest armor plate with rivets (#7a6bb0/#b8f0d8); headwear: no hat; prop: round shield.\nCell 10: sea lion; expression: big open-mouthed laugh with closed happy eyes; action (Korean): 공을 높이 들고 박수를 친다; outfit: cozy hoodie with a front pocket (#f2d16b/#c05a3a); headwear: straw hat with a ribbon; prop: striped ball."
+    }
+  ]
+}
