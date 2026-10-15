@@ -114,3 +114,17 @@ test('reserve archive shows 100 unique unused characters with art, filters and d
   const prompts=JSON.parse(fs.readFileSync(path.join(root,'research/reserve-character-prompts.json'),'utf8'));assert.equal(prompts.characters.length,100);assert.equal(prompts.sheets.length,10);
  }finally{b.dom.window.close()}
 });
+
+test('every result of every quiz renders its result card, traits and compatibility without errors',()=>{
+ for(const id of ['dnd','abo','enneagram','constitution','ohaeng','bigfive','teto','stress'])for(const r of T[id].results){
+  const dom=new JSDOM(fs.readFileSync(path.join(root,id,'index.html'),'utf8'),{url:'https://example.com/PharmacoTest/'+id+'/?type='+r.id,runScripts:'outside-only',pretendToBeVisual:true});
+  const w=dom.window;w.scrollTo=()=>{};const errors=[];w.addEventListener('error',e=>errors.push(e.message));
+  try{
+   for(const s of [...w.document.scripts]){const name=new URL(s.src).pathname.replace('/PharmacoTest/','');w.eval(fs.readFileSync(path.join(root,name),'utf8'));}
+   const q=s=>w.document.querySelector(s);
+   assert(q('.label'),id+':'+r.id+' result card');assert.equal(q('.vial-name').textContent,r.name);
+   assert.equal(w.document.querySelectorAll('[data-match]').length,8,id+':'+r.id+' compatibility');
+   assert(w.document.querySelectorAll('.result-traits .selected').length>=1,id+':'+r.id+' traits');assert.equal(errors.length,0,errors.join());
+  }finally{w.close()}
+ }
+});
