@@ -40,6 +40,8 @@
 
 `npm ci && npm test`
 
+배포 전에 `node scripts/bump-asset-version.cjs`를 실행해 모든 페이지의 js/css 주소 버전(`?v=`)을 올려주세요. GitHub Pages는 스크립트를 10분간 캐시하므로, 버전을 올리지 않으면 예전 스크립트와 새 페이지가 섞여 화면이 비어 보일 수 있습니다.
+
 별도 외부 서비스 없이 정적 파일 서버로 로컬 실행할 수 있습니다. 배포는 GitHub Pages의 main 루트 기준입니다.
 
 - [전체 약침 도감](https://ahwa-lab.github.io/PharmacoTest/encyclopedia/): 50종의 캐릭터·성격·설명과 원료 모티프를 검색할 수 있습니다.

@@ -128,3 +128,10 @@ test('every result of every quiz renders its result card, traits and compatibili
   }finally{w.close()}
  }
 });
+
+test('every page loads local scripts and styles with one shared cache-busting version',()=>{
+ const versions=new Set();
+ for(const p of ['index.html',...pages.map(x=>x+'/index.html')]){const doc=new JSDOM(fs.readFileSync(path.join(root,p),'utf8')).window.document;
+  for(const e of doc.querySelectorAll('script[src],link[rel="stylesheet"]')){const u=e.getAttribute('src')||e.getAttribute('href');if(/^https?:/.test(u))continue;const m=u.match(/\?v=(\w+)$/);assert(m,p+' '+u+' has no version');versions.add(m[1]);}}
+ assert.equal(versions.size,1);
+});
