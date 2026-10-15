@@ -3,14 +3,15 @@ const assert=require('node:assert/strict');
 const vm=require('node:vm'),fs=require('node:fs'),path=require('node:path');
 const source=fs.readFileSync(path.join(__dirname,'../index.html'),'utf8').match(/<script>([\s\S]*?)<\/script>/)[1];
 function boot({search='',storage=new Map(),rows=null}={}){
- const elements={},records=[];
+ const elements={},records=[];let now=0,timerId=0;const timers=new Map();
  const node=()=>({style:{},attrs:{},setAttribute(k,v){this.attrs[k]=v},getAttribute(k){return this.attrs[k]},getBoundingClientRect(){return {left:20,bottom:100}},showModal(){this.open=true},close(){this.open=false;this.onclose?.()}});
  const choices=[0,1].map(p=>Object.assign(node(),{getAttribute(){return String(p)}}));
  const feedback=[node(),node()];
  const app={innerHTML:'',querySelectorAll(selector){return selector==='.choice'?choices:selector==='.feedback button'?feedback:[]}};elements.app=app;
  const api={id:()=> 'test-run-id',record:(...r)=>{records.push(r);return Promise.resolve(true)},status:()=>rows?'ready':'unconfigured',refresh:()=>Promise.resolve(rows)};
- vm.runInNewContext(source,{document:{getElementById(id){return elements[id] ||= node()}},localStorage:{getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)},location:{origin:'https://example.com',pathname:'/',search},URLSearchParams,navigator:{},history:{replaceState(){}},setTimeout,window:{PharmacoStats:api,scrollTo(){},innerWidth:390,innerHeight:844}});
- return {app,elements,records,choices,feedback,storage};
+ class Clock extends Date { static now(){return now} }
+ vm.runInNewContext(source,{Date:Clock,setInterval(fn){const id=++timerId;timers.set(id,fn);return id},clearInterval(id){timers.delete(id)},document:{getElementById(id){return elements[id] ||= node()}},localStorage:{getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)},location:{origin:'https://example.com',pathname:'/',search},URLSearchParams,navigator:{},history:{replaceState(){}},setTimeout,window:{PharmacoStats:api,scrollTo(){},innerWidth:390,innerHeight:844}});
+ return {app,elements,records,choices,feedback,storage,advance(ms){now+=ms;[...timers.values()].forEach(fn=>fn())},timerCount(){return timers.size}};
 }
 const settle=()=>new Promise(resolve=>setImmediate(resolve));
 test('only quiz completion records a result; votes replace it and returning does not recount',async()=>{
@@ -51,4 +52,23 @@ test('all four screens have the same four navigation buttons in order',async()=>
 test('saved result and vote can be opened after page reload without recounting',async()=>{
  const storage=new Map(),b=boot({storage});b.elements.go.onclick();for(let i=0;i<16;i++)b.choices[0].onclick();b.feedback[0].onclick();await settle();
  const c=boot({storage});c.elements['nav-result'].onclick();assert.equal(c.records.length,0);assert.equal(c.feedback[0].attrs['aria-pressed'],'true');assert(c.app.innerHTML.includes('조제 완료'));
+});
+
+test('10-second deadline skips exactly one question and marks it red',()=>{
+ const b=boot();b.elements.go.onclick();assert(b.app.innerHTML.includes('>10</div>'));assert.equal(b.timerCount(),1);
+ b.advance(9000);assert.equal(b.elements.countdown.textContent,'1');assert(b.app.innerHTML.includes('1 / 16'));
+ b.advance(1000);assert(b.app.innerHTML.includes('2 / 16'));assert.equal((b.app.innerHTML.match(/class="skipped"/g)||[]).length,1);assert.equal(b.timerCount(),1);
+ for(let i=1;i<16;i++)b.choices[0].onclick();
+ assert.equal(b.timerCount(),0);assert.equal(b.records.length,1);
+ const saved=JSON.parse(b.storage.get('pharmaco-last-result'));assert.equal(saved.tally.reduce((n,t)=>n+t.a+t.b,0),15);assert.equal(saved.tally.reduce((n,t)=>n+t.skipped,0),1);
+});
+test('manual unknowns are neutral; all skipped axes are disclosed in the result',()=>{
+ const b=boot();b.elements.go.onclick();for(let i=0;i<16;i++)b.elements.unknown.onclick();
+ assert.equal(b.timerCount(),0);assert.equal(b.records.length,1);assert(b.app.innerHTML.includes('무작위로 배정'));
+ const saved=JSON.parse(b.storage.get('pharmaco-last-result'));assert(saved.tally.every(t=>t.a===0&&t.b===0&&t.skipped===4));
+});
+test('previous question resets its timer and replaces its skipped status',()=>{
+ const b=boot();b.elements.go.onclick();b.elements.unknown.onclick();b.advance(5000);b.elements.back.onclick();
+ assert.equal((b.app.innerHTML.match(/class="skipped"/g)||[]).length,0);assert.equal(b.timerCount(),1);
+ b.advance(9000);assert(b.app.innerHTML.includes('1 / 16'));b.choices[0].onclick();assert(b.app.innerHTML.includes('2 / 16'));assert.equal((b.app.innerHTML.match(/class="skipped"/g)||[]).length,0);
 });

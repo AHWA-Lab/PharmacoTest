@@ -65,6 +65,8 @@ button:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
 .rack i::before { content: ""; position: absolute; left: 20%; right: 20%; top: -5px; height: 4px; background: var(--line); border-radius: 1px; }
 .rack i.done { background: var(--cap); border-color: var(--cap); }
 .rack i.done::before { background: var(--cap); }
+.rack i.skipped { background: #eb8585; border-color: #eb8585; }
+.rack i.skipped::before { background: #eb8585; }
 .rack i.now { border-color: var(--amber); }
 .rack i.now::before { background: var(--amber); }
 .count { font-size: 13px; color: var(--muted); margin: 0 0 36px; font-variant-numeric: tabular-nums; }
@@ -76,6 +78,13 @@ button:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
   transition: border-color .15s, transform .15s;
 }
 .vs { text-align: center; font-family: var(--font-display); font-weight: 900; font-size: 18px; letter-spacing: .08em; color: #d9805f; margin: -2px 0; }
+.choice-divider { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 24px; }
+.choice-divider .vs { justify-self: end; }
+.unknown { justify-self: start; border: 1px solid var(--line); border-radius: 999px; background: #fff; padding: 8px 14px; font-size: 14px; color: var(--muted); }
+.unknown:hover { background: #f3effd; border-color: var(--lav); }
+.countdown { display: grid; place-items: center; width: 48px; height: 48px; margin: 18px auto 0; border: 2px solid var(--cap); border-radius: 50%; font-size: 23px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.countdown.urgent { border-color: #d96a6a; color: #c45252; }
+.time-notice { margin: 0 0 24px; font-size: clamp(23px, 6vw, 30px); font-weight: 700; color: #b55b41; }
 .choice:hover { border-color: var(--lav); background: #faf8ff; }
 .choice:active { transform: scale(.99); }
 .back { margin-top: 22px; background: none; border: 0; color: var(--muted); font-size: 14px; padding: 6px 0; text-decoration: underline; text-underline-offset: 3px; }
@@ -340,7 +349,7 @@ main:has(.types-page) { max-width: 960px; }
     var cached = JSON.parse(localStorage.getItem('pharmaco-last-result') || 'null');
     if (cached && Object.prototype.hasOwnProperty.call(RESULTS, cached.code)) {
       var validTally = Array.isArray(cached.tally) && cached.tally.length === 4 && cached.tally.every(function (t) {
-        return t && Number.isInteger(t.a) && Number.isInteger(t.b) && t.a >= 0 && t.b >= 0 && t.a + t.b === PER_AXIS;
+        return t && Number.isInteger(t.a) && Number.isInteger(t.b) && t.a >= 0 && t.b >= 0 && t.a + t.b <= PER_AXIS;
       });
       savedResult = { code: cached.code, tally: validTally ? cached.tally : null, resultId: validTally ? cached.resultId : null, vote: cached.vote === 1 || cached.vote === -1 ? cached.vote : null };
     }
@@ -380,7 +389,16 @@ main:has(.types-page) { max-width: 960px; }
   }
 
   var viewVersion = 0;
+  var quizTimer = null;
+  var quizDeadline = 0;
+  var questionOpen = false;
+  function stopQuizTimer() {
+    if (quizTimer !== null) clearInterval(quizTimer);
+    quizTimer = null;
+    questionOpen = false;
+  }
   function el(html) {
+    stopQuizTimer();
     viewVersion++;
     var page = html.indexOf('class="start"') >= 0 ? 'start' : html.indexOf('class="label"') >= 0 ? 'result' : html.indexOf('class="types-page"') >= 0 ? 'types' : html.indexOf('class="stats-page"') >= 0 ? 'stats' : null;
     var links = [ ['restart', '다시하기', 'start'], ['result', '결과보기', 'result'], ['types', '전체보기', 'types'], ['stats', '통계보기', 'stats'] ];
@@ -410,6 +428,8 @@ main:has(.types-page) { max-width: 960px; }
       '<p class="eyebrow">일반한약팀 · 심리 처방</p>' +
       '<h1>약침 성격 처방</h1>' +
       '<p class="lead">16개 문항에 둘 중 가까운 쪽을 고르면 나와 닮은 약침이 조제됩니다. 문항은 풀에서 무작위로 뽑혀서 할 때마다 달라요.</p>' +
+      '<p class="time-notice">질문당 시간제한 10초</p>' +
+      '<p class="foot">시간 안에 선택하지 않으면 ‘모르겠다’로 넘어갑니다.</p>' +
       '<ul class="spec"><li>1회 16문항</li><li>약 1분</li><li>결과 16종</li></ul>' +
       '<div class="actions"><button class="go" id="go">조제 시작</button><button class="ghost" id="share">친구에게 공유</button></div>' +
       '</section>'
@@ -424,29 +444,46 @@ main:has(.types-page) { max-width: 960px; }
     var opts = q.flip ? [1, 0] : [0, 1];
     var rack = "";
     for (var k = 0; k < state.qs.length; k++) {
-      rack += '<i class="' + (k < state.i ? "done" : k === state.i ? "now" : "") + '"></i>';
+      rack += '<i class="' + (k < state.i ? (state.ans[k] === null ? "skipped" : "done") : k === state.i ? "now" : "") + '"></i>';
     }
     var btns = opts.map(function (o) {
       return '<button class="choice" data-pick="' + o + '">' + q.text[o] + '</button>';
-    }).join('<div class="vs" aria-hidden="true">VS</div>');
+    }).join('<div class="choice-divider"><span class="vs" aria-hidden="true">VS</span><button type="button" class="unknown" id="unknown">모르겠다</button></div>');
     el(
       '<section>' +
-      '<div class="rack" aria-hidden="true">' + rack + '</div>' +
+      '<div class="rack" role="img" aria-label="' + state.i + '문항 완료, 모르겠다 ' + state.ans.filter(function (a) { return a === null; }).length + '문항">' + rack + '</div>' +
       '<p class="count">' + (state.i + 1) + ' / ' + state.qs.length + '</p>' +
       '<p class="q-title">둘 중 나와 가까운 쪽</p>' +
       '<div class="choices">' + btns + '</div>' +
+      '<div class="countdown" id="countdown" role="timer" aria-label="남은 시간 10초">10</div>' +
       '<button class="back" id="back"' + (state.i === 0 ? " disabled" : "") + '>이전 문항</button>' +
       '</section>'
     );
+    questionOpen = true;
+    quizDeadline = Date.now() + 10000;
+    var questionVersion = viewVersion;
+    var countdown = document.getElementById('countdown');
+    quizTimer = setInterval(function () {
+      if (questionVersion !== viewVersion || !questionOpen) return;
+      var remaining = Math.max(0, Math.ceil((quizDeadline - Date.now()) / 1000));
+      countdown.textContent = String(remaining);
+      countdown.setAttribute('aria-label', '남은 시간 ' + remaining + '초');
+      countdown.className = 'countdown' + (remaining <= 3 ? ' urgent' : '');
+      if (remaining === 0) answer(null);
+    }, 100);
     Array.prototype.forEach.call(app.querySelectorAll(".choice"), function (b) {
-      b.onclick = function () { answer(parseInt(b.getAttribute("data-pick"), 10)); };
+      b.onclick = function () { if (questionVersion === viewVersion) answer(parseInt(b.getAttribute("data-pick"), 10)); };
     });
+    document.getElementById('unknown').onclick = function () { if (questionVersion === viewVersion) answer(null); };
     document.getElementById("back").onclick = function () {
       if (state.i > 0) { state.i--; state.ans.pop(); renderQ(); }
     };
   }
 
   function answer(pick) {
+    if (!questionOpen) return;
+    if (Date.now() >= quizDeadline) pick = null;
+    stopQuizTimer();
     state.ans.push(pick);
     state.i++;
     if (state.i >= state.qs.length) {
@@ -471,8 +508,9 @@ main:has(.types-page) { max-width: 960px; }
   }
 
   function scoreResult() {
-    var tally = AXES.map(function () { return { a: 0, b: 0, last: "a" }; });
+    var tally = AXES.map(function () { return { a: 0, b: 0, skipped: 0, last: Math.random() < 0.5 ? "a" : "b" }; });
     state.qs.forEach(function (q, idx) {
+      if (state.ans[idx] === null) { tally[q.axis].skipped++; return; }
       var side = state.ans[idx] === 0 ? "a" : "b";
       tally[q.axis][side]++;
       tally[q.axis].last = side;
@@ -496,15 +534,17 @@ main:has(.types-page) { max-width: 960px; }
     if (!shared) {
       var bars = AXES.map(function (ax, i) {
         var t = tally[i];
-        var pa = (t.a / PER_AXIS) * 100;
+        var answered = t.a + t.b;
+        var pa = answered ? (t.a / answered) * 100 : 50;
         return '<div class="bar"><span class="l">' + ax.a + '</span>' +
-          '<div class="track" role="img" aria-label="' + ax.aName + ' ' + t.a + ', ' + ax.bName + ' ' + t.b + '"><span style="width:' + pa + '%"></span></div>' +
+          '<div class="track" role="img" aria-label="' + (answered ? ax.aName + ' ' + t.a + ', ' + ax.bName + ' ' + t.b : '응답 없음') + '"><span style="width:' + pa + '%;opacity:' + (answered ? 1 : 0) + '"></span></div>' +
           '<span class="r">' + ax.b + '</span></div>';
       }).join("");
       var scoreLine = AXES.map(function (ax, i) {
-        return ax.aName + ' ' + tally[i].a + ':' + tally[i].b + ' ' + ax.bName;
+        return ax.aName + ' ' + tally[i].a + ':' + tally[i].b + ' ' + ax.bName + (tally[i].skipped ? ' (모름 ' + tally[i].skipped + ')' : '');
       }).join(" · ");
       detail = '<div class="bars">' + bars + '</div><p class="foot">' + scoreLine + '</p>';
+      if (tally.some(function (t) { return t.a + t.b === 0; })) detail += '<p class="foot">응답이 없는 성향 축은 무작위로 배정되었습니다.</p>';
     }
 
     el(
