@@ -115,6 +115,10 @@ button:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
 .ghost { background: var(--surface); border: 1.5px solid var(--lav); border-radius: 999px; padding: 12px 20px; font-weight: 500; }
 .share-row { margin-top: 14px; }
 .ghost:hover { background: #f3effd; }
+.feedback { display: flex; justify-content: center; gap: 12px; margin-top: 28px; }
+.feedback button { background: var(--surface); border: 1.5px solid var(--line); border-radius: 50%; width: 52px; height: 52px; padding: 0; font-size: 26px; }
+.feedback button:hover { border-color: var(--lav); }
+.feedback button[aria-pressed="true"] { background: #e9f8f1; border-color: #5fae8e; box-shadow: 0 0 0 2px rgba(95,174,142,.18); }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 
@@ -357,8 +361,22 @@ button:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
           ? '<button class="go" id="again">나도 조제하기</button>'
           : '<button class="go" id="again">다시 조제</button><button class="ghost" id="share">결과 공유</button>') +
       '</div>' +
+      '<div class="feedback" role="group" aria-label="이 결과가 내 성격에 부합하나요?">' +
+        '<button type="button" aria-label="내 성격에 부합해요" aria-pressed="false">👍</button>' +
+        '<button type="button" aria-label="내 성격에 부합하지 않아요" aria-pressed="false">👎</button>' +
+      '</div>' +
       '</section>'
     );
+    var feedbackButtons = app.querySelectorAll(".feedback button");
+    Array.prototype.forEach.call(feedbackButtons, function (button) {
+      button.onclick = function () {
+        var wasPressed = button.getAttribute("aria-pressed") === "true";
+        Array.prototype.forEach.call(feedbackButtons, function (item) {
+          item.setAttribute("aria-pressed", "false");
+        });
+        button.setAttribute("aria-pressed", String(!wasPressed));
+      };
+    });
     document.getElementById("again").onclick = function () {
       if (shared) history.replaceState(null, "", BASE);
       buildQuiz(); renderQ();
