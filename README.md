@@ -16,7 +16,7 @@
 | 약침번아웃체크 | 15 (64) | 4 | [플레이](https://ahwa-lab.github.io/PharmacoTest/stress/) |
 
 - [캐릭터 인기순위](https://ahwa-lab.github.io/PharmacoTest/ranking/): 모든 테스트 결과의 👍·👎를 캐릭터 단위로 합산해 윌슨 점수(95% 하한)로 정렬합니다.
-- [사용되지 않은 캐릭터들](https://ahwa-lab.github.io/PharmacoTest/reserve/): 예비 캐릭터 100종. `scripts/build-reserve.cjs`가 `reserve-data.js`와 이미지 프롬프트(`research/reserve-character-prompts.json`)를 만들고, `reserve-art.js`가 SVG 스티커 그림을 그립니다.
+- [사용되지 않은 캐릭터들](https://ahwa-lab.github.io/PharmacoTest/reserve/): 예비 캐릭터 100종. `scripts/build-reserve.cjs`가 `reserve-data.js`와 이미지 프롬프트(`research/reserve-character-prompts.json`)를 만들고, `reserve-art.js`가 기존 그림체에 맞춰 이미지 생성 도구로 완성한 일러스트 100종을 표시합니다. 원본 PNG와 표시용 WebP는 `assets/reserve/`, 실제 생성 프롬프트와 시트별 ID는 `research/reserve-image-generation.json`에 보관합니다.
 - 모든 하위 페이지 상단의 ‘약침 테스트 모음’ 배지로 첫 화면에 돌아갈 수 있습니다.
 
 ### 문항 출제 방식 (편향 방지)

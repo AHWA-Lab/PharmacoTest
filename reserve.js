@@ -38,7 +38,7 @@
     }).join('') : '<p class="dex-empty">조건에 맞는 캐릭터가 없어요.</p>';
     grid.querySelectorAll('[data-id]').forEach(function (b) { b.onclick = function () {
       var c = list.find(function (x) { return x.id === b.dataset.id; });
-      document.getElementById('dialog-content').innerHTML = '<div class="reserve-dialog-art">' + picture(c) + '</div><h2 id="dialog-name">' + esc(c.nick) + '</h2><div class="type-row"><span class="code">' + c.id + ' · ' + esc(c.animal) + '</span></div><p>' + esc(c.core) + '</p><p class="reserve-quote">“' + esc(c.catchphrase) + '”</p>' + details(c);
+      document.getElementById('dialog-content').innerHTML = '<div class="character-frame reserve-dialog-art">' + picture(c) + '</div><h2 id="dialog-name">' + esc(c.nick) + '</h2><div class="type-row"><span class="code">' + c.id + ' · ' + esc(c.animal) + '</span></div><p>' + esc(c.core) + '</p><p class="reserve-quote">“' + esc(c.catchphrase) + '”</p>' + details(c);
       dialog.showModal();
     }; });
   }

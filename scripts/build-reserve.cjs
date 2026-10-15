@@ -152,7 +152,7 @@ const prompts = {
   })),
   sheets: Array.from({ length: 10 }, (_, s) => {
     const group = characters.slice(s * 10, s * 10 + 10);
-    return { sheet: 'reserve-' + String(s + 1).padStart(2, '0'), ids: group.map(c => c.id), prompt: `${style}\nCreate EXACTLY 5 columns and 2 rows, 10 EQUAL cells, row-major order, 2:1 canvas. No labels, text, numbers, borders or gutters. Each full-body subject centered in its own cell with 10% padding.\n` + group.map((c, k) => `Cell ${k + 1}: ${c.animalEn}; expression: ${c._en.expression}; action (Korean): ${c.action}; outfit: ${c._en.outfit} (${c.palette.main}/${c.palette.accent}); headwear: ${c._en.hat}; prop: ${c._en.prop}.`).join('\n') };
+    return { sheet: 'reserve-' + String(s + 1).padStart(2, '0'), ids: group.map(c => c.id), prompt: `${style}\nCreate EXACTLY 5 columns and 2 rows, 10 EQUAL cells, row-major order, 5:2 canvas. No labels, text, numbers, borders or gutters. Each full-body subject centered in its own cell with 10% padding.\n` + group.map((c, k) => `Cell ${k + 1}: ${c.animalEn}; expression: ${c._en.expression}; action (Korean): ${c.action}; outfit: ${c._en.outfit} (${c.palette.main}/${c.palette.accent}); headwear: ${c._en.hat}; prop: ${c._en.prop}.`).join('\n') };
   })
 };
 characters.forEach(c => { delete c._en; });

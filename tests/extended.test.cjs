@@ -106,11 +106,16 @@ test('reserve archive shows 100 unique unused characters with art, filters and d
   assert.equal(new Set(data.map(c=>c.animal)).size,100);assert.equal(new Set(data.map(c=>c.nick)).size,100);
   const used=new Set(profiles.map(p=>p.nick));assert(!data.some(c=>used.has(c.nick)));
   const combos=new Set(data.map(c=>[c.outfit,c.hat,c.palette.name,c.theme].join()));assert.equal(combos.size,100);
-  assert.equal(b.all('.reserve-card').length,100);assert.equal(b.all('.reserve-card svg').length,100);
+  assert.equal(b.all('.reserve-card').length,100);assert.equal(b.all('.reserve-card .reserve-sprite').length,100);
+  const manifest=JSON.parse(fs.readFileSync(path.join(root,'research/reserve-image-generation.json'),'utf8'));
+  assert.equal(manifest.sheets.length,10);assert.equal(manifest.sheets.flatMap(s=>s.ids).length,100);
+  const cells=new Set();
+  for(const c of data){const loc=b.w.PharmacoReserveArt.location(c.id),sheet=manifest.sheets.find(s=>s.sheet===loc.sheet);assert.equal(sheet.ids[loc.row*5+loc.column],c.id);cells.add([loc.sheet,loc.row,loc.column].join(':'));assert(fs.existsSync(path.join(root,'assets/reserve',loc.sheet+'.webp')));assert(fs.existsSync(path.join(root,'assets/reserve',loc.sheet+'.png')));}
+  assert.equal(cells.size,100);assert.equal(new Set(b.all('.reserve-sprite').map(e=>e.dataset.character)).size,100);
   b.q('#group-filters [data-key="myth"]').click();assert.equal(b.all('.reserve-card').length,4);
   b.q('#group-filters [data-key="all"]').click();b.q('#dex-search').value='감초';b.q('#dex-search').dispatchEvent(new b.w.Event('input'));
   assert.equal(b.all('.reserve-card').length,data.filter(c=>c.herb==='감초').length);
-  b.q('.reserve-art').click();assert(b.q('#type-dialog').open);assert.equal(b.all('.reserve-facts > div').length,10);
+  b.q('.reserve-art').click();assert(b.q('#type-dialog').open);assert.equal(b.all('.reserve-facts > div').length,10);assert.equal(b.q('.reserve-dialog-art .reserve-sprite').dataset.character,b.q('.reserve-art .reserve-sprite').dataset.character);
   const prompts=JSON.parse(fs.readFileSync(path.join(root,'research/reserve-character-prompts.json'),'utf8'));assert.equal(prompts.characters.length,100);assert.equal(prompts.sheets.length,10);
  }finally{b.dom.window.close()}
 });
