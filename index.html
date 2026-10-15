@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>약침 성격 처방</title>
+<meta name="description" content="16문항으로 알아보는 나와 닮은 약침. 일반한약팀 심리 처방.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="약침 성격 처방">
+<meta property="og:description" content="16문항에 답하면 나와 닮은 약침이 조제됩니다. 나는 어떤 약침일까?">
+<meta property="og:url" content="https://agihuimini.github.io/pharmacoMBTI/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='11' y='2' width='10' height='5' rx='1' fill='%231f6b50'/%3E%3Crect x='8' y='8' width='16' height='22' rx='3' fill='%231f6b50'/%3E%3Crect x='10' y='15' width='12' height='8' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;900&display=swap">
+<style>
+/* Layout: 한 문항씩 넘기는 좁은 단일 컬럼. 결과는 약침 바이알 라벨 형태의 카드. */
+:root {
+  --bg: #ecf1ed;
+  --surface: #f8faf8;
+  --ink: #16241d;
+  --muted: #55665c;
+  --line: #c6d3ca;
+  --cap: #1f6b50;
+  --cap-ink: #ffffff;
+  --amber: #a8651a;
+  --font-display: "Noto Serif KR", "Batang", serif;
+  --font-body: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1914; --surface: #16231c; --ink: #e4eee8; --muted: #93a59a;
+    --line: #2b3d33; --cap: #5fbf98; --cap-ink: #0f1914; --amber: #e0a04b;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1914; --surface: #16231c; --ink: #e4eee8; --muted: #93a59a;
+  --line: #2b3d33; --cap: #5fbf98; --cap-ink: #0f1914; --amber: #e0a04b;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: 16px; line-height: 1.6;
+  padding-block: 28px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+main { max-width: 540px; margin: 0 auto; }
+h1, h2 { font-family: var(--font-display); text-wrap: balance; margin: 0; }
+.eyebrow { font-size: 12px; letter-spacing: .14em; color: var(--muted); margin: 0 0 10px; }
+button { font: inherit; color: inherit; cursor: pointer; }
+button:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+
+/* start */
+.start h1 { font-size: clamp(34px, 9vw, 46px); line-height: 1.15; font-weight: 900; }
+.start p.lead { color: var(--muted); margin: 16px 0 28px; max-width: 34em; }
+.spec { display: flex; gap: 10px; flex-wrap: wrap; margin: 0 0 28px; padding: 0; list-style: none; }
+.spec li { border: 1px solid var(--line); background: var(--surface); padding: 4px 10px; font-size: 13px; color: var(--muted); border-radius: 3px; }
+.go {
+  background: var(--cap); color: var(--cap-ink); border: 0; border-radius: 3px;
+  padding: 14px 26px; font-weight: 700; font-size: 16px; letter-spacing: .04em;
+}
+.go:hover { filter: brightness(1.08); }
+
+/* quiz */
+.rack { display: grid; grid-template-columns: repeat(16, 1fr); gap: 4px; margin-bottom: 8px; }
+.rack i { height: 22px; border: 1.5px solid var(--line); border-radius: 2px 2px 5px 5px; background: transparent; position: relative; }
+.rack i::before { content: ""; position: absolute; left: 20%; right: 20%; top: -5px; height: 4px; background: var(--line); border-radius: 1px; }
+.rack i.done { background: var(--cap); border-color: var(--cap); }
+.rack i.done::before { background: var(--cap); }
+.rack i.now { border-color: var(--amber); }
+.rack i.now::before { background: var(--amber); }
+.count { font-size: 13px; color: var(--muted); margin: 0 0 36px; font-variant-numeric: tabular-nums; }
+.q-title { font-size: 12px; letter-spacing: .14em; color: var(--amber); margin: 0 0 14px; font-weight: 700; }
+.choices { display: grid; gap: 12px; }
+.choice {
+  text-align: left; background: var(--surface); border: 1.5px solid var(--line); border-radius: 4px;
+  padding: 20px 18px; font-size: 17px; line-height: 1.5; min-height: 72px; width: 100%;
+  transition: border-color .15s, transform .15s;
+}
+.choice:hover { border-color: var(--cap); }
+.choice:active { transform: scale(.99); }
+.back { margin-top: 22px; background: none; border: 0; color: var(--muted); font-size: 14px; padding: 6px 0; text-decoration: underline; text-underline-offset: 3px; }
+.back[disabled] { visibility: hidden; }
+
+/* result */
+.label {
+  background: var(--surface); border: 1.5px solid var(--ink); border-radius: 4px; overflow: hidden;
+}
+.label-cap { background: var(--cap); color: var(--cap-ink); display: flex; justify-content: space-between; gap: 12px; padding: 10px 18px; font-size: 12px; letter-spacing: .1em; }
+.label-body { padding: 22px 18px 20px; }
+.cat { font-size: 13px; color: var(--muted); margin: 0 0 2px; }
+.vial-name { font-family: var(--font-display); font-weight: 900; font-size: clamp(26px, 7.5vw, 34px); line-height: 1.2; margin: 0 0 18px; text-wrap: balance; }
+.you { font-size: 18px; line-height: 1.6; margin: 0 0 20px; }
+.you b { font-weight: 700; background: linear-gradient(transparent 62%, color-mix(in srgb, var(--amber) 35%, transparent) 62%); }
+.type-row { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; border-top: 1px dashed var(--line); padding-top: 16px; }
+.code { font-family: var(--font-display); font-weight: 900; font-size: 30px; letter-spacing: .08em; color: var(--cap); }
+.nick { font-size: 15px; color: var(--muted); }
+.bars { display: grid; gap: 10px; margin: 22px 0 0; }
+.bar { display: grid; grid-template-columns: 2.2em 1fr 2.2em; align-items: center; gap: 10px; font-size: 14px; font-variant-numeric: tabular-nums; }
+.bar .l { font-weight: 700; }
+.bar .r { text-align: right; font-weight: 700; }
+.track { display: flex; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+.track span { background: var(--cap); display: block; }
+.dim { color: var(--muted); font-weight: 400; }
+.foot { font-size: 13px; color: var(--muted); margin: 14px 0 0; }
+.actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 22px; }
+.ghost { background: transparent; border: 1.5px solid var(--ink); border-radius: 3px; padding: 12px 20px; font-weight: 500; }
+.share-row { margin-top: 14px; }
+.ghost:hover { background: var(--surface); }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+</head>
+<body>
+<main id="app"></main>
+
+<script>
+(function () {
+  var AXES = [
+    { id: "EI", a: "E", b: "I", aName: "외향", bName: "내향", pool: [
+      ["약속이 취소되면 아쉽다", "약속이 취소되면 은근히 좋다"],
+      ["처음 보는 사람과 금방 말을 튼다", "처음 보는 사람은 한참 지켜본다"],
+      ["밥은 같이 먹는 게 좋다", "밥은 혼자 먹는 게 편하다"],
+      ["생각은 말하면서 정리된다", "생각은 혼자 정리한 뒤 말한다"],
+      ["쉬는 날엔 밖으로 나간다", "쉬는 날엔 집이 최고다"],
+      ["전화가 오면 반갑다", "전화가 오면 일단 긴장한다"],
+      ["모임에서 말이 많은 편이다", "모임에서 듣는 편이다"],
+      ["회식 뒤에 오히려 기운이 난다", "회식 뒤에 방전된다"],
+      ["낯선 자리에 먼저 손을 든다", "낯선 자리에선 뒷줄에 앉는다"],
+      ["친구는 많을수록 좋다", "깊은 친구 몇 명이면 충분하다"],
+      ["카톡은 바로바로 답한다", "카톡은 몰아서 답한다"],
+      ["여행은 여럿이 간다", "여행은 혼자나 둘이 간다"]
+    ]},
+    { id: "SN", a: "S", b: "N", aName: "감각", bName: "직관", pool: [
+      ["이야기는 사실 위주로 듣는다", "이야기는 의미와 맥락 위주로 듣는다"],
+      ["레시피는 그대로 따른다", "레시피는 참고만 한다"],
+      ["지금 눈앞의 일이 중요하다", "앞으로의 가능성이 중요하다"],
+      ["검증된 방법이 좋다", "새로운 방법이 좋다"],
+      ["설명은 예시가 먼저다", "설명은 큰 그림이 먼저다"],
+      ["멍때릴 때 오늘 한 일이 떠오른다", "멍때릴 때 엉뚱한 상상을 한다"],
+      ["숫자와 데이터를 믿는다", "직감을 믿는다"],
+      ["디테일을 잘 알아챈다", "분위기와 흐름을 잘 알아챈다"],
+      ["길은 지도를 보고 찾는다", "길은 감으로 찾는다"],
+      ["현실적이라는 말을 자주 듣는다", "독특하다는 말을 자주 듣는다"],
+      ["해본 것이 믿음직하다", "처음 보는 것이 끌린다"],
+      ["영화는 줄거리가 중요하다", "영화는 숨은 상징이 중요하다"]
+    ]},
+    { id: "TF", a: "T", b: "F", aName: "사고", bName: "감정", pool: [
+      ["고민 상담엔 해결책부터 준다", "고민 상담엔 공감부터 한다"],
+      ["옳고 그름이 먼저다", "상대의 기분이 먼저다"],
+      ["\"똑똑하다\"는 말이 더 좋다", "\"따뜻하다\"는 말이 더 좋다"],
+      ["싸울 땐 논리로 이기고 싶다", "싸울 땐 관계를 지키고 싶다"],
+      ["냉정하다는 말을 들어봤다", "감성적이라는 말을 들어봤다"],
+      ["결정은 장단점을 따져서 한다", "결정은 마음이 가는 쪽으로 한다"],
+      ["영화를 보며 \"저게 말이 돼?\" 한다", "영화를 보며 쉽게 눈물이 난다"],
+      ["피드백은 직설적이 낫다", "피드백은 돌려 말하는 게 낫다"],
+      ["효율이 곧 배려다", "마음 써주는 게 곧 배려다"],
+      ["감정 호소에 잘 흔들리지 않는다", "남의 감정이 쉽게 전염된다"],
+      ["팀에선 원칙을 지키는 쪽이다", "팀에선 분위기를 살리는 쪽이다"],
+      ["실수한 사람에겐 원인을 짚어준다", "실수한 사람은 먼저 다독인다"]
+    ]},
+    { id: "JP", a: "J", b: "P", aName: "계획", bName: "즉흥", pool: [
+      ["할 일은 미리 끝낸다", "할 일은 마감이 닥쳐야 한다"],
+      ["일정이 바뀌면 스트레스다", "일정이 바뀌면 재밌다"],
+      ["여행 전에 시간표를 짠다", "여행은 가서 정한다"],
+      ["책상이 대체로 정돈돼 있다", "책상에 나만 아는 질서가 있다"],
+      ["체크리스트가 있으면 안심된다", "체크리스트는 답답하다"],
+      ["약속엔 10분 일찍 도착한다", "약속엔 아슬아슬하게 도착한다"],
+      ["결정은 빨리 내리고 싶다", "결정은 끝까지 열어두고 싶다"],
+      ["쇼핑 전에 살 목록을 적는다", "쇼핑은 구경하다 정한다"],
+      ["계획이 틀어지면 불안하다", "계획이 없는 게 편하다"],
+      ["방학 숙제는 미리 했다", "방학 숙제는 마지막 날 했다"],
+      ["캘린더를 꼼꼼히 쓴다", "캘린더는 거의 안 쓴다"],
+      ["시작하면 끝을 본다", "여러 개를 동시에 벌려 둔다"]
+    ]}
+  ];
+
+  var RESULTS = {
+    ESTJ: ["총지휘관", "혈기보양약침", "삼기활력", "기운을 끌어올려 팀 전체의 사기를 책임지는 추진형 리더"],
+    ESTP: ["해결사", "증류약침", "어혈", "막힌 곳을 시원하게 뚫어주는 현장 문제 해결사"],
+    ESFJ: ["분위기 메이커", "증류약침", "경근이완", "남을 부드럽게 풀어주고 관계를 이어주는 외교관"],
+    ESFP: ["파티 플래너", "동물성약침", "Sweet BV", "이름부터 달콤해서 어딜 가나 분위기를 띄우는 에너자이저"],
+    ENTJ: ["전략가", "혈기보양약침", "총만어혈", "여러 약재를 한 번에 조합해 큰 그림을 짜는 종합 설계자"],
+    ENTP: ["토론왕", "경락장약침", "BUM (웅담+우황+사향)", "센 재료만 모아 거침없이 논쟁에 뛰어드는 직설적 도전자"],
+    ENFJ: ["멘토", "동물성약침", "재생", "사람의 가능성을 되살리고 다시 일어서게 돕는 영감의 안내자"],
+    ENFP: ["자유로운 영혼", "팔강약침", "상초 (황련해독탕)", "어디로든 가볍게 튀어 오르는 열정적인 모험가"],
+    ISTJ: ["원칙주의자", "동물성약침", "정제봉독", "날이 서고 예민하고 깐깐한 완벽주의자"],
+    ISTP: ["장인", "증류약침", "요각통", "허리와 다리 같은 실무 부위만 묵묵히 고치는 손기술의 실용가"],
+    ISFJ: ["수호자", "팔강약침", "신음허", "겉으로 드러나진 않아도 뿌리를 지키며 조용히 받쳐주는 든든한 조력자"],
+    ISFP: ["감성 예술가", "동물성약침", "연아", "자신의 아름다움을 가꾸고 관계의 중심이 되고자 하는 공주"],
+    INTJ: ["설계 천재", "경락장약침", "CF (홍화)", "뼈를 이어 붙이는 홍화씨처럼 머릿속 구조물을 정교하게 접합하는 설계자"],
+    INTP: ["발명가", "증류약침", "AJ-1 (공진단)", "이것저것 섞어 새 처방을 만들어내는 엉뚱한 연구자"],
+    INFJ: ["조언자", "혈기보양약침", "청폐", "막힌 숨통을 틔워주듯 답답한 마음을 맑게 정리해 주는 통찰의 조언자"],
+    INFP: ["몽상가", "증류약침", "소염", "열을 가라앉히듯 들뜬 감정을 식히며 자기만의 세계를 가꾸는 몽상가"]
+  };
+
+  var PER_AXIS = 4;
+  var app = document.getElementById("app");
+  var state = { qs: [], i: 0, ans: [] };
+
+  function shuffle(arr) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+
+  function buildQuiz() {
+    var qs = [];
+    AXES.forEach(function (ax, ai) {
+      shuffle(ax.pool).slice(0, PER_AXIS).forEach(function (p) {
+        qs.push({ axis: ai, flip: Math.random() < 0.5, text: p });
+      });
+    });
+    state.qs = shuffle(qs);
+    state.i = 0;
+    state.ans = [];
+  }
+
+  function el(html) { app.innerHTML = html; }
+
+  function renderStart() {
+    el(
+      '<section class="start">' +
+      '<p class="eyebrow">일반한약팀 · 심리 처방</p>' +
+      '<h1>약침 성격 처방</h1>' +
+      '<p class="lead">16개 문항에 둘 중 가까운 쪽을 고르면 나와 닮은 약침이 조제됩니다. 문항은 풀에서 무작위로 뽑혀서 할 때마다 달라요.</p>' +
+      '<ul class="spec"><li>1회 16문항</li><li>약 1분</li><li>결과 16종</li></ul>' +
+      '<div class="actions"><button class="go" id="go">조제 시작</button><button class="ghost" id="share">친구에게 공유</button></div>' +
+      '</section>'
+    );
+    document.getElementById("go").onclick = function () { buildQuiz(); renderQ(); };
+    var shareBtn = document.getElementById("share");
+    shareBtn.onclick = function () { share(shareBtn, "약침 성격 처방", "16문항으로 알아보는 나와 닮은 약침", BASE); };
+  }
+
+  function renderQ() {
+    var q = state.qs[state.i];
+    var opts = q.flip ? [1, 0] : [0, 1];
+    var rack = "";
+    for (var k = 0; k < state.qs.length; k++) {
+      rack += '<i class="' + (k < state.i ? "done" : k === state.i ? "now" : "") + '"></i>';
+    }
+    var btns = opts.map(function (o) {
+      return '<button class="choice" data-pick="' + o + '">' + q.text[o] + '</button>';
+    }).join("");
+    el(
+      '<section>' +
+      '<div class="rack" aria-hidden="true">' + rack + '</div>' +
+      '<p class="count">' + (state.i + 1) + ' / ' + state.qs.length + '</p>' +
+      '<p class="q-title">둘 중 나와 가까운 쪽</p>' +
+      '<div class="choices">' + btns + '</div>' +
+      '<button class="back" id="back"' + (state.i === 0 ? " disabled" : "") + '>이전 문항</button>' +
+      '</section>'
+    );
+    Array.prototype.forEach.call(app.querySelectorAll(".choice"), function (b) {
+      b.onclick = function () { answer(parseInt(b.getAttribute("data-pick"), 10)); };
+    });
+    document.getElementById("back").onclick = function () {
+      if (state.i > 0) { state.i--; state.ans.pop(); renderQ(); }
+    };
+  }
+
+  function answer(pick) {
+    state.ans.push(pick);
+    state.i++;
+    if (state.i >= state.qs.length) { var res = scoreResult(); renderResult(res.code, res.tally); } else renderQ();
+  }
+
+  var BASE = location.origin + location.pathname;
+
+  function share(btn, title, text, url) {
+    var label = btn.textContent;
+    var flash = function (msg) { btn.textContent = msg; setTimeout(function () { btn.textContent = label; }, 1800); };
+    if (navigator.share) {
+      navigator.share({ title: title, text: text, url: url }).catch(function () {});
+      return;
+    }
+    try {
+      navigator.clipboard.writeText(text + "\n" + url).then(function () { flash("링크 복사됨"); }, function () { flash("복사 불가"); });
+    } catch (e) { flash("복사 불가"); }
+  }
+
+  function scoreResult() {
+    var tally = AXES.map(function () { return { a: 0, b: 0, last: "a" }; });
+    state.qs.forEach(function (q, idx) {
+      var side = state.ans[idx] === 0 ? "a" : "b";
+      tally[q.axis][side]++;
+      tally[q.axis].last = side;
+    });
+    var code = "";
+    AXES.forEach(function (ax, i) {
+      var t = tally[i];
+      var side = t.a > t.b ? "a" : t.b > t.a ? "b" : t.last;
+      code += ax[side];
+    });
+    return { code: code, tally: tally };
+  }
+
+  function renderResult(code, tally) {
+    var shared = !tally;
+    var r = RESULTS[code];
+    var detail = "";
+    if (!shared) {
+      var bars = AXES.map(function (ax, i) {
+        var t = tally[i];
+        var pa = (t.a / PER_AXIS) * 100;
+        return '<div class="bar"><span class="l">' + ax.a + '</span>' +
+          '<div class="track" role="img" aria-label="' + ax.aName + ' ' + t.a + ', ' + ax.bName + ' ' + t.b + '"><span style="width:' + pa + '%"></span></div>' +
+          '<span class="r">' + ax.b + '</span></div>';
+      }).join("");
+      var scoreLine = AXES.map(function (ax, i) {
+        return ax.aName + ' ' + tally[i].a + ':' + tally[i].b + ' ' + ax.bName;
+      }).join(" · ");
+      detail = '<div class="bars">' + bars + '</div><p class="foot">' + scoreLine + '</p>';
+    }
+
+    el(
+      '<section>' +
+      '<p class="eyebrow">' + (shared ? "친구가 받은 처방" : "조제 완료") + '</p>' +
+      '<article class="label">' +
+        '<div class="label-cap"><span>' + r[1] + '</span><span>1BOX = 2ml × 5 vial</span></div>' +
+        '<div class="label-body">' +
+          '<p class="cat">' + (shared ? "이 사람의 약침" : "당신의 약침") + '</p>' +
+          '<h2 class="vial-name">' + r[2] + '</h2>' +
+          '<p class="you">' + (shared ? "" : "당신은 ") + '<b>' + r[3] + '</b> 타입입니다.</p>' +
+          '<div class="type-row"><span class="code">' + code + '</span><span class="nick">' + r[0] + '</span></div>' +
+          detail +
+        '</div>' +
+      '</article>' +
+      '<p class="foot">이름과 재료를 억지로 연결한 재미용 매칭입니다. 실제 효능과는 관계가 없습니다.</p>' +
+      '<div class="actions">' +
+        (shared
+          ? '<button class="go" id="again">나도 조제하기</button>'
+          : '<button class="go" id="again">다시 조제</button><button class="ghost" id="share">결과 공유</button>') +
+      '</div>' +
+      '</section>'
+    );
+    document.getElementById("again").onclick = function () {
+      if (shared) history.replaceState(null, "", BASE);
+      buildQuiz(); renderQ();
+    };
+    var shareBtn = document.getElementById("share");
+    if (shareBtn) shareBtn.onclick = function () {
+      share(shareBtn, "약침 성격 처방",
+        "나는 " + code + " " + r[0] + " · [" + r[1] + "] " + r[2] + "! 너는 어떤 약침이야?",
+        BASE + "?type=" + code);
+    };
+  }
+
+  var shared = new URLSearchParams(location.search).get("type");
+  shared = shared && shared.toUpperCase();
+  if (shared && RESULTS[shared]) renderResult(shared); else renderStart();
+})();
+</script>
+
+</body>
+</html>
