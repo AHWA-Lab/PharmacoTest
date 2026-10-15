@@ -149,6 +149,10 @@ main:has(.types-page) { max-width: 960px; }
 .type-dialog p { margin-bottom: 0; }
 .type-description { border-top: 1px dashed var(--line); margin-top: 22px; padding-top: 4px; font-size: 15px; line-height: 1.85; word-break: keep-all; overflow-wrap: break-word; }
 .type-description p { margin: 16px 0 0; }
+.type-icon.last-result, .stats-icon.last-result { outline: 3px solid #36a66c; outline-offset: 3px; box-shadow: 0 0 0 6px #36a66c20; }
+.stats-avatar { min-width: 0; }
+.stats-avatar .satisfaction-bar { margin-top: 10px; width: 72px; }
+.feedback button:disabled { cursor: default; opacity: .45; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 
@@ -156,6 +160,8 @@ main:has(.types-page) { max-width: 960px; }
 <body>
 <main id="app"></main>
 
+<script src="stats-config.js"></script>
+<script src="stats.js"></script>
 <script>
 (function () {
   var AXES = [
@@ -319,7 +325,14 @@ main:has(.types-page) { max-width: 960px; }
 
   var PER_AXIS = 4;
   var app = document.getElementById("app");
-  var state = { qs: [], i: 0, ans: [] };
+  var state = { qs: [], i: 0, ans: [], resultId: null, vote: null };
+  var lastResultType = null;
+  try { lastResultType = localStorage.getItem('pharmaco-last-type'); } catch (error) {}
+
+  function rememberResult(code) {
+    lastResultType = code;
+    try { localStorage.setItem('pharmaco-last-type', code); } catch (error) {}
+  }
 
   function shuffle(arr) {
     var a = arr.slice();
@@ -340,9 +353,12 @@ main:has(.types-page) { max-width: 960px; }
     state.qs = shuffle(qs);
     state.i = 0;
     state.ans = [];
+    state.resultId = window.PharmacoStats.id();
+    state.vote = null;
   }
 
-  function el(html) { app.innerHTML = html; }
+  var viewVersion = 0;
+  function el(html) { viewVersion++; app.innerHTML = html; }
 
   function renderStart() {
     el(
@@ -389,7 +405,11 @@ main:has(.types-page) { max-width: 960px; }
   function answer(pick) {
     state.ans.push(pick);
     state.i++;
-    if (state.i >= state.qs.length) { var res = scoreResult(); renderResult(res.code, res.tally); } else renderQ();
+    if (state.i >= state.qs.length) {
+      var res = scoreResult();
+      window.PharmacoStats.record(state.resultId, res.code, null);
+      renderResult(res.code, res.tally);
+    } else renderQ();
   }
 
   var BASE = location.origin + location.pathname;
@@ -423,6 +443,7 @@ main:has(.types-page) { max-width: 960px; }
   }
 
   function renderResult(code, tally) {
+    rememberResult(code);
     var shared = !tally;
     var r = RESULTS[code];
     var pos = CHARACTER_POSITIONS[code];
@@ -469,6 +490,7 @@ main:has(.types-page) { max-width: 960px; }
         '<button type="button" aria-label="내 성격에 부합해요" aria-pressed="false">👍</button>' +
         '<button type="button" aria-label="내 성격에 부합하지 않아요" aria-pressed="false">👎</button>' +
       '</div>' +
+      (!shared ? '<p class="foot" id="feedback-status" role="status"></p>' : '') +
       '<div class="result-menu">' +
         '<button type="button" class="ghost">처음으로 돌아가기</button>' +
         '<button type="button" class="ghost" id="all-types">약침타입 전체보기</button>' +
@@ -483,13 +505,23 @@ main:has(.types-page) { max-width: 960px; }
       renderTypeStats(function () { renderResult(code, tally); });
     };
     var feedbackButtons = app.querySelectorAll(".feedback button");
-    Array.prototype.forEach.call(feedbackButtons, function (button) {
+    Array.prototype.forEach.call(feedbackButtons, function (button, index) {
+      var vote = index === 0 ? 1 : -1;
+      button.disabled = shared;
+      button.setAttribute('aria-pressed', String(!shared && state.vote === vote));
       button.onclick = function () {
+        if (shared) return;
         var wasPressed = button.getAttribute("aria-pressed") === "true";
         Array.prototype.forEach.call(feedbackButtons, function (item) {
           item.setAttribute("aria-pressed", "false");
         });
         button.setAttribute("aria-pressed", String(!wasPressed));
+        state.vote = wasPressed ? null : vote;
+        var statusNode = document.getElementById('feedback-status');
+        statusNode.textContent = '평가 저장 중…';
+        window.PharmacoStats.record(state.resultId, code, state.vote).then(function (saved) {
+          statusNode.textContent = saved ? '평가가 반영되었습니다.' : '평가를 보관했습니다. 통계 연결 시 다시 전송합니다.';
+        });
       };
     });
     document.getElementById("again").onclick = function () {
@@ -508,6 +540,41 @@ main:has(.types-page) { max-width: 960px; }
   var satisfactionStats = {};
 
 
+
+  function satisfaction(code) {
+    var stats = satisfactionStats[code];
+    var total = stats ? stats.up + stats.down : 0;
+    var percent = total ? Math.round(stats.up / total * 100) : null;
+    var label = percent === null ? '만족도: 집계 전' : '만족도 ' + percent + '% · 불만족 ' + (100 - percent) + '%';
+    var width = percent === null ? 50 : percent;
+    return { label: label, bar: '<div class="satisfaction-bar' + (percent === null ? ' no-data' : '') + '" tabindex="0" role="img" data-satisfaction="' + label + '" aria-label="' + label + '"><span class="positive" style="width:' + width + '%"></span><span class="negative" style="width:' + (100 - width) + '%"></span></div>' };
+  }
+
+  function statsNotice() {
+    var status = window.PharmacoStats.status();
+    if (status === 'unconfigured') return '공용 통계 연결 전입니다.';
+    if (status === 'error') return '통계를 불러오지 못했습니다. 다시 들어오면 재시도합니다.';
+    if (status === 'pending') return '일부 결과의 전송을 기다리고 있습니다.';
+    if (status === 'loading') return '통계를 불러오는 중…';
+    return '';
+  }
+
+  function refreshStatsView(render) {
+    var version = viewVersion;
+    window.PharmacoStats.refresh().then(function (rows) {
+      if (rows) {
+        typeResultCounts = {};
+        satisfactionStats = {};
+        rows.forEach(function (row) {
+          if (!Object.prototype.hasOwnProperty.call(RESULTS, row.code)) return;
+          typeResultCounts[row.code] = Number(row.result_count);
+          satisfactionStats[row.code] = { up: Number(row.up_count), down: Number(row.down_count) };
+        });
+      }
+      if (version === viewVersion && !document.getElementById('type-dialog').open) render();
+    });
+  }
+
   function typeDialogMarkup() {
     return '<dialog class="type-dialog" id="type-dialog" aria-labelledby="dialog-type-name"><button type="button" class="dialog-close" id="dialog-close" aria-label="닫기">×</button><div id="dialog-content"></div></dialog>';
   }
@@ -525,22 +592,18 @@ main:has(.types-page) { max-width: 960px; }
     };
   }
 
-  function renderAllTypes(back) {
+  function renderAllTypes(back, refreshed) {
     var tiles = Object.keys(RESULTS).map(function (code) {
       var r = RESULTS[code];
       var pos = CHARACTER_POSITIONS[code];
-      var stats = satisfactionStats[code];
-      var total = stats ? stats.up + stats.down : 0;
-      var percent = total ? Math.round(stats.up / total * 100) : null;
-      var label = percent === null ? "만족도: 집계 전" : "만족도 " + percent + "%";
-      // 집계 전의 두 색은 비율을 나타내지 않습니다.
-      var width = percent === null ? 50 : percent;
+      var sat = satisfaction(code), label = sat.label;
       return '<article class="type-tile" tabindex="0" data-satisfaction="' + label + '" aria-label="' + code + ' ' + r[2] + ', ' + label + '">' +
-        '<button type="button" class="character-frame type-icon" data-code="' + code + '" aria-label="' + r[2] + ' 상세 보기"><div class="character" style="background-position:' + (pos[0] * 100 / 3) + '% ' + (pos[1] * 100 / 3) + '%"></div></button>' +
+        '<button type="button" class="character-frame type-icon' + (code === lastResultType ? ' last-result' : '') + '" data-code="' + code + '" aria-label="' + r[2] + ' 상세 보기"><div class="character" style="background-position:' + (pos[0] * 100 / 3) + '% ' + (pos[1] * 100 / 3) + '%"></div></button>' +
         '<span class="tile-code">' + code + '</span><h2 class="tile-name">' + r[2] + '</h2><p class="tile-nick">' + r[0] + '</p>' +
-        '<div class="satisfaction-bar' + (percent === null ? ' no-data' : '') + '" aria-hidden="true"><span class="positive" style="width:' + width + '%"></span><span class="negative" style="width:' + (100 - width) + '%"></span></div></article>';
+        sat.bar + '</article>';
     }).join("");
     el('<section class="types-page"><h1>약침타입 전체보기</h1><div class="types-grid">' + tiles + '</div>' +
+      '<p class="foot">' + statsNotice() + '</p>' +
       '<p class="foot">초록: 만족 · 빨강: 불만족. 흐린 막대는 아직 집계된 평가가 없는 타입입니다.</p>' +
       '<button type="button" class="ghost" id="types-back">결과로 돌아가기</button>' +
       '<div class="satisfaction-tooltip" id="satisfaction-tooltip" role="tooltip" hidden></div>' + typeDialogMarkup() + '</section>');
@@ -562,13 +625,16 @@ main:has(.types-page) { max-width: 960px; }
       tile.onclick = function () { var rect = tile.getBoundingClientRect(); show(tile, rect.left, rect.bottom); };
     });
     document.getElementById("types-back").onclick = back;
-    window.scrollTo(0, 0);
+    if (!refreshed) {
+      window.scrollTo(0, 0);
+      refreshStatsView(function () { renderAllTypes(back, true); });
+    }
   }
 
   // 유형별 테스트 결과 건수. 만족/불만족 평가 건수와 별도로 집계합니다.
   var typeResultCounts = null;
 
-  function renderTypeStats(back) {
+  function renderTypeStats(back, refreshed) {
     var codes = Object.keys(RESULTS);
     var total = typeResultCounts ? codes.reduce(function (sum, code) { return sum + (typeResultCounts[code] || 0); }, 0) : 0;
     var rows = codes.map(function (code) {
@@ -576,11 +642,11 @@ main:has(.types-page) { max-width: 960px; }
       var count = typeResultCounts ? typeResultCounts[code] || 0 : null;
       var ratio = total ? count / total * 100 : 0;
       var value = count === null ? '비율 — · 결과건수 — (집계 전)' : ratio.toFixed(1) + '% · ' + count.toLocaleString('ko-KR') + '건';
-      return '<div class="stats-row"><button type="button" class="stats-icon" data-code="' + code + '" aria-label="' + r[2] + ' 상세 보기">' +
-        '<div class="character" style="background-position:' + (pos[0] * 100 / 3) + '% ' + (pos[1] * 100 / 3) + '%"></div></button>' +
+      return '<div class="stats-row"><div class="stats-avatar"><button type="button" class="stats-icon' + (code === lastResultType ? ' last-result' : '') + '" data-code="' + code + '" aria-label="' + r[2] + ' 상세 보기">' +
+        '<div class="character" style="background-position:' + (pos[0] * 100 / 3) + '% ' + (pos[1] * 100 / 3) + '%"></div></button>' + satisfaction(code).bar + '</div>' +
         '<div><div class="stats-track" role="img" aria-label="' + r[2] + ': ' + value + '"><span class="stats-fill" style="width:' + ratio + '%"></span></div><p class="stats-value">' + value + '</p></div></div>';
     }).join('');
-    el('<section class="stats-page"><h1>약침타입 통계보기</h1><div class="stats-list">' + rows + '</div>' +
+    el('<section class="stats-page"><h1>약침타입 통계보기</h1><p class="foot">' + statsNotice() + '</p><div class="stats-list">' + rows + '</div>' +
       '<button type="button" class="ghost" id="stats-back">결과로 돌아가기</button>' +
       '<div class="satisfaction-tooltip" id="type-name-tooltip" role="tooltip" hidden></div>' +
       typeDialogMarkup() + '</section>');
@@ -600,8 +666,22 @@ main:has(.types-page) { max-width: 960px; }
         openTypeDialog(button.getAttribute('data-code'));
       };
     });
+    Array.prototype.forEach.call(app.querySelectorAll('.stats-avatar .satisfaction-bar'), function (bar) {
+      function showBar(x, y) {
+        tooltip.textContent = bar.getAttribute('data-satisfaction');
+        tooltip.hidden = false;
+        tooltip.style.left = Math.max(8, Math.min(x, window.innerWidth - tooltip.offsetWidth - 8)) + 'px';
+        tooltip.style.top = Math.max(8, Math.min(y + 18, window.innerHeight - tooltip.offsetHeight - 8)) + 'px';
+      }
+      bar.onpointermove = function (event) { showBar(event.clientX, event.clientY); };
+      bar.onpointerleave = bar.onblur = function () { tooltip.hidden = true; };
+      bar.onfocus = bar.onclick = function () { var rect = bar.getBoundingClientRect(); showBar(rect.left, rect.bottom); };
+    });
     document.getElementById('stats-back').onclick = back;
-    window.scrollTo(0, 0);
+    if (!refreshed) {
+      window.scrollTo(0, 0);
+      refreshStatsView(function () { renderTypeStats(back, true); });
+    }
   }
 
   var shared = new URLSearchParams(location.search).get("type");
