@@ -115,7 +115,7 @@ test('reserve archive shows 100 unique unused characters with art, filters and d
   b.q('#group-filters [data-key="myth"]').click();assert.equal(b.all('.reserve-card').length,4);
   b.q('#group-filters [data-key="all"]').click();b.q('#dex-search').value='감초';b.q('#dex-search').dispatchEvent(new b.w.Event('input'));
   assert.equal(b.all('.reserve-card').length,data.filter(c=>c.herb==='감초').length);
-  b.q('.reserve-art').click();assert(b.q('#type-dialog').open);assert.equal(b.all('.reserve-facts > div').length,10);assert.equal(b.q('.reserve-dialog-art .reserve-sprite').dataset.character,b.q('.reserve-art .reserve-sprite').dataset.character);
+  b.q('.reserve-art').click();assert(b.q('#type-dialog').open);assert.equal(b.all('#dialog-content .reserve-facts > div').length,10);assert.equal(b.q('.reserve-dialog-art .reserve-sprite').dataset.character,b.q('.reserve-art .reserve-sprite').dataset.character);
   const prompts=JSON.parse(fs.readFileSync(path.join(root,'research/reserve-character-prompts.json'),'utf8'));assert.equal(prompts.characters.length,100);assert.equal(prompts.sheets.length,10);
  }finally{b.dom.window.close()}
 });

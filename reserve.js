@@ -44,3 +44,35 @@
   }
   render();
 })();
+(function () {
+  'use strict';
+  // 그림을 기다리는 500종: 묘사와 이미지 AI용 프롬프트만 있습니다.
+  var data = window.PharmacoReservePlans, PAGE = 48;
+  var active = 'all', query = '', shown = PAGE;
+  var labels = { all: '전체 ' + data.characters.length };
+  data.categories.forEach(function (c) { labels[c.id] = c.label + ' ' + c.count; });
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function prompt(c) { return data.style + '\n\nCharacter (described in Korean): ' + c.description + '\nPersonality to convey: ' + c.persona + (c.motif ? '\nInspired by (homage only, original design): ' + c.motif : ''); }
+  var catName = {};
+  data.categories.forEach(function (c) { catName[c.id] = c.label; });
+  var box = document.getElementById('plan-filters');
+  box.innerHTML = Object.keys(labels).map(function (k) { return '<button type="button" class="dex-filter" data-cat="' + k + '" aria-pressed="' + (k === active) + '">' + esc(labels[k]) + '</button>'; }).join('');
+  box.querySelectorAll('button').forEach(function (b) { b.onclick = function () { active = b.dataset.cat; shown = PAGE; box.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); }); render(); }; });
+  document.getElementById('plan-search').oninput = function (e) { query = e.target.value.toLocaleLowerCase().trim(); shown = PAGE; render(); };
+  document.getElementById('plan-more').onclick = function () { shown += PAGE; render(); };
+  function render() {
+    var list = data.characters.filter(function (c) { return (active === 'all' || c.category === active) && (!query || [c.nick, c.subject, c.persona, c.look, c.motif || '', catName[c.category]].join(' ').toLocaleLowerCase().indexOf(query) !== -1); });
+    document.getElementById('plan-count').textContent = list.length + '종';
+    var grid = document.getElementById('plan-grid');
+    grid.innerHTML = list.slice(0, shown).map(function (c) {
+      return '<article class="plan-card"><span class="dex-tag">' + c.id + ' · ' + esc(catName[c.category]) + '</span><h3>' + esc(c.nick) + '</h3><p class="plan-subject">' + esc(c.subject) + '</p><p class="reserve-quote">' + esc(c.persona) + '</p><dl class="reserve-facts">' + [['외형·복장', c.look], ['소품', c.prop], ['동작', c.pose], ['표정', c.expression], ['색감', c.colors]].concat(c.motif ? [['모티프', c.motif]] : []).map(function (r) { return '<div><dt>' + r[0] + '</dt><dd>' + esc(r[1]) + '</dd></div>'; }).join('') + '</dl><button type="button" class="dex-filter plan-copy" data-id="' + c.id + '">프롬프트 복사</button></article>';
+    }).join('') || '<p class="dex-empty">조건에 맞는 캐릭터가 없어요.</p>';
+    document.getElementById('plan-more').hidden = list.length <= shown;
+    grid.querySelectorAll('.plan-copy').forEach(function (b) { b.onclick = function () {
+      var c = data.characters.find(function (x) { return x.id === b.dataset.id; }), text = prompt(c);
+      function done(ok) { b.textContent = ok ? '복사했어요 ✓' : '복사 실패 — 길게 눌러 선택하세요'; setTimeout(function () { b.textContent = '프롬프트 복사'; }, 1800); }
+      try { navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); }); } catch (e) { done(false); }
+    }; });
+  }
+  render();
+})();
